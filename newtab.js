@@ -372,7 +372,7 @@ function GetClock() {
         document.getElementById("welcomeMessage").style.opacity = "1";
       }, 2000);
     }
-  }, 3000);
+  }, 1500);
 }
 
 var dimScreen = 1;

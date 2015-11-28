@@ -364,20 +364,8 @@ function GetClock() {
       document.getElementById("welcomeMessage").innerHTML = welcomeMessageMORNING;
     } else if (thour < 18) {
       document.getElementById("welcomeMessage").innerHTML = welcomeMessageAFTERNOON;
-    } else if (thour < 25) {
+    } else {
       document.getElementById("welcomeMessage").innerHTML = welcomeMessageEVENING;
-    } else if (thour == 11) {
-      if (nmin == 11) {
-        document.getElementById("welcomeMessage").innerHTML = welcomeMessageWISH;
-      } else {
-        document.getElementById("welcomeMessage").innerHTML = welcomeMessageMORNING;
-      }
-    } else if (thour == 23) {
-      if (nmin == 11) {
-        document.getElementById("welcomeMessage").innerHTML = welcomeMessageWISH;
-      } else {
-        document.getElementById("welcomeMessage").innerHTML = welcomeMessageEVENING;
-      }
     }
     setTimeout(function() {
       document.getElementById("welcomeMessage").style.opacity = "1";

@@ -356,22 +356,32 @@ function GetClock() {
   }, 2000);
 
   setTimeout(function() {
+    var welcomeMessageMORNING = "Good morning";
+    var welcomeMessageAFTERNOON = "Good afternoon";
+    var welcomeMessageEVENING = "Good evening";
+    var welcomeMessageWISH = "<i>It's 11:11 - Make a wish...</i>";
     if (thour < 12) {
-      document.getElementById("welcomeMessage").innerHTML = "Good morning";
-      setTimeout(function() {
-        document.getElementById("welcomeMessage").style.opacity = "1";
-      }, 2000);
+      document.getElementById("welcomeMessage").innerHTML = welcomeMessageMORNING;
     } else if (thour < 18) {
-      document.getElementById("welcomeMessage").innerHTML = "Good afternoon";
-      setTimeout(function() {
-        document.getElementById("welcomeMessage").style.opacity = "1";
-      }, 2000);
-    } else {
-      document.getElementById("welcomeMessage").innerHTML = "Good evening";
-      setTimeout(function() {
-        document.getElementById("welcomeMessage").style.opacity = "1";
-      }, 2000);
+      document.getElementById("welcomeMessage").innerHTML = welcomeMessageAFTERNOON;
+    } else if (thour < 25) {
+      document.getElementById("welcomeMessage").innerHTML = welcomeMessageEVENING;
+    } else if (thour == 11) {
+      if (nmin == 11) {
+        document.getElementById("welcomeMessage").innerHTML = welcomeMessageWISH;
+      } else {
+        document.getElementById("welcomeMessage").innerHTML = welcomeMessageMORNING;
+      }
+    } else if (thour == 23) {
+      if (nmin == 11) {
+        document.getElementById("welcomeMessage").innerHTML = welcomeMessageWISH;
+      } else {
+        document.getElementById("welcomeMessage").innerHTML = welcomeMessageEVENING;
+      }
     }
+    setTimeout(function() {
+      document.getElementById("welcomeMessage").style.opacity = "1";
+    }, 2000);
   }, 1500);
 }
 

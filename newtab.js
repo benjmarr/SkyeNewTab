@@ -93,6 +93,20 @@ document.getElementById("optionRELOAD").addEventListener("click", function() {
   }, 2500);
 }, false);
 
+if (getCookie("optionWELCOMEMESSAGE") == "off") {
+  document.getElementById("optionWELCOMEMESSAGE").innerHTML = "<a>Enable welcome messages</a>";
+} else {
+  document.getElementById("optionWELCOMEMESSAGE").innerHTML = "<a>Disable welcome messages</a>";
+};
+
+document.getElementById("optionWELCOMEMESSAGE").addEventListener("click", function() {
+  if (getCookie("optionWELCOMEMESSAGE") == "on") {
+    setCookie("optionWELCOMEMESSAGE", "off", 365)
+  } else {
+    setCookie("optionWELCOMEMESSAGE", "on", 365);
+  }
+}, false);
+
 setTimeout(function() { // Thanks to Mario2Sonic for the idea! https://www.youtube.com/user/raylfli
   setTimeout(function() {
     document.getElementById("quoteBox").style.opacity = "1";
@@ -102,11 +116,11 @@ setTimeout(function() { // Thanks to Mario2Sonic for the idea! https://www.youtu
   setTimeout(function() {
     var marked1 = "<sup>&quot;</sup>";
     var marked2 = "<sup>&quot;</sup> - ";
-    // NOTE Change quote number 2
+    // NOTE Change quote number 3
     if (quoteNumber == 1) {
       document.getElementById("quoteBox").innerHTML = marked1 + "Do not let the behavior of others destroy your inner peace." + marked2 + "Dalai Lama";
     } else if (quoteNumber == 2) {
-      document.getElementById("quoteBox").innerHTML = marked1 + "The purpose of art is washing the dust of daily life off our souls." + marked2 + "Pablo Picasso";
+      document.getElementById("quoteBox").innerHTML = marked1 + "The true secret of happiness lies in taking a genuine interest in all the details of daily life." + marked2 + "William Morris";
     } else if (quoteNumber == 3) {
       document.getElementById("quoteBox").innerHTML = marked1 + "Try to be a rainbow in someone's cloud." + marked2 + "Maya Angelou";
     } else if (quoteNumber == 4) {
@@ -368,7 +382,13 @@ function GetClock() {
       document.getElementById("welcomeMessage").innerHTML = welcomeMessageEVENING;
     }
     setTimeout(function() {
-      document.getElementById("welcomeMessage").style.opacity = "1";
+      if (getCookie("optionWELCOMEMESSAGE") == "on") {
+        document.getElementById("welcomeMessage").style.opacity = "1";
+      } else if (getCookie("optionWELCOMEMESSAGE") == "") {
+        setCookie("optionWELCOMEMESSAGE", "on", 365);
+      } else if (getCookie("optionWELCOMEMESSAGE") == "off") {
+        document.getElementById("optionWELCOMEMESSAGE").style.opacity = "1";
+      }
     }, 2000);
   }, 1500);
 }

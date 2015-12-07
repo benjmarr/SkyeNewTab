@@ -107,7 +107,7 @@ document.getElementById("optionWELCOMEMESSAGE").addEventListener("click", functi
   }
 }, false);
 
-setTimeout(function() { // Thanks to Mario2Sonic for the idea! https://www.youtube.com/user/raylfli
+setTimeout(function() {
   setTimeout(function() {
     document.getElementById("quoteBox").style.opacity = "1";
   }, 3000);

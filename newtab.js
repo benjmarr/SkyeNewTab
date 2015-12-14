@@ -116,13 +116,13 @@ setTimeout(function() {
   setTimeout(function() {
     var marked1 = "<sup>&quot;</sup>";
     var marked2 = "<sup>&quot;</sup> - ";
-    // NOTE Change quote number 3
+    // NOTE Change quote number 4
     if (quoteNumber == 1) {
       document.getElementById("quoteBox").innerHTML = marked1 + "Do not let the behavior of others destroy your inner peace." + marked2 + "Dalai Lama";
     } else if (quoteNumber == 2) {
       document.getElementById("quoteBox").innerHTML = marked1 + "The true secret of happiness lies in taking a genuine interest in all the details of daily life." + marked2 + "William Morris";
     } else if (quoteNumber == 3) {
-      document.getElementById("quoteBox").innerHTML = marked1 + "Try to be a rainbow in someone's cloud." + marked2 + "Maya Angelou";
+      document.getElementById("quoteBox").innerHTML = marked1 + "When we are in love we often doubt that which we most believe." + marked2 + "Francois de La Rochefoucauld";
     } else if (quoteNumber == 4) {
       document.getElementById("quoteBox").innerHTML = marked1 + "Anyone who has ever made anything of importance was disciplined." + marked2 + "Andrew Hendrixson";
     } else if (quoteNumber == 5) {
@@ -593,3 +593,14 @@ function time() {
     stopHour = hour + " hours";
   }
 }
+
+setInterval(function() {
+  var timedBackgroundChangeNumber = backgroundNumber[Math.floor(Math.random() * backgroundNumber.length)];
+  document.getElementById("header").style.opacity = "0";
+  setTimeout(function() {
+    document.getElementById("header").style.backgroundImage = "url('content/background/" + timedBackgroundChangeNumber + ".jpg')";
+  }, 600);
+  setTimeout(function() {
+    document.getElementById("header").style.opacity = "1";
+  }, 900);
+}, 600000);

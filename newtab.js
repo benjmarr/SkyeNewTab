@@ -1,7 +1,7 @@
 // Copyright Benjamin (c) All rights reserved - 2015
 
 console.log("Skye New Tab page copyright (c) Benjamin, 2015 - All rights reserved.");
-var backgroundNumber = Array(21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,20);
+var backgroundNumber = Array(41,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40);
 // NOTE Maximum of 20 backgrounds NOTE Add number onto end for new images, delete lowest number (This is just a weird developer note)
 var randomBackground = backgroundNumber[Math.floor(Math.random() * backgroundNumber.length)];
 var PAGEurl = "https://github.com/BenAndy/SkyeNewTab/tree/master";
@@ -213,7 +213,7 @@ setTimeout(function() {
   }, 500);
 
   document.getElementById("header").style.backgroundImage = "url('content/background/" + randomBackground + ".jpg')";
-  document.getElementById("ImageUpdateDate").innerHTML = "Wednesday, 13<sup>th</sup> December 2015";
+  document.getElementById("ImageUpdateDate").innerHTML = "Wednesday, 6<sup>th</sup> January 2016";
 }, 50); // NOTE WHEN ADDING NEW BACKGROUNDS CHANGE BACKGROUND VALUE AT TOP OF PAGE
 
 var tday = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
@@ -267,6 +267,12 @@ function GetClock() {
         alertName.innerHTML = thisAlert;
         setTimeout(function() {alertShow; document.title = thisAlert;}, 1000);
       };
+      if (ndate == 6) {
+        var thisAlert = "Rest in piece Kevin Graham Jobe";
+        document.getElementById("welcomeMessage").style.visibility = "hidden";
+        alertName.innerHTML = thisAlert;
+        setTimeout(function() {alertShow; document.title = thisAlert;}, 1000);
+      }
     } else if (tmonth[nmonth] == "February") {
 
     } else if (tmonth[nmonth] == "March") {

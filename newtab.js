@@ -268,7 +268,7 @@ function GetClock() {
         setTimeout(function() {alertShow; document.title = thisAlert;}, 1000);
       };
       if (ndate == 6) {
-        var thisAlert = "Rest in piece Kevin Graham Jobe";
+        var thisAlert = "Rest in piece Kevin Jobe";
         document.getElementById("welcomeMessage").style.visibility = "hidden";
         alertName.innerHTML = thisAlert;
         setTimeout(function() {alertShow; document.title = thisAlert;}, 1000);

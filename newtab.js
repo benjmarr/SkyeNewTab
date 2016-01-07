@@ -93,20 +93,6 @@ document.getElementById("optionRELOAD").addEventListener("click", function() {
   }, 2500);
 }, false);
 
-if (getCookie("optionWELCOMEMESSAGE") == "off") {
-  document.getElementById("optionWELCOMEMESSAGE").innerHTML = "<a>Enable welcome messages</a>";
-} else {
-  document.getElementById("optionWELCOMEMESSAGE").innerHTML = "<a>Disable welcome messages</a>";
-};
-
-document.getElementById("optionWELCOMEMESSAGE").addEventListener("click", function() {
-  if (getCookie("optionWELCOMEMESSAGE") == "on") {
-    setCookie("optionWELCOMEMESSAGE", "off", 365)
-  } else {
-    setCookie("optionWELCOMEMESSAGE", "on", 365);
-  }
-}, false);
-
 setTimeout(function() {
   setTimeout(function() {
     document.getElementById("quoteBox").style.opacity = "1";
@@ -387,15 +373,6 @@ function GetClock() {
     } else {
       document.getElementById("welcomeMessage").innerHTML = welcomeMessageEVENING;
     }
-    setTimeout(function() {
-      if (getCookie("optionWELCOMEMESSAGE") == "on") {
-        document.getElementById("welcomeMessage").style.opacity = "1";
-      } else if (getCookie("optionWELCOMEMESSAGE") == "") {
-        setCookie("optionWELCOMEMESSAGE", "on", 365);
-      } else if (getCookie("optionWELCOMEMESSAGE") == "off") {
-        document.getElementById("optionWELCOMEMESSAGE").style.opacity = "1";
-      }
-    }, 2000);
   }, 1500);
 }
 

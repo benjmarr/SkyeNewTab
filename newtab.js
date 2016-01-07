@@ -373,6 +373,8 @@ function GetClock() {
     } else {
       document.getElementById("welcomeMessage").innerHTML = welcomeMessageEVENING;
     }
+
+    document.getElementById("welcomeMessage").style.opacity = "1";
   }, 1500);
 }
 

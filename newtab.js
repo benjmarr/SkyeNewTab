@@ -1,7 +1,7 @@
 // Copyright Benjamin (c) All rights reserved - 2015
 
 console.log("Skye New Tab page copyright (c) Benjamin, 2015 - All rights reserved.");
-var backgroundNumber = Array(41,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40);
+var backgroundNumber = Array(41,42,43,44,45,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40);
 // NOTE Maximum of 20 backgrounds NOTE Add number onto end for new images, delete lowest number (This is just a weird developer note)
 var randomBackground = backgroundNumber[Math.floor(Math.random() * backgroundNumber.length)];
 var PAGEurl = "https://github.com/BenAndy/SkyeNewTab/tree/master";

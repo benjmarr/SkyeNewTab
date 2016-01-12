@@ -2,8 +2,10 @@
 
 console.log("Skye New Tab page copyright (c) Benjamin, 2015 - All rights reserved.");
 var backgroundNumber = Array(41,42,43,44,45,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40);
+document.getElementById("ImageUpdateDate").innerHTML = "Tuesday, 12<sup>th</sup> January 2016";
 // NOTE Maximum of 20 backgrounds NOTE Add number onto end for new images, delete lowest number (This is just a weird developer note)
 var randomBackground = backgroundNumber[Math.floor(Math.random() * backgroundNumber.length)];
+document.getElementById("header").style.backgroundImage = "url('content/background/" + randomBackground + ".jpg')";
 var PAGEurl = "https://github.com/BenAndy/SkyeNewTab/tree/master";
 
 var decideHappyBirthdayBenjaminORHappyBirthdayOlivia = Math.floor((Math.random() * 2) + 1);
@@ -197,10 +199,7 @@ setTimeout(function() {
       }, 500);
     }, 500);
   }, 500);
-
-  document.getElementById("header").style.backgroundImage = "url('content/background/" + randomBackground + ".jpg')";
-  document.getElementById("ImageUpdateDate").innerHTML = "Wednesday, 6<sup>th</sup> January 2016";
-}, 50); // NOTE WHEN ADDING NEW BACKGROUNDS CHANGE BACKGROUND VALUE AT TOP OF PAGE
+}, 50);
 
 var tday = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
 var tmonth = new Array("January","February","March","April","May","June","July","August","September","October","November","December");

@@ -8,6 +8,61 @@ var randomBackground = backgroundNumber[Math.floor(Math.random() * backgroundNum
 document.getElementById("header").style.backgroundImage = "url('content/background/" + randomBackground + ".jpg')";
 var PAGEurl = "https://github.com/BenAndy/SkyeNewTab/tree/master";
 
+// Image data
+var imageUnsplashURL;
+var imageUnsplashAuthor;
+var imageUnsplashAuthorPage;
+var imageGitHubURL = PAGEurl + "/content/background/" + randomBackground + ".jpg";
+if (randomBackground == 41) {
+
+} else if (randomBackground == 42) {
+  var imageUnsplashURL = "https://unsplash.com/photos/hIMdKs_0cSE";
+  var imageUnsplashAuthor = "Sylvain Guiheneuc";
+  var imageUnsplashAuthorPage = "https://unsplash.com/sylvain_guiheneuc";
+} else if (randomBackground == 43) {
+  var imageUnsplashURL = "https://unsplash.com/photos/T8gIOL3_sdI";
+  var imageUnsplashAuthor = "Frances Gunn";
+  var imageUnsplashAuthorPage = "https://unsplash.com/francesgunn";
+} else if (randomBackground == 44) {
+  var imageUnsplashURL = "https://unsplash.com/photos/85hdWh8KtR4";
+  var imageUnsplashAuthor = "Jean-Marie Grange";
+  var imageUnsplashAuthorPage = "https://unsplash.com/jeanmariegrange";
+} else if (randomBackground == 45) {
+  var imageUnsplashURL = "https://unsplash.com/photos/FQgHHJzbwo0";
+  var imageUnsplashAuthor = "Leeroy";
+  var imageUnsplashAuthorPage = "https://unsplash.com/leeroy";
+} else if (randomBackground == 26) {
+
+} else if (randomBackground == 27) {
+
+} else if (randomBackground == 28) {
+
+} else if (randomBackground == 29) {
+
+} else if (randomBackground == 30) {
+
+} else if (randomBackground == 31) {
+
+} else if (randomBackground == 32) {
+
+} else if (randomBackground == 33) {
+
+} else if (randomBackground == 34) {
+
+} else if (randomBackground == 35) {
+
+} else if (randomBackground == 36) {
+
+} else if (randomBackground == 37) {
+
+} else if (randomBackground == 38) {
+
+} else if (randomBackground == 39) {
+
+} else if (randomBackground == 40) {
+
+}
+
 var decideHappyBirthdayBenjaminORHappyBirthdayOlivia = Math.floor((Math.random() * 2) + 1);
 
 function setCookie(cname, cvalue, exdays) {

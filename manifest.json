@@ -1,5 +1,5 @@
 {
-  "version": "1.8.67",
+  "version": "1.8.68",
   "name": "Skye New Tab",
   "short_name": "Skye New Tab",
   "description": "Replace your new tab page with a more modern page! Featuring time, dates, many background images, welcome messages and more!",
@@ -11,9 +11,6 @@
   "minimum_chrome_version": "47.0.2526.106",
   "background": {
     "scripts": ["background.js"]
-  },
-  "omnibox": {
-    "keyword": "skye"
   },
   "icons": {
     "128": "content/favicon128x128.png"

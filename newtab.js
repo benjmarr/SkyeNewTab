@@ -10,7 +10,7 @@ var PAGEurl = "https://github.com/BenAndy/SkyeNewTab/tree/master";
 
 // Image data
 var unsplashImageData = function(imgUrl, imgAuth, imgAuthPro) {
-  // Feature under development
+  // Feature soon to come
 };
 var imageGitHubURL = PAGEurl + "/content/background/" + randomBackground + ".jpg";
 if (randomBackground == 41) {
@@ -150,45 +150,45 @@ setTimeout(function() {
     var marked1 = "<sup>&quot;</sup>";
     var marked2 = "<sup>&quot;</sup> - ";
     // NOTE Change quote number 4
-    if (quoteNumber == 1) {
+    if (quoteNumber === 1) {
       document.getElementById("quoteBox").innerHTML = marked1 + "Do not let the behavior of others destroy your inner peace." + marked2 + "Dalai Lama";
-    } else if (quoteNumber == 2) {
+    } else if (quoteNumber === 2) {
       document.getElementById("quoteBox").innerHTML = marked1 + "The true secret of happiness lies in taking a genuine interest in all the details of daily life." + marked2 + "William Morris";
-    } else if (quoteNumber == 3) {
+    } else if (quoteNumber === 3) {
       document.getElementById("quoteBox").innerHTML = marked1 + "When we are in love we often doubt that which we most believe." + marked2 + "Francois de La Rochefoucauld";
-    } else if (quoteNumber == 4) {
+    } else if (quoteNumber === 4) {
       document.getElementById("quoteBox").innerHTML = marked1 + "Anyone who has ever made anything of importance was disciplined." + marked2 + "Andrew Hendrixson";
-    } else if (quoteNumber == 5) {
+    } else if (quoteNumber === 5) {
       document.getElementById("quoteBox").innerHTML = marked1 + "Don’t spend time beating on a wall, hoping to transform it into a door." + marked2 + " Coco Chanel";
-    } else if (quoteNumber == 6) {
+    } else if (quoteNumber === 6) {
       document.getElementById("quoteBox").innerHTML = marked1 + "Creativity is intelligence having fun." + marked2 + "Albert Einstein";
-    } else if (quoteNumber == 7) {
+    } else if (quoteNumber === 7) {
       document.getElementById("quoteBox").innerHTML = marked1 + "Optimism is the one quality more associated with success and happiness than any other." + marked2 + "Brian Tracy";
-    } else if (quoteNumber == 8) {
+    } else if (quoteNumber === 8) {
       document.getElementById("quoteBox").innerHTML = marked1 + "Always keep your eyes open. Keep watching. Because whatever you see can inspire you." + marked2 + "Grace Coddington";
-    } else if (quoteNumber == 9) {
+    } else if (quoteNumber === 9) {
       document.getElementById("quoteBox").innerHTML = marked1 + "What you get by achieving your goals is not as important as what you become by achieving your goals." + marked2 + "Henry David Thoreau";
-    } else if (quoteNumber == 10) {
+    } else if (quoteNumber === 10) {
       document.getElementById("quoteBox").innerHTML = marked1 + "If the plan doesn’t work, change the plan, but never the goal." + marked2 + "Author Unknown";
-    } else if (quoteNumber == 11) {
+    } else if (quoteNumber === 11) {
       document.getElementById("quoteBox").innerHTML = marked1 + "I destroy my enemies when I make them my friends." + marked2 + "Abraham Lincoln";
-    } else if (quoteNumber == 12) {
+    } else if (quoteNumber === 12) {
       document.getElementById("quoteBox").innerHTML = marked1 + "Don’t live the same year 75 times and call it a life." + marked2 + "Robin Sharma";
-    } else if (quoteNumber == 13) {
+    } else if (quoteNumber === 13) {
       document.getElementById("quoteBox").innerHTML = marked1 + "You cannot save people, you can just love them." + marked2 + "Anaïs Nin";
-    } else if (quoteNumber == 14) {
+    } else if (quoteNumber === 14) {
       document.getElementById("quoteBox").innerHTML = marked1 + "It wasn’t raining when Noah built the ark." + marked2 + "Howard Ruff";
-    } else if (quoteNumber == 15) {
+    } else if (quoteNumber === 15) {
       document.getElementById("quoteBox").innerHTML = marked1 + "Take your dreams seriously." + marked2 + "Author Unknown";
-    } else if (quoteNumber == 16) {
+    } else if (quoteNumber === 16) {
       document.getElementById("quoteBox").innerHTML = marked1 + "There is no way to happiness. Happiness is the way." + marked2 + "Thich Nhat Hanh";
-    } else if (quoteNumber == 17) {
+    } else if (quoteNumber === 17) {
       document.getElementById("quoteBox").innerHTML = marked1 + "Champions keep playing until they get it right." + marked2 + "Billie Jean King";
-    } else if (quoteNumber == 18) {
+    } else if (quoteNumber === 18) {
       document.getElementById("quoteBox").innerHTML = marked1 + "You will succeed because most people are lazy." + marked2 + "Shahir Zag";
-    } else if (quoteNumber == 19) {
+    } else if (quoteNumber === 19) {
       document.getElementById("quoteBox").innerHTML = marked1 + "Genius is 1% inspiration, 99% perspiration." + marked2 + "Thomas Edison";
-    } else if (quoteNumber == 20) {
+    } else if (quoteNumber === 20) {
       document.getElementById("quoteBox").innerHTML = marked1 + "How come you can drink a drink, but you can't food a food." + marked2 + "Jaden Smith";
     }
   }, 100);

@@ -1,7 +1,7 @@
 // Copyright Benjamin (c) All rights reserved - 2016
 
 console.log("Skye New Tab page copyright (c) Benjamin, 2016 - All rights reserved.");
-var backgroundNumber = Array(41,42,43,44,45,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40);
+var backgroundNumber = Array(41,42,43,44,45,46,47,48,49,50,31,32,33,34,35,36,37,38,39,40);
 document.getElementById("ImageUpdateDate").innerHTML = "Tuesday, 12<sup>th</sup> January 2016";
 // NOTE Maximum of 20 backgrounds NOTE Add number onto end for new images, delete lowest number (This is just a weird developer note)
 var randomBackground = backgroundNumber[Math.floor(Math.random() * backgroundNumber.length)];
@@ -31,16 +31,26 @@ if (randomBackground == 41) {
   var imageUnsplashURL = "https://unsplash.com/photos/FQgHHJzbwo0";
   var imageUnsplashAuthor = "Leeroy";
   var imageUnsplashAuthorPage = "https://unsplash.com/leeroy";
-} else if (randomBackground == 26) {
-
-} else if (randomBackground == 27) {
-
-} else if (randomBackground == 28) {
-
-} else if (randomBackground == 29) {
-
-} else if (randomBackground == 30) {
-
+} else if (randomBackground == 46) {
+  var imageUnsplashURL = "https://unsplash.com/photos/ywnnwzcdR5o";
+  var imageUnsplashAuthor = "Jonathan Bean";
+  var imageUnsplashAuthorPage = "https://unsplash.com/jonathanbean";
+} else if (randomBackground == 47) {
+  var imageUnsplashURL = "https://unsplash.com/photos/r75qppvP-FE";
+  var imageUnsplashAuthor = "Eric Huang";
+  var imageUnsplashAuthorPage = "https://unsplash.com/erichuang78910";
+} else if (randomBackground == 48) {
+  var imageUnsplashURL = "https://unsplash.com/photos/DjlKxYFJlTc";
+  var imageUnsplashAuthor = "Elliott Engelmann";
+  var imageUnsplashAuthorPage = "https://unsplash.com/elliottengelmann";
+} else if (randomBackground == 49) {
+  var imageUnsplashURL = "https://unsplash.com/photos/Xwk4gkiMNGc";
+  var imageUnsplashAuthor = "Oliver & Hen Pritchard-Barrett";
+  var imageUnsplashAuthorPage = "https://unsplash.com/olliepb";
+} else if (randomBackground == 50) {
+  var imageUnsplashURL = "https://unsplash.com/photos/2p1HOcpi14U";
+  var imageUnsplashAuthor = "Hide Obara";
+  var imageUnsplashAuthorPage = "https://unsplash.com/hideobara";
 } else if (randomBackground == 31) {
 
 } else if (randomBackground == 32) {

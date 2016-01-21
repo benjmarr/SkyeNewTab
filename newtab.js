@@ -9,68 +9,50 @@ document.getElementById("header").style.backgroundImage = "url('content/backgrou
 var PAGEurl = "https://github.com/BenAndy/SkyeNewTab/tree/master";
 
 // Image data
-var imageUnsplashURL;
-var imageUnsplashAuthor;
-var imageUnsplashAuthorPage;
+var unsplashImageData = function(imgUrl, imgAuth, imgAuthPro) {
+  // Feature under development
+};
 var imageGitHubURL = PAGEurl + "/content/background/" + randomBackground + ".jpg";
 if (randomBackground == 41) {
 
 } else if (randomBackground == 42) {
-  var imageUnsplashURL = "https://unsplash.com/photos/hIMdKs_0cSE";
-  var imageUnsplashAuthor = "Sylvain Guiheneuc";
-  var imageUnsplashAuthorPage = "https://unsplash.com/sylvain_guiheneuc";
+  unsplashImageData("https://unsplash.com/photos/hIMdKs_0cSE", "Sylvain Guiheneuc", "https://unsplash.com/sylvain_guiheneuc");
 } else if (randomBackground == 43) {
-  var imageUnsplashURL = "https://unsplash.com/photos/T8gIOL3_sdI";
-  var imageUnsplashAuthor = "Frances Gunn";
-  var imageUnsplashAuthorPage = "https://unsplash.com/francesgunn";
+  unsplashImageData("https://unsplash.com/photos/T8gIOL3_sdI", "Frances Gunn", "https://unsplash.com/francesgunn");
 } else if (randomBackground == 44) {
-  var imageUnsplashURL = "https://unsplash.com/photos/85hdWh8KtR4";
-  var imageUnsplashAuthor = "Jean-Marie Grange";
-  var imageUnsplashAuthorPage = "https://unsplash.com/jeanmariegrange";
+  unsplashImageData("https://unsplash.com/photos/85hdWh8KtR4", "Jean-Marie Grange", "https://unsplash.com/jeanmariegrange");
 } else if (randomBackground == 45) {
-  var imageUnsplashURL = "https://unsplash.com/photos/FQgHHJzbwo0";
-  var imageUnsplashAuthor = "Leeroy";
-  var imageUnsplashAuthorPage = "https://unsplash.com/leeroy";
+  unsplashImageData("https://unsplash.com/photos/FQgHHJzbwo0", "Leeroy", "https://unsplash.com/leeroy");
 } else if (randomBackground == 46) {
-  var imageUnsplashURL = "https://unsplash.com/photos/ywnnwzcdR5o";
-  var imageUnsplashAuthor = "Jonathan Bean";
-  var imageUnsplashAuthorPage = "https://unsplash.com/jonathanbean";
+  unsplashImageData("https://unsplash.com/photos/ywnnwzcdR5o", "Jonathan Bean", "https://unsplash.com/jonathanbean");
 } else if (randomBackground == 47) {
-  var imageUnsplashURL = "https://unsplash.com/photos/r75qppvP-FE";
-  var imageUnsplashAuthor = "Eric Huang";
-  var imageUnsplashAuthorPage = "https://unsplash.com/erichuang78910";
+  unsplashImageData("https://unsplash.com/photos/r75qppvP-FE", "Eric Huang", "https://unsplash.com/erichuang78910");
 } else if (randomBackground == 48) {
-  var imageUnsplashURL = "https://unsplash.com/photos/DjlKxYFJlTc";
-  var imageUnsplashAuthor = "Elliott Engelmann";
-  var imageUnsplashAuthorPage = "https://unsplash.com/elliottengelmann";
+  unsplashImageData("https://unsplash.com/photos/DjlKxYFJlTc", "Elliott Engelmann", "https://unsplash.com/elliottengelmann");
 } else if (randomBackground == 49) {
-  var imageUnsplashURL = "https://unsplash.com/photos/Xwk4gkiMNGc";
-  var imageUnsplashAuthor = "Oliver & Hen Pritchard-Barrett";
-  var imageUnsplashAuthorPage = "https://unsplash.com/olliepb";
+  unsplashImageData("https://unsplash.com/photos/Xwk4gkiMNGc", "Oliver & Hen Pritchard-Barrett", "https://unsplash.com/olliepb");
 } else if (randomBackground == 50) {
-  var imageUnsplashURL = "https://unsplash.com/photos/2p1HOcpi14U";
-  var imageUnsplashAuthor = "Hide Obara";
-  var imageUnsplashAuthorPage = "https://unsplash.com/hideobara";
+  unsplashImageData("https://unsplash.com/photos/2p1HOcpi14U", "Hide Obara", "https://unsplash.com/hideobara");
 } else if (randomBackground == 31) {
-
+  unsplashImageData("", "", "");
 } else if (randomBackground == 32) {
-
+  unsplashImageData("", "", "");
 } else if (randomBackground == 33) {
-
+  unsplashImageData("", "", "");
 } else if (randomBackground == 34) {
-
+  unsplashImageData("", "", "");
 } else if (randomBackground == 35) {
-
+  unsplashImageData("", "", "");
 } else if (randomBackground == 36) {
-
+  unsplashImageData("", "", "");
 } else if (randomBackground == 37) {
-
+  unsplashImageData("", "", "");
 } else if (randomBackground == 38) {
-
+  unsplashImageData("", "", "");
 } else if (randomBackground == 39) {
-
+  unsplashImageData("", "", "");
 } else if (randomBackground == 40) {
-
+  unsplashImageData("", "", "");
 };
 
 function setCookie(cname, cvalue, exdays) {
@@ -435,56 +417,55 @@ if (getCookie("grayscaleBackCOOKIE") == "") {
   setCookie("grayscaleBackCOOKIE", 0, 365);
 };
 
+// Link icons grayscale, mouse over & click
+var iconLinkMouseover = function(linkID, linkURL) {
+  document.getElementById("link" + linkID).style.opacity = "1";
+  document.getElementById("link" + linkID).style.webkitFilter = "grayscale(0)";
+  document.getElementById("link" + linkID).addEventListener("click", function() {
+    window.location = linkURL;
+    document.getElementById("body").style.backgroundColor = "#FFFFFF";
+    document.getElementById("body").style.opacity = "0";
+  }, false);
+};
+
 setTimeout(function() {
   document.getElementById("link1").onmouseover = function() {
-    document.getElementById("link1").style.opacity = "1";
-    document.getElementById("link1").style.webkitFilter = "grayscale(0)";
-    document.getElementById("link1").addEventListener("click", function() {window.location = "https://google.com"; document.getElementById("body").style.backgroundColor = "white"; document.getElementById("body").style.opacity = "0";}, false);
+    iconLinkMouseover(1, "https://www.google.com/");
   }
   document.getElementById("link1").onmouseout = function() {
     document.getElementById("link1").style.opacity = "0.7";
     document.getElementById("link1").style.webkitFilter = "grayscale(1)";
   }
   document.getElementById("link2").onmouseover = function() {
-    document.getElementById("link2").style.opacity = "1";
-    document.getElementById("link2").style.webkitFilter = "grayscale(0)";
-    document.getElementById("link2").addEventListener("click", function() {window.location = "https://twitter.com"; document.getElementById("body").style.backgroundColor = "white"; document.getElementById("body").style.opacity = "0";}, false);
+    iconLinkMouseover(2, "https://www.twitter.com/");
   }
   document.getElementById("link2").onmouseout = function() {
     document.getElementById("link2").style.opacity = "0.7";
     document.getElementById("link2").style.webkitFilter = "grayscale(1)";
   }
   document.getElementById("link3").onmouseover = function() {
-    document.getElementById("link3").style.opacity = "1";
-    document.getElementById("link3").style.webkitFilter = "grayscale(0)";
-    document.getElementById("link3").addEventListener("click", function() {window.location = "https://facebook.com"; document.getElementById("body").style.backgroundColor = "white"; document.getElementById("body").style.opacity = "0";}, false);
+    iconLinkMouseover(3, "https://www.facebook.com/");
   }
   document.getElementById("link3").onmouseout = function() {
     document.getElementById("link3").style.opacity = "0.7";
     document.getElementById("link3").style.webkitFilter = "grayscale(1)";
   }
   document.getElementById("link4").onmouseover = function() {
-    document.getElementById("link4").style.opacity = "1";
-    document.getElementById("link4").style.webkitFilter = "grayscale(0)";
-    document.getElementById("link4").addEventListener("click", function() {window.location = "https://youtube.com"; document.getElementById("body").style.backgroundColor = "white"; document.getElementById("body").style.opacity = "0";}, false);
+    iconLinkMouseover(4, "https://www.youtube.com/");
   }
   document.getElementById("link4").onmouseout = function() {
     document.getElementById("link4").style.opacity = "0.7";
     document.getElementById("link4").style.webkitFilter = "grayscale(1)";
   }
   document.getElementById("link5").onmouseover = function() {
-    document.getElementById("link5").style.opacity = "1";
-    document.getElementById("link5").style.webkitFilter = "grayscale(0)";
-    document.getElementById("link5").addEventListener("click", function() {window.location = "https://pinterest.com"; document.getElementById("body").style.backgroundColor = "white"; document.getElementById("body").style.opacity = "0";}, false);
+    iconLinkMouseover(5, "https://www.pinterest.com/");
   }
   document.getElementById("link5").onmouseout = function() {
     document.getElementById("link5").style.opacity = "0.7";
     document.getElementById("link5").style.webkitFilter = "grayscale(1)";
   }
   document.getElementById("link6").onmouseover = function() {
-    document.getElementById("link6").style.opacity = "1";
-    document.getElementById("link6").style.webkitFilter = "grayscale(0)";
-    document.getElementById("link6").addEventListener("click", function() {window.location = "https://instagram.com"; document.getElementById("body").style.backgroundColor = "white"; document.getElementById("body").style.opacity = "0";}, false);
+    iconLinkMouseover(6, "https://www.instagram.com/");
   }
   document.getElementById("link6").onmouseout = function() {
     document.getElementById("link6").style.opacity = "0.7";

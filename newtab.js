@@ -273,18 +273,18 @@ function GetClock() {
     nmin = "0" + nmin;
   }
 
-  if (ndate == 1 || 21 || 31) {
+  if (ndate === 1 || ndate === 21 || ndate === 31) {
     var strdndth = "st";
-  } else if (ndate == 2 || 22) {
+  } else if (ndate === 2 || ndate === 22) {
     var strdndth = "nd";
-  } else if (ndate == 3 || 23) {
+  } else if (ndate === 3 || ndate === 23) {
     var strdndth = "rd";
   } else {
     var strdndth = "th";
   }
 
   // Clock & date box
-  document.getElementById("datebox").innerHTML = "" + tday[nday] + ", " +tmonth[nmonth]+ " " +ndate+ "" + "<sup>" + strdndth + "</sup>";
+  document.getElementById("datebox").innerHTML = "" + tday[nday] + ", " +tmonth[nmonth]+ " " + ndate + "" + "<sup>" + strdndth + "</sup>";
   document.getElementById("clockbox").innerHTML = "" + nhour + ":" + nmin + ap + "";
 
   // Date Alerts

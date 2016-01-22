@@ -23,7 +23,7 @@ backgroundChange("random");
 var unsplashImageData = function(imgUrl, imgAuth, imgAuthPro) {
   // Feature soon to come
 };
-var imageGitHubURL = PAGEurl + "/content/background/" + randBack + ".jpg";
+
 if (randomBackground == 41) {
 
 } else if (randomBackground == 42) {

@@ -2,17 +2,28 @@
 
 console.log("Skye New Tab page copyright (c) Benjamin, 2016 - All rights reserved.");
 var backgroundNumber = Array(41,42,43,44,45,46,47,48,49,50,31,32,33,34,35,36,37,38,39,40);
-document.getElementById("ImageUpdateDate").innerHTML = "Tuesday, 12<sup>th</sup> January 2016";
+document.getElementById("ImageUpdateDate").innerHTML = "Tuesday, 21<sup>st</sup> January 2016";
 // NOTE Maximum of 20 backgrounds NOTE Add number onto end for new images, delete lowest number (This is just a weird developer note)
 var randomBackground = backgroundNumber[Math.floor(Math.random() * backgroundNumber.length)];
-document.getElementById("header").style.backgroundImage = "url('content/background/" + randomBackground + ".jpg')";
 var PAGEurl = "https://github.com/BenAndy/SkyeNewTab/tree/master";
+var randBack = function() {
+  return backgroundNumber[Math.floor(Math.random() * backgroundNumber.length)];
+};
 
+var backgroundChange = function(id) {
+  if (id === "random") {
+    document.getElementById("header").style.backgroundImage = "url('content/background/" + randBack() + ".jpg')";
+  } else {
+    document.getElementById("header").style.backgroundImage = "url('content/background/" + id + ".jpg')";
+  }
+};
+
+backgroundChange("random");
 // Image data
 var unsplashImageData = function(imgUrl, imgAuth, imgAuthPro) {
   // Feature soon to come
 };
-var imageGitHubURL = PAGEurl + "/content/background/" + randomBackground + ".jpg";
+var imageGitHubURL = PAGEurl + "/content/background/" + randBack + ".jpg";
 if (randomBackground == 41) {
 
 } else if (randomBackground == 42) {
@@ -112,21 +123,13 @@ document.getElementById("optionsX").addEventListener("click", function() {
 }, false);
 
 document.getElementById("optionNEWBACK").addEventListener("click", function() {
+  document.getElementById("header").style.opacity = "0";
   setTimeout(function() {
-    var newBack = backgroundNumber[Math.floor(Math.random() * backgroundNumber.length)];
-    document.getElementById("header").style.opacity = "0";
-    setTimeout(function() {
-      document.getElementById("header").style.backgroundImage = "url('content/background/" + newBack + ".jpg')";
-      setTimeout(function() {
-        document.getElementById("header").style.opacity = "1";
-      }, 500);
-    }, 500);
-    setTimeout(function() {
-      var newimgURL = PAGEurl + "/content/background/" + newBack + ".jpg";
-      document.getElementById("optionNEWBACK").innerHTML = "<a>Change the background image</a> [ID: " + newBack + "]";
-      document.getElementById("ImageURL").innerHTML = "<a href='" + newimgURL + "' target='_blank'>" + newimgURL + "</a>";
-    }, 100);
-  }, 500);
+    backgroundChange("random");
+  }, 600);
+  setTimeout(function() {
+    document.getElementById("header").style.opacity = "1";
+  }, 900);
 }, false);
 
 document.getElementById("optionRELOAD").addEventListener("click", function() {
@@ -195,9 +198,6 @@ setTimeout(function() {
 }, 50);
 
 setTimeout(function() {
-  var imgURL = PAGEurl + "/content/background/" + randomBackground + ".jpg";
-  document.getElementById("ImageURL").innerHTML = "<a href='" + imgURL + "' target='_blank'>" + imgURL + "</a>";
-  document.getElementById("optionNEWBACK").innerHTML = "<a>Change the background image</a> [ID: " + randomBackground + "]";
   document.getElementById("body").style.opacity = "1";
   setTimeout(function() {
     document.getElementById("optionsImg").style.opacity = "1";
@@ -556,10 +556,9 @@ function time() {
 }
 
 setInterval(function() {
-  var timedBackgroundChangeNumber = backgroundNumber[Math.floor(Math.random() * backgroundNumber.length)];
   document.getElementById("header").style.opacity = "0";
   setTimeout(function() {
-    document.getElementById("header").style.backgroundImage = "url('content/background/" + timedBackgroundChangeNumber + ".jpg')";
+    backgroundChange("random");
   }, 600);
   setTimeout(function() {
     document.getElementById("header").style.opacity = "1";

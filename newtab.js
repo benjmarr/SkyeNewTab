@@ -104,6 +104,8 @@ if (getCookie("name") === "Type your name here!" || getCookie("name") === "" || 
   getName();
 } else if (getCookie("name") === "none") {
   document.getElementById("optionNAME").innerHTML = "<a>Add your name</a>";
+} else {
+  document.getElementById("optionNAME").innerHTML = "<a>Remove your name</a>";
 };
 
 document.getElementById("shortcutList").addEventListener("click", function() {

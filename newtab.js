@@ -4,7 +4,6 @@ console.log("Skye New Tab page copyright (c) Benjamin, 2016 - All rights reserve
 var backgroundNumber = Array(41,42,43,44,45,46,47,48,49,50,31,32,33,34,35,36,37,38,39,40);
 document.getElementById("ImageUpdateDate").innerHTML = "Tuesday, 21<sup>st</sup> January 2016";
 // NOTE Maximum of 20 backgrounds NOTE Add number onto end for new images, delete lowest number (This is just a weird developer note)
-var randomBackground = backgroundNumber[Math.floor(Math.random() * backgroundNumber.length)];
 var PAGEurl = "https://github.com/BenAndy/SkyeNewTab/tree/master";
 var randBack = function() {
   return backgroundNumber[Math.floor(Math.random() * backgroundNumber.length)];
@@ -27,45 +26,45 @@ var unsplashImageData = function(imgUrl, imgAuth, imgAuthPro) {
   // Feature soon to come
 };
 
-if (randomBackground === 41) {
+if (currentBackgroundID === 41) {
 
-} else if (randomBackground === 42) {
+} else if (currentBackgroundID === 42) {
   unsplashImageData("https://unsplash.com/photos/hIMdKs_0cSE", "Sylvain Guiheneuc", "https://unsplash.com/sylvain_guiheneuc");
-} else if (randomBackground === 43) {
+} else if (currentBackgroundID === 43) {
   unsplashImageData("https://unsplash.com/photos/T8gIOL3_sdI", "Frances Gunn", "https://unsplash.com/francesgunn");
-} else if (randomBackground === 44) {
+} else if (currentBackgroundID === 44) {
   unsplashImageData("https://unsplash.com/photos/85hdWh8KtR4", "Jean-Marie Grange", "https://unsplash.com/jeanmariegrange");
-} else if (randomBackground === 45) {
+} else if (currentBackgroundID === 45) {
   unsplashImageData("https://unsplash.com/photos/FQgHHJzbwo0", "Leeroy", "https://unsplash.com/leeroy");
-} else if (randomBackground === 46) {
+} else if (currentBackgroundID === 46) {
   unsplashImageData("https://unsplash.com/photos/ywnnwzcdR5o", "Jonathan Bean", "https://unsplash.com/jonathanbean");
-} else if (randomBackground === 47) {
+} else if (currentBackgroundID === 47) {
   unsplashImageData("https://unsplash.com/photos/r75qppvP-FE", "Eric Huang", "https://unsplash.com/erichuang78910");
-} else if (randomBackground === 48) {
+} else if (currentBackgroundID === 48) {
   unsplashImageData("https://unsplash.com/photos/DjlKxYFJlTc", "Elliott Engelmann", "https://unsplash.com/elliottengelmann");
-} else if (randomBackground === 49) {
+} else if (currentBackgroundID === 49) {
   unsplashImageData("https://unsplash.com/photos/Xwk4gkiMNGc", "Oliver & Hen Pritchard-Barrett", "https://unsplash.com/olliepb");
-} else if (randomBackground === 50) {
+} else if (currentBackgroundID === 50) {
   unsplashImageData("https://unsplash.com/photos/2p1HOcpi14U", "Hide Obara", "https://unsplash.com/hideobara");
-} else if (randomBackground === 31) {
+} else if (currentBackgroundID === 31) {
   unsplashImageData("", "", "");
-} else if (randomBackground === 32) {
+} else if (currentBackgroundID === 32) {
   unsplashImageData("", "", "");
-} else if (randomBackground === 33) {
+} else if (currentBackgroundID === 33) {
   unsplashImageData("", "", "");
-} else if (randomBackground === 34) {
+} else if (currentBackgroundID === 34) {
   unsplashImageData("", "", "");
-} else if (randomBackground === 35) {
+} else if (currentBackgroundID === 35) {
   unsplashImageData("", "", "");
-} else if (randomBackground === 36) {
+} else if (currentBackgroundID === 36) {
   unsplashImageData("", "", "");
-} else if (randomBackground === 37) {
+} else if (currentBackgroundID === 37) {
   unsplashImageData("", "", "");
-} else if (randomBackground === 38) {
+} else if (currentBackgroundID === 38) {
   unsplashImageData("", "", "");
-} else if (randomBackground === 39) {
+} else if (currentBackgroundID === 39) {
   unsplashImageData("", "", "");
-} else if (randomBackground === 40) {
+} else if (currentBackgroundID === 40) {
   unsplashImageData("", "", "");
 };
 
@@ -86,6 +85,26 @@ function getCookie(cname) {
     }
     return "";
 }
+
+var getName = function() {
+  var name = prompt("What's your name? If you don't wish to have your name shown, just press enter.", "Type your name here!");
+  setCookie("name", name, 365);
+  if (getCookie("name") === "Type your name here!" || getCookie("name") === "" || getCookie("name") === "null") {
+    setCookie("name", "none", 365);
+    alert("You can add your name in the options menu (Press 'O' for options...)!");
+    document.getElementById("optionNAME").innerHTML = "<a>Add your name</a>";
+  } else {
+    alert("Thanks," + " " + name + ". You can change your name in the options menu (Press 'O' for options...)!");
+    document.getElementById("optionNAME").innerHTML = "<a>Remove your name</a>";
+  }
+  console.log("User:" + " " + getCookie("name"));
+};
+
+if (getCookie("name") === "Type your name here!" || getCookie("name") === "" || getCookie("name") === "null") {
+  getName();
+} else if (getCookie("name") === "none") {
+  document.getElementById("optionNAME").innerHTML = "<a>Add your name</a>";
+};
 
 document.getElementById("shortcutList").addEventListener("click", function() {
   document.getElementById("shortcutMenu").style.visibility = "visible";
@@ -123,6 +142,16 @@ document.getElementById("optionsX").addEventListener("click", function() {
   setTimeout(function() {
     document.getElementById("optionsMenu").style.visibility = "hidden";
   }, 600);
+}, false);
+
+// Options click
+document.getElementById("optionNAME").addEventListener("click", function() {
+  if (getCookie("name") === "none") {
+    getName();
+  } else {
+    setCookie("name", "none", 365);
+    document.getElementById("optionNAME").innerHTML = "<a>Add your name</a>";
+  }
 }, false);
 
 document.getElementById("optionNEWBACK").addEventListener("click", function() {
@@ -343,17 +372,25 @@ function GetClock() {
   }, 1000);
 
   setTimeout(function() {
-    var welcomeMessageMORNING = "Good morning";
-    var welcomeMessageAFTERNOON = "Good afternoon";
-    var welcomeMessageEVENING = "Good evening";
     if (thour < 12) {
-      document.getElementById("welcomeMessage").innerHTML = welcomeMessageMORNING;
+      if (getCookie("name") === "none") {
+        document.getElementById("welcomeMessage").innerHTML = "Good morning";
+      } else {
+        document.getElementById("welcomeMessage").innerHTML = "Good morning," + " " + getCookie("name");
+      }
     } else if (thour < 18) {
-      document.getElementById("welcomeMessage").innerHTML = welcomeMessageAFTERNOON;
+      if (getCookie("name") === "none") {
+        document.getElementById("welcomeMessage").innerHTML = "Good afternoon";
+      } else {
+        document.getElementById("welcomeMessage").innerHTML = "Good afternoon," + " " + getCookie("name");
+      }
     } else {
-      document.getElementById("welcomeMessage").innerHTML = welcomeMessageEVENING;
+      if (getCookie("name") === "none") {
+        document.getElementById("welcomeMessage").innerHTML = "Good evening";
+      } else {
+        document.getElementById("welcomeMessage").innerHTML = "Good evening," + " " + getCookie("name");
+      }
     };
-
     document.getElementById("welcomeMessage").style.opacity = "1";
   }, 1500);
 }

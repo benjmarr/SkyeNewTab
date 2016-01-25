@@ -189,6 +189,8 @@ img > #link {
   font-size: 1070%;
   margin-top: 6%;
   margin-bottom: -3%;
+  opacity: 0;
+  transition: opacity 1s;
 }
 
 #datebox {
@@ -198,6 +200,8 @@ img > #link {
   cursor: default;
   width: 100%;
   font-size: 300%;
+  opacity: 0;
+  transition: opacity 1s;
 }
 
 #newtab {

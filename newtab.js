@@ -147,13 +147,13 @@ document.getElementById("optionsX").addEventListener("click", function() {
 }, false);
 
 // Options click
-// document.getElementById("optionPMAM").addEventListener("click", function() {
-//   if (getCookie("showPMAM")) {
-//     setCookie("showPMAM", false, 365);
-//   } else {
-//     setCookie("showPMAM", true, 365);
-//   };
-// }, false);
+document.getElementById("optionPMAM").addEventListener("click", function() {
+  if (getCookie("showPMAM") === "true") {
+    setCookie("showPMAM", "false", 365);
+  } else {
+    setCookie("showPMAM", "true", 365);
+  };
+}, false);
 
 document.getElementById("optionNAME").addEventListener("click", function() {
   if (getCookie("name") === "none") {
@@ -289,7 +289,7 @@ setTimeout(function() {
 var tday = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
 var tmonth = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
 
-setInterval(GetClock,100);
+setInterval(GetClock,1000);
 function GetClock() {
   var d = new Date();
   var nday = d.getDay(),nmonth=d.getMonth(),ndate=d.getDate();
@@ -325,19 +325,18 @@ function GetClock() {
 
   // Clock & date box
   document.getElementById("datebox").innerHTML = "" + tday[nday] + ", " +tmonth[nmonth]+ " " + ndate + "" + "<sup>" + strdndth + "</sup>";
-  document.getElementById("clockbox").innerHTML = "" + nhour + ":" + nmin + ap + "";
-  // if (getCookie("showPMAM") === "") {
-  //   setCookie("showPMAM", true, 365);
-  //   document.getElementById("optionPMAM").innerHTML = "<a>Hide the 'PM' and 'AM'</a>";
-  //   document.getElementById("clockbox").innerHTML = "" + nhour + ":" + nmin + ap + "";
-  // } else if (getCookie("showPMAM")) {
-  //   document.getElementById("optionPMAM").innerHTML = "<a>Hide the 'PM' and 'AM'</a>";
-  //   document.getElementById("clockbox").innerHTML = "" + nhour + ":" + nmin + ap + "";
-  // } else {
-  //   setCookie("showPMAM", false, 365);
-  //   document.getElementById("optionPMAM").innerHTML = "<a>Show the 'PM' and 'AM'</a>";
-  //   document.getElementById("clockbox").innerHTML = "" + nhour + ":" + nmin + "";
-  // };
+  if (getCookie("showPMAM") === "") {
+    setCookie("showPMAM", "true", 365);
+    document.getElementById("optionPMAM").innerHTML = "<a>Hide the 'PM' and 'AM'</a>";
+    document.getElementById("clockbox").innerHTML = "" + nhour + ":" + nmin + ap + "";
+  } else if (getCookie("showPMAM") === "true") {
+    document.getElementById("optionPMAM").innerHTML = "<a>Hide the 'PM' and 'AM'</a>";
+    document.getElementById("clockbox").innerHTML = "" + nhour + ":" + nmin + ap + "";
+  } else {
+    setCookie("showPMAM", "false", 365);
+    document.getElementById("optionPMAM").innerHTML = "<a>Show the 'PM' and 'AM'</a>";
+    document.getElementById("clockbox").innerHTML = "" + nhour + ":" + nmin + "";
+  };
 
   // Date Alerts
   setTimeout(function() {
@@ -412,8 +411,15 @@ function GetClock() {
       }
     };
     document.getElementById("welcomeMessage").style.opacity = "1";
-  }, 1500);
+  }, 500);
 }
+
+setTimeout(function() {
+  document.getElementById("clockbox").style.opacity = "1";
+  setTimeout(function() {
+    document.getElementById("datebox").style.opacity = "1";
+  }, 500);
+}, 1000);
 
 var dimScreen = 1;
 var lookedConsole = 0;

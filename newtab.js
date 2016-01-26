@@ -238,9 +238,9 @@ document.getElementById("optionsX").addEventListener("click", function() {
 }, false);
 
 // Options click
-document.getElementById("optionSETBACK").addEventListener("click", function() {
+// document.getElementById("optionSETBACK").addEventListener("click", function() {
   // work
-}, false);
+// }, false);
 
 document.getElementById("optionPMAM").addEventListener("click", function() {
   if (getCookie("showPMAM") === "true") {

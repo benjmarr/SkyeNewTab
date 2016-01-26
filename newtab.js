@@ -15,7 +15,91 @@ var backgroundChange = function(id) {
     currentBackgroundID = randBack();
     document.getElementById("header").style.backgroundImage = "url('content/background/" + currentBackgroundID + ".jpg')";
   } else {
-    document.getElementById("header").style.backgroundImage = "url('content/background/" + id + ".jpg')";
+    switch(id) {
+      case backgroundNumber[0]:
+        currentBackgroundID = backgroundNumber[0];
+        document.getElementById("header").style.backgroundImage = "url('content/background/" + currentBackgroundID + ".jpg')";
+        break;
+      case backgroundNumber[1]:
+        currentBackgroundID = backgroundNumber[1];
+        document.getElementById("header").style.backgroundImage = "url('content/background/" + currentBackgroundID + ".jpg')";
+        break;
+      case backgroundNumber[2]:
+        currentBackgroundID = backgroundNumber[2];
+        document.getElementById("header").style.backgroundImage = "url('content/background/" + currentBackgroundID + ".jpg')";
+        break;
+      case backgroundNumber[3]:
+        currentBackgroundID = backgroundNumber[3];
+        document.getElementById("header").style.backgroundImage = "url('content/background/" + currentBackgroundID + ".jpg')";
+        break;
+      case backgroundNumber[4]:
+        currentBackgroundID = backgroundNumber[4];
+        document.getElementById("header").style.backgroundImage = "url('content/background/" + currentBackgroundID + ".jpg')";
+        break;
+      case backgroundNumber[5]:
+        currentBackgroundID = backgroundNumber[5];
+        document.getElementById("header").style.backgroundImage = "url('content/background/" + currentBackgroundID + ".jpg')";
+        break;
+      case backgroundNumber[6]:
+        currentBackgroundID = backgroundNumber[6];
+        document.getElementById("header").style.backgroundImage = "url('content/background/" + currentBackgroundID + ".jpg')";
+        break;
+      case backgroundNumber[7]:
+        currentBackgroundID = backgroundNumber[7];
+        document.getElementById("header").style.backgroundImage = "url('content/background/" + currentBackgroundID + ".jpg')";
+        break;
+      case backgroundNumber[8]:
+        currentBackgroundID = backgroundNumber[8];
+        document.getElementById("header").style.backgroundImage = "url('content/background/" + currentBackgroundID + ".jpg')";
+        break;
+      case backgroundNumber[9]:
+        currentBackgroundID = backgroundNumber[9];
+        document.getElementById("header").style.backgroundImage = "url('content/background/" + currentBackgroundID + ".jpg')";
+        break;
+      case backgroundNumber[10]:
+        currentBackgroundID = backgroundNumber[10];
+        document.getElementById("header").style.backgroundImage = "url('content/background/" + currentBackgroundID + ".jpg')";
+        break;
+      case backgroundNumber[11]:
+        currentBackgroundID = backgroundNumber[11];
+        document.getElementById("header").style.backgroundImage = "url('content/background/" + currentBackgroundID + ".jpg')";
+        break;
+      case backgroundNumber[12]:
+        currentBackgroundID = backgroundNumber[12];
+        document.getElementById("header").style.backgroundImage = "url('content/background/" + currentBackgroundID + ".jpg')";
+        break;
+      case backgroundNumber[13]:
+        currentBackgroundID = backgroundNumber[13];
+        document.getElementById("header").style.backgroundImage = "url('content/background/" + currentBackgroundID + ".jpg')";
+        break;
+      case backgroundNumber[14]:
+        currentBackgroundID = backgroundNumber[14];
+        document.getElementById("header").style.backgroundImage = "url('content/background/" + currentBackgroundID + ".jpg')";
+        break;
+      case backgroundNumber[15]:
+        currentBackgroundID = backgroundNumber[15];
+        document.getElementById("header").style.backgroundImage = "url('content/background/" + currentBackgroundID + ".jpg')";
+        break;
+      case backgroundNumber[16]:
+        currentBackgroundID = backgroundNumber[16];
+        document.getElementById("header").style.backgroundImage = "url('content/background/" + currentBackgroundID + ".jpg')";
+        break;
+      case backgroundNumber[17]:
+        currentBackgroundID = backgroundNumber[17];
+        document.getElementById("header").style.backgroundImage = "url('content/background/" + currentBackgroundID + ".jpg')";
+        break;
+      case backgroundNumber[18]:
+        currentBackgroundID = backgroundNumber[18];
+        document.getElementById("header").style.backgroundImage = "url('content/background/" + currentBackgroundID + ".jpg')";
+        break;
+      case backgroundNumber[19]:
+        currentBackgroundID = backgroundNumber[19];
+        document.getElementById("header").style.backgroundImage = "url('content/background/" + currentBackgroundID + ".jpg')";
+        break;
+      default:
+        // work
+        break;
+    };
   }
 };
 

@@ -1,8 +1,8 @@
 // Copyright Benjamin (c) All rights reserved - 2016
 
 console.log("Skye New Tab page copyright (c) Benjamin, 2016 - All rights reserved.");
-var backgroundNumber = Array(41,42,43,44,45,46,47,48,49,50,31,32,33,34,35,36,37,38,39,40);
-document.getElementById("ImageUpdateDate").innerHTML = "Tuesday, 21<sup>st</sup> January 2016";
+var backgroundNumber = Array(41,42,43,44,45,46,47,48,49,50,51,32,33,34,35,36,37,38,39,40);
+document.getElementById("ImageUpdateDate").innerHTML = "Tuesday, 26<sup>th</sup> January 2016";
 // NOTE Maximum of 20 backgrounds NOTE Add number onto end for new images, delete lowest number (This is just a weird developer note)
 var PAGEurl = "https://github.com/BenAndy/SkyeNewTab/tree/master";
 var randBack = function() {
@@ -46,8 +46,8 @@ if (currentBackgroundID === 41) {
   unsplashImageData("https://unsplash.com/photos/Xwk4gkiMNGc", "Oliver & Hen Pritchard-Barrett", "https://unsplash.com/olliepb");
 } else if (currentBackgroundID === 50) {
   unsplashImageData("https://unsplash.com/photos/2p1HOcpi14U", "Hide Obara", "https://unsplash.com/hideobara");
-} else if (currentBackgroundID === 31) {
-  unsplashImageData("", "", "");
+} else if (currentBackgroundID === 51) {
+  unsplashImageData("https://unsplash.com/photos/sokDJl8L-fs", "Benjamin", "https://unsplash.com/ben_andy");
 } else if (currentBackgroundID === 32) {
   unsplashImageData("", "", "");
 } else if (currentBackgroundID === 33) {

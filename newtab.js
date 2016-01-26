@@ -103,7 +103,14 @@ var backgroundChange = function(id) {
   }
 };
 
-backgroundChange("random");
+if (getCookie("setBack") === "") {
+  setCookie("setBack", false, 365);
+  backgroundChange("random");
+} else if (getCookie("setBack") === "false") {
+  backgroundChange("random");
+} else {
+  backgroundChange(getCookie("setBack")); // WORK
+};
 
 // Image data
 var unsplashImageData = function(imgUrl, imgAuth, imgAuthPro) {
@@ -231,6 +238,10 @@ document.getElementById("optionsX").addEventListener("click", function() {
 }, false);
 
 // Options click
+document.getElementById("optionSETBACK").addEventListener("click", function() {
+  // work
+}, false);
+
 document.getElementById("optionPMAM").addEventListener("click", function() {
   if (getCookie("showPMAM") === "true") {
     setCookie("showPMAM", "false", 365);

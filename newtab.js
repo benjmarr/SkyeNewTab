@@ -2,7 +2,7 @@
 
 console.log("Skye New Tab page copyright (c) Benjamin, 2016 - All rights reserved.");
 var backgroundNumber = Array(41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,37,38,39,40);
-document.getElementById("ImageUpdateDate").innerHTML = "Tuesday, 26<sup>th</sup> January 2016";
+document.getElementById("ImageUpdateDate").innerHTML = "Sunday, 31<sup>st</sup> January 2016";
 // NOTE Maximum of 20 backgrounds NOTE Add number onto end for new images, delete lowest number (This is just a weird developer note)
 var PAGEurl = "https://github.com/BenAndy/SkyeNewTab/tree/master";
 var randBack = function() {

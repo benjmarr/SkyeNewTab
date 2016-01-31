@@ -1,7 +1,7 @@
 // Copyright Benjamin (c) All rights reserved - 2016
 
 console.log("Skye New Tab page copyright (c) Benjamin, 2016 - All rights reserved.");
-var backgroundNumber = Array(41,42,43,44,45,46,47,48,49,50,51,32,33,34,35,36,37,38,39,40);
+var backgroundNumber = Array(41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,37,38,39,40);
 document.getElementById("ImageUpdateDate").innerHTML = "Tuesday, 26<sup>th</sup> January 2016";
 // NOTE Maximum of 20 backgrounds NOTE Add number onto end for new images, delete lowest number (This is just a weird developer note)
 var PAGEurl = "https://github.com/BenAndy/SkyeNewTab/tree/master";
@@ -139,16 +139,16 @@ if (currentBackgroundID === 41) {
   unsplashImageData("https://unsplash.com/photos/2p1HOcpi14U", "Hide Obara", "https://unsplash.com/hideobara");
 } else if (currentBackgroundID === 51) {
   unsplashImageData("https://unsplash.com/photos/sokDJl8L-fs", "Benjamin", "https://unsplash.com/ben_andy");
-} else if (currentBackgroundID === 32) {
-  unsplashImageData("", "", "");
-} else if (currentBackgroundID === 33) {
-  unsplashImageData("", "", "");
-} else if (currentBackgroundID === 34) {
-  unsplashImageData("", "", "");
-} else if (currentBackgroundID === 35) {
-  unsplashImageData("", "", "");
-} else if (currentBackgroundID === 36) {
-  unsplashImageData("", "", "");
+} else if (currentBackgroundID === 52) {
+  unsplashImageData("https://unsplash.com/photos/4jcFu1byopQ", "Davide Ragusa", "https://unsplash.com/davideragusa");
+} else if (currentBackgroundID === 53) {
+  unsplashImageData("https://unsplash.com/photos/GYumuBnTqKc", "E+N Photographies", "https://unsplash.com/nicomiot");
+} else if (currentBackgroundID === 54) {
+  unsplashImageData("https://unsplash.com/photos/6-jTZysYY_U", "NASA", "https://unsplash.com/nasa");
+} else if (currentBackgroundID === 55) {
+  unsplashImageData("https://unsplash.com/photos/R3LcfTvcGWY", "Annie Spratt", "https://unsplash.com/fableandfolk");
+} else if (currentBackgroundID === 56) {
+  unsplashImageData("https://unsplash.com/photos/GSzD6vGIWKM", "Mickey O'neil", "https://unsplash.com/mickeyoneil");
 } else if (currentBackgroundID === 37) {
   unsplashImageData("", "", "");
 } else if (currentBackgroundID === 38) {

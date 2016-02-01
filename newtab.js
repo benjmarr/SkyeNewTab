@@ -200,6 +200,49 @@ if (getCookie("name") === "Type your name here!" || getCookie("name") === "" || 
   document.getElementById("optionNAME").innerHTML = "<a>Remove your name</a>";
 };
 
+// Date formatting options
+document.getElementById("optionDATEFORMAT").addEventListener("click", function() {
+  document.getElementById("dateFormatMenu").style.visibility = "visible";
+  document.getElementById("dateFormatMenu").style.opacity = "0.9";
+  document.getElementById("optionsImg").style.visibility = "visible";
+  document.getElementById("optionsImg").style.opacity = "1";
+  document.getElementById("optionsMenu").style.opacity = "0";
+  setTimeout(function() {
+    document.getElementById("optionsMenu").style.visibility = "hidden";
+  }, 600);
+}, false);
+
+document.getElementById("dateFormatX").addEventListener("click", function() {
+  document.getElementById("dateFormatMenu").style.opacity = "0";
+  setTimeout(function() {
+    document.getElementById("dateFormatMenu").style.visibility = "hidden";
+  }, 600);
+}, false);
+
+if (getCookie("dateFormatting") === "") {
+  setCookie("dateFormatting", 0, 365);
+};
+
+document.getElementById("dateFormatting0").addEventListener("click", function() {
+  setCookie("dateFormatting", 0, 365);
+}, false);
+
+document.getElementById("dateFormatting1").addEventListener("click", function() {
+  setCookie("dateFormatting", 1, 365);
+}, false);
+
+document.getElementById("dateFormatting2").addEventListener("click", function() {
+  setCookie("dateFormatting", 2, 365);
+}, false);
+
+document.getElementById("dateFormatting3").addEventListener("click", function() {
+  setCookie("dateFormatting", 3, 365);
+}, false);
+
+document.getElementById("dateFormatting4").addEventListener("click", function() {
+  setCookie("dateFormatting", 4, 365);
+}, false);
+
 // Set your birthdate
 // var birthdayDay;
 // var birthdayMonth;
@@ -233,6 +276,7 @@ if (getCookie("name") === "Type your name here!" || getCookie("name") === "" || 
 //   getBirthdate();
 // };
 
+// Shortcut list button
 document.getElementById("shortcutList").addEventListener("click", function() {
   document.getElementById("shortcutMenu").style.visibility = "visible";
   document.getElementById("shortcutMenu").style.opacity = "0.9";
@@ -244,6 +288,7 @@ document.getElementById("shortcutList").addEventListener("click", function() {
   }, 600);
 }, false);
 
+// Shortcut close button
 document.getElementById("shortcutX").addEventListener("click", function() {
   document.getElementById("shortcutMenu").style.opacity = "0";
   setTimeout(function() {
@@ -251,17 +296,21 @@ document.getElementById("shortcutX").addEventListener("click", function() {
   }, 600);
 }, false);
 
+// Options open image button
 document.getElementById("optionsImg").addEventListener("click", function() {
   document.getElementById("optionsMenu").style.visibility = "visible";
   document.getElementById("optionsMenu").style.opacity = "0.9";
   document.getElementById("optionsImg").style.opacity = "0";
   document.getElementById("shortcutMenu").style.opacity = "0";
+  document.getElementById("dateFormatMenu").style.opacity = "0";
   setTimeout(function() {
-    document.getElementById("shortcutMenu").style.visibility = "hidden";
     document.getElementById("optionsImg").style.visibility = "hidden";
+    document.getElementById("shortcutMenu").style.visibility = "hidden";
+    document.getElementById("dateFormatMenu").style.visibility = "hidden";
   }, 600);
 }, false);
 
+// Options close button
 document.getElementById("optionsX").addEventListener("click", function() {
   document.getElementById("optionsImg").style.visibility = "visible";
   document.getElementById("optionsMenu").style.opacity = "0";
@@ -452,8 +501,22 @@ function GetClock() {
     var strdndth = "th";
   }
 
+  var setDateFormat = function(formatID) {
+    if (formatID === "0") {
+      document.getElementById("datebox").innerHTML = tday[nday] + ", " + tmonth[nmonth] + " " + ndate + "<sup>" + strdndth + "</sup>";
+    } else if (formatID === "1") {
+      document.getElementById("datebox").innerHTML = tmonth[nmonth] + " " + ndate + "<sup>" + strdndth + "</sup>";
+    } else if (formatID === "2") {
+      document.getElementById("datebox").innerHTML = tday[nday] + ", " + ndate + "<sup>" + strdndth + "</sup>" + " " + tmonth[nmonth];
+    } else if (formatID === "3") {
+      document.getElementById("datebox").innerHTML = tday[nday] + " " + "the" + " " + ndate + "<sup>" + strdndth + "</sup> of" + " " + tmonth[nmonth];
+    } else if (formatID === "4") {
+      document.getElementById("datebox").innerHTML = tday[nday];
+    };
+  };
+
   // Clock & date box
-  document.getElementById("datebox").innerHTML = "" + tday[nday] + ", " +tmonth[nmonth]+ " " + ndate + "" + "<sup>" + strdndth + "</sup>";
+  setDateFormat(getCookie("dateFormatting"));
   if (getCookie("showPMAM") === "") {
     setCookie("showPMAM", "true", 365);
     document.getElementById("optionPMAM").innerHTML = "<a>Hide the 'PM' and 'AM'</a>";
@@ -569,9 +632,11 @@ document.addEventListener("keydown", function(e) {
   if (e.keyCode == "27") {
     document.getElementById("optionsMenu").style.opacity = "0";
     document.getElementById("shortcutMenu").style.opacity = "0";
+    document.getElementById("dateFormatMenu").style.opacity = "0";
     setTimeout(function() {
       document.getElementById("optionsMenu").style.visibility = "hidden";
       document.getElementById("shortcutMenu").style.visibility = "hidden";
+      document.getElementById("dateFormatMenu").style.visibility = "hidden";
       document.getElementById("optionsImg").style.visibility = "visible";
       document.getElementById("optionsImg").style.opacity = "0.9";
     }, 600);
@@ -580,8 +645,10 @@ document.addEventListener("keydown", function(e) {
     document.getElementById("optionsMenu").style.opacity = "0.9";
     document.getElementById("optionsImg").style.opacity = "0";
     document.getElementById("shortcutMenu").style.opacity = "0";
+    document.getElementById("dateFormatMenu").style.opacity = "0";
     setTimeout(function() {
       document.getElementById("shortcutMenu").style.visibility = "hidden";
+      document.getElementById("dateFormatMenu").style.visibility = "hidden";
       document.getElementById("optionsImg").style.visibility = "hidden";
     }, 600);
   } else if (e.keyCode == "82") {

@@ -69,9 +69,31 @@ img > #link {
   height: 2%;
 }
 
+#dateFormatX {
+  width: 10%;
+  height: 10%;
+}
+
 #shortcutX {
   width: 10%;
   height: 10%;
+}
+
+#dateFormatMenu {
+  background-color: black;
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  font-size: 120%;
+  transition: opacity 0.5s;
 }
 
 #shortcutMenu {
@@ -86,9 +108,9 @@ img > #link {
   margin-top: 5%;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.5s;
   position: absolute;
   font-size: 120%;
+  transition: opacity 0.5s;
 }
 
 #optionsMenu {

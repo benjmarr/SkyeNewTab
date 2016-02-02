@@ -243,6 +243,10 @@ document.getElementById("dateFormatting4").addEventListener("click", function() 
   setCookie("dateFormatting", 4, 365);
 }, false);
 
+document.getElementById("dateFormatting5").addEventListener("click", function() {
+  setCookie("dateFormatting", 5, 365);
+}, false);
+
 // Set your birthdate
 // var birthdayDay;
 // var birthdayMonth;
@@ -512,6 +516,8 @@ function GetClock() {
       document.getElementById("datebox").innerHTML = tday[nday] + " " + "the" + " " + ndate + "<sup>" + strdndth + "</sup> of" + " " + tmonth[nmonth];
     } else if (formatID === "4") {
       document.getElementById("datebox").innerHTML = tday[nday];
+    } else if (formatID === "5") {
+      document.getElementById("datebox").innerHTML = tday[nday] + ", " + ndate + " " + tmonth[nmonth];
     };
   };
 

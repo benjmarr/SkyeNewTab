@@ -200,6 +200,24 @@ if (getCookie("name") === "Type your name here!" || getCookie("name") === "" || 
   document.getElementById("optionNAME").innerHTML = "<a>Remove your name</a>";
 };
 
+// Show/Hide the quotes
+if (getCookie("optionQUOTE") === "" || getCookie("optionQUOTE") === "true") {
+  setCookie("optionQUOTE", true, 365);
+  document.getElementById("optionQUOTE").innerHTML = "<a>Hide the quotes</a>";
+} else {
+  document.getElementById("optionQUOTE").innerHTML = "<a>Show the quotes</a>";
+};
+
+document.getElementById("optionQUOTE").addEventListener("click", function() {
+  if (getCookie("optionQUOTE") === "true") {
+    setCookie("optionQUOTE", false, 365);
+    document.getElementById("optionQUOTE").innerHTML = "<a>Show the quotes</a>";
+  } else {
+    setCookie("optionQUOTE", true, 365);
+    document.getElementById("optionQUOTE").innerHTML = "<a>Hide the quotes</a>";
+  };
+}, false);
+
 // Date formatting options
 document.getElementById("optionDATEFORMAT").addEventListener("click", function() {
   document.getElementById("dateFormatMenu").style.visibility = "visible";
@@ -307,11 +325,7 @@ document.getElementById("optionsX").addEventListener("click", function() {
   }, 600);
 }, false);
 
-// Options click
-// document.getElementById("optionSETBACK").addEventListener("click", function() {
-  // work
-// }, false);
-
+// Hide/Show the PM/AM
 document.getElementById("optionPMAM").addEventListener("click", function() {
   if (getCookie("showPMAM") === "true") {
     setCookie("showPMAM", "false", 365);
@@ -351,9 +365,13 @@ document.getElementById("optionRELOAD").addEventListener("click", function() {
 }, false);
 
 setTimeout(function() {
-  setTimeout(function() {
-    document.getElementById("quoteBox").style.opacity = "1";
-  }, 3000);
+  setInterval(function() {
+    if (getCookie("optionQUOTE") === "true") {
+      document.getElementById("quoteBox").style.opacity = "1";
+    } else {
+      document.getElementById("quoteBox").style.opacity = "0";
+    };
+  }, 10);
   var quoteChoose = Array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20);
   var quoteNumber = quoteChoose[Math.floor(Math.random() * quoteChoose.length)];
   setTimeout(function() {
@@ -400,7 +418,7 @@ setTimeout(function() {
       document.getElementById("quoteBox").innerHTML = "<sup>&quot;</sup>How come you can drink a drink, but you can't food a food.<sup>&quot;</sup> - Jaden Smith";
     }
   }, 100);
-}, 50);
+}, 2000);
 
 setTimeout(function() {
   document.getElementById("body").style.opacity = "1";

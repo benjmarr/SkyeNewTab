@@ -223,29 +223,12 @@ if (getCookie("dateFormatting") === "") {
   setCookie("dateFormatting", 0, 365);
 };
 
-document.getElementById("dateFormatting0").addEventListener("click", function() {
-  setCookie("dateFormatting", 0, 365);
-}, false);
-
-document.getElementById("dateFormatting1").addEventListener("click", function() {
-  setCookie("dateFormatting", 1, 365);
-}, false);
-
-document.getElementById("dateFormatting2").addEventListener("click", function() {
-  setCookie("dateFormatting", 2, 365);
-}, false);
-
-document.getElementById("dateFormatting3").addEventListener("click", function() {
-  setCookie("dateFormatting", 3, 365);
-}, false);
-
-document.getElementById("dateFormatting4").addEventListener("click", function() {
-  setCookie("dateFormatting", 4, 365);
-}, false);
-
-document.getElementById("dateFormatting5").addEventListener("click", function() {
-  setCookie("dateFormatting", 5, 365);
-}, false);
+document.getElementById("dateFormatting0").addEventListener("click", function() {setCookie("dateFormatting", 0, 365);}, false);
+document.getElementById("dateFormatting1").addEventListener("click", function() {setCookie("dateFormatting", 1, 365);}, false);
+document.getElementById("dateFormatting2").addEventListener("click", function() {setCookie("dateFormatting", 2, 365);}, false);
+document.getElementById("dateFormatting3").addEventListener("click", function() {setCookie("dateFormatting", 3, 365);}, false);
+document.getElementById("dateFormatting4").addEventListener("click", function() {setCookie("dateFormatting", 4, 365);}, false);
+document.getElementById("dateFormatting5").addEventListener("click", function() {setCookie("dateFormatting", 5, 365);}, false);
 
 // Set your birthdate
 // var birthdayDay;

@@ -9,6 +9,25 @@ var randBack = function() {
   return backgroundNumber[Math.floor(Math.random() * backgroundNumber.length)];
 };
 
+// Reset function
+document.getElementById("optionRESET").addEventListener("click", function() {RESET()}, false);
+var RESET = function() {
+  var resetConfirm = confirm("Are you sure you want to reset all settings?");
+  if (resetConfirm) {
+    document.getElementById("header").style.opacity = "0";
+    document.getElementById("unsplash").style.opacity = "0";
+    document.getElementById("options").style.opacity = "0";
+    document.getElementById("link").style.opacity = "0";
+    setCookie("setBack", "", 365);
+    setCookie("name", "", 365);
+    setCookie("optionQUOTE", "", 365);
+    setCookie("dateFormatting", "", 365);
+    setCookie("showPMAM", "", 365);
+    setCookie("grayscaleBackCOOKIE", "", 365);
+    window.location = "";
+  };
+};
+
 var currentBackgroundID;
 var backgroundChange = function(id) {
   if (id === "random") {
@@ -247,39 +266,6 @@ document.getElementById("dateFormatting2").addEventListener("click", function() 
 document.getElementById("dateFormatting3").addEventListener("click", function() {setCookie("dateFormatting", 3, 365);}, false);
 document.getElementById("dateFormatting4").addEventListener("click", function() {setCookie("dateFormatting", 4, 365);}, false);
 document.getElementById("dateFormatting5").addEventListener("click", function() {setCookie("dateFormatting", 5, 365);}, false);
-
-// Set your birthdate
-// var birthdayDay;
-// var birthdayMonth;
-// var getBirthdate = function() {
-//   var birthdateConfirm = confirm("Do you want to have Skye New Tab wish you a happy birthday on your birthdate?");
-//   setCookie("usingBirthdate", birthdateConfirm, 365);
-//   if (getCookie("usingBirthdate") === "true") {
-//     birthdayMonth = prompt("What month were you born? Please use the number format", "Eg. 6");
-//     if (birthdayMonth < "13" && birthdayMonth > "0") {
-//       birthdayDay = prompt("What day were you born? Please use the number format", "Eg. 4");
-//       if (birthdayDay < "31" && birthdayDay > "0") {
-//         alert("We will now wish you a happy birthday on the" + " " + birthdayDay + "/" + birthdayMonth + "!");
-//         console.log("Birthday:" + " " + birthdayDay + "/" + birthdayMonth);
-//         birthdayMonth -= 1;
-//         setCookie("birthdayDay", birthdayDay, 365);
-//         setCookie("birthdayMonth", birthdayMonth, 365);
-//       } else {
-//         alert("This is not a valid day.");
-//         setCookie("usingBirthdate", "false", 365);
-//       };
-//     } else {
-//       alert("This is not a valid month.");
-//       setCookie("usingBirthdate", "false", 365);
-//     };
-//   } else {
-//     alert("You can add your birthday in the options menu (Press 'O' for options...)!");
-//   };
-// };
-//
-// if (getCookie("usingBirthdate") === "") {
-//   getBirthdate();
-// };
 
 // Shortcut list button
 document.getElementById("shortcutList").addEventListener("click", function() {
@@ -546,59 +532,46 @@ function GetClock() {
         document.getElementById("dateAlert").style.opacity = "1";
       }, 1000);
     };
-    // var birthdayD = new Date();
-    // var birthdayN = birthdayD.getMonth();
-    // if (birthdayN === getCookie("birthdayMonth")) {
-    //   console.log("x");
-    //   if (ndate === getCookie("birthdayDay")) {
-    //     if (getCookie("name") === "none") {
-    //       dateAlert("Happy birthday!");
-    //     } else {
-    //       dateAlert("Happy birthday," + " " + getCookie("name"));
-    //     };
-    //   };
-    // } else {
-      if (tmonth[nmonth] === "January") {
-        if (ndate === 1) {
-          dateAlert("Happy new year!");
-        };
-        if (ndate === 6) {
-          dateAlert("Rest in piece Kevin Jobe");
-        }
-      } else if (tmonth[nmonth] === "February") {
-
-      } else if (tmonth[nmonth] === "March") {
-        if (ndate === 27) {
-          dateAlert("Happy Easter!");
-        };
-      } else if (tmonth[nmonth] === "April") {
-
-      } else if (tmonth[nmonth] === "May") {
-
-      } else if (tmonth[nmonth] === "June") {
-
-      } else if (tmonth[nmonth] === "July") {
-
-      } else if (tmonth[nmonth] === "August") {
-
-      } else if (tmonth[nmonth] === "September") {
-
-      } else if (tmonth[nmonth] === "October") {
-        if (ndate === 17) {
-          dateAlert("Happy birthday, Benjamin!");
-        };
-      } else if (tmonth[nmonth] === "November") {
-        if (ndate  === 13) {
-          dateAlert("#PrayForParis");
-        };
-      } else if (tmonth[nmonth] === "December") {
-        if (ndate === 25) {
-          dateAlert("Merry Christmas!");
-        };
-      } else {
-        document.getElementById("dateAlert").style.visibility = "hidden";
+    if (tmonth[nmonth] === "January") {
+      if (ndate === 1) {
+        dateAlert("Happy new year!");
       };
-    // }
+      if (ndate === 6) {
+        dateAlert("Rest in piece Kevin Jobe");
+      }
+    } else if (tmonth[nmonth] === "February") {
+
+    } else if (tmonth[nmonth] === "March") {
+      if (ndate === 27) {
+        dateAlert("Happy Easter!");
+      };
+    } else if (tmonth[nmonth] === "April") {
+
+    } else if (tmonth[nmonth] === "May") {
+
+    } else if (tmonth[nmonth] === "June") {
+
+    } else if (tmonth[nmonth] === "July") {
+
+    } else if (tmonth[nmonth] === "August") {
+
+    } else if (tmonth[nmonth] === "September") {
+
+    } else if (tmonth[nmonth] === "October") {
+      if (ndate === 17) {
+        dateAlert("Happy birthday, Benjamin!");
+      };
+    } else if (tmonth[nmonth] === "November") {
+      if (ndate  === 13) {
+        dateAlert("#PrayForParis");
+      };
+    } else if (tmonth[nmonth] === "December") {
+      if (ndate === 25) {
+        dateAlert("Merry Christmas!");
+      };
+    } else {
+      document.getElementById("dateAlert").style.visibility = "hidden";
+    };
   }, 1000);
 
   setTimeout(function() {

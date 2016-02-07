@@ -14,10 +14,10 @@ document.getElementById("optionRESET").addEventListener("click", function() {RES
 var RESET = function() {
   var resetConfirm = confirm("Are you sure you want to reset all settings?");
   if (resetConfirm) {
-    document.getElementById("header").style.opacity = "0";
-    document.getElementById("unsplash").style.opacity = "0";
-    document.getElementById("options").style.opacity = "0";
-    document.getElementById("link").style.opacity = "0";
+    opacity("header", 0, 0);
+    opacity("unsplash", 0, 3000);
+    opacity("options", 0, 0);
+    opacity("link", 0, 0);
     setCookie("setBack", "", 365);
     setCookie("name", "", 365);
     setCookie("optionQUOTE", "", 365);
@@ -29,7 +29,14 @@ var RESET = function() {
   };
 };
 
-// backgroundChange(id) method
+// opacity() method
+var opacity = function(id, opacity, delay) {
+  setTimeout(function() {
+    document.getElementById(id).style.opacity = opacity;
+  }, delay);
+};
+
+// backgroundChange() method
 var currentBackgroundID;
 var backgroundChange = function(id) {
   if (id === "random") {
@@ -242,17 +249,17 @@ document.getElementById("optionQUOTE").addEventListener("click", function() {
 // Icon visibility settings
 document.getElementById("optionICONS").addEventListener("click", function() {
   document.getElementById("iconVisibilitySettings").style.visibility = "visible";
-  document.getElementById("iconVisibilitySettings").style.opacity = "0.9";
+  opacity("iconVisibilitySettings", 0.9, 0);
   document.getElementById("optionsImg").style.visibility = "visible";
-  document.getElementById("optionsImg").style.opacity = "1";
-  document.getElementById("optionsMenu").style.opacity = "0";
+  opacity("optionsImg", 1, 0);
+  opacity("optionsMenu", 0, 0);
   setTimeout(function() {
     document.getElementById("optionsMenu").style.visibility = "hidden";
   }, 600);
 }, false);
 
 document.getElementById("iconVisibilityX").addEventListener("click", function() {
-  document.getElementById("iconVisibilitySettings").style.opacity = "0";
+  opacity("iconVisibilitySettings", 0, 0);
   setTimeout(function() {
     document.getElementById("iconVisibilitySettings").style.visibility = "hidden";
   }, 600);
@@ -269,17 +276,17 @@ if (getCookie("iconVisi") === "") {
 // Date formatting options
 document.getElementById("optionDATEFORMAT").addEventListener("click", function() {
   document.getElementById("dateFormatMenu").style.visibility = "visible";
-  document.getElementById("dateFormatMenu").style.opacity = "0.9";
+  opacity("dateFormatMenu", 0.9, 0);
   document.getElementById("optionsImg").style.visibility = "visible";
-  document.getElementById("optionsImg").style.opacity = "1";
-  document.getElementById("optionsMenu").style.opacity = "0";
+  opacity("optionsImg", 1, 0);
+  opacity("optionsMenu", 0, 0);
   setTimeout(function() {
     document.getElementById("optionsMenu").style.visibility = "hidden";
   }, 600);
 }, false);
 
 document.getElementById("dateFormatX").addEventListener("click", function() {
-  document.getElementById("dateFormatMenu").style.opacity = "0";
+  opacity("dateFormatMenu", 0, 0);
   setTimeout(function() {
     document.getElementById("dateFormatMenu").style.visibility = "hidden";
   }, 600);
@@ -299,10 +306,10 @@ document.getElementById("dateFormatting5").addEventListener("click", function() 
 // Shortcut list button
 document.getElementById("shortcutList").addEventListener("click", function() {
   document.getElementById("shortcutMenu").style.visibility = "visible";
-  document.getElementById("shortcutMenu").style.opacity = "0.9";
+  opacity("shortcutMenu", 0.9, 0);
   document.getElementById("optionsImg").style.visibility = "visible";
-  document.getElementById("optionsImg").style.opacity = "1";
-  document.getElementById("optionsMenu").style.opacity = "0";
+  opacity("optionsImg", 1, 0);
+  opacity("optionsMenu", 0, 0);
   setTimeout(function() {
     document.getElementById("optionsMenu").style.visibility = "hidden";
   }, 600);
@@ -310,7 +317,7 @@ document.getElementById("shortcutList").addEventListener("click", function() {
 
 // Shortcut close button
 document.getElementById("shortcutX").addEventListener("click", function() {
-  document.getElementById("shortcutMenu").style.opacity = "0";
+  opacity("shortcutMenu", 0, 0);
   setTimeout(function() {
     document.getElementById("shortcutMenu").style.visibility = "hidden";
   }, 600);
@@ -319,10 +326,10 @@ document.getElementById("shortcutX").addEventListener("click", function() {
 // Options open image button
 document.getElementById("optionsImg").addEventListener("click", function() {
   document.getElementById("optionsMenu").style.visibility = "visible";
-  document.getElementById("optionsMenu").style.opacity = "0.9";
-  document.getElementById("optionsImg").style.opacity = "0";
-  document.getElementById("shortcutMenu").style.opacity = "0";
-  document.getElementById("dateFormatMenu").style.opacity = "0";
+  opacity("optionsMenu", 0.9, 0);
+  opacity("optionsImg", 0, 0);
+  opacity("shortcutMenu", 0, 0);
+  opacity("dateFormatMenu", 0, 0);
   setTimeout(function() {
     document.getElementById("optionsImg").style.visibility = "hidden";
     document.getElementById("shortcutMenu").style.visibility = "hidden";
@@ -333,8 +340,8 @@ document.getElementById("optionsImg").addEventListener("click", function() {
 // Options close button
 document.getElementById("optionsX").addEventListener("click", function() {
   document.getElementById("optionsImg").style.visibility = "visible";
-  document.getElementById("optionsMenu").style.opacity = "0";
-  document.getElementById("optionsImg").style.opacity = "0.9";
+  opacity("optionsMenu", 0, 0);
+  opacity("optionsImg", 0.9, 0);
   setTimeout(function() {
     document.getElementById("optionsMenu").style.visibility = "hidden";
   }, 600);
@@ -359,32 +366,23 @@ document.getElementById("optionNAME").addEventListener("click", function() {
 }, false);
 
 document.getElementById("optionNEWBACK").addEventListener("click", function() {
-  document.getElementById("header").style.opacity = "0";
+  opacity("header", 0, 0);
   setTimeout(function() {
     backgroundChange("random");
   }, 600);
   setTimeout(function() {
-    document.getElementById("header").style.opacity = "1";
+    opacity("header", 1, 0);
   }, 900);
 }, false);
 
-document.getElementById("optionRELOAD").addEventListener("click", function() {
-  document.getElementById("optionRELOAD").innerHTML = "<a>Reloading...</a>";
-  document.getElementById("optionsMenu").style.opacity = "0";
-  document.getElementById("shortcutMenu").style.opacity = "0";
-  document.getElementById("link").style.opacity = "0";
-  document.getElementById("body").style.opacity = "0";
-  setTimeout(function() {
-    window.location = "";
-  }, 2500);
-}, false);
+document.getElementById("optionRELOAD").addEventListener("click", function() {window.location = "";}, false);
 
 setTimeout(function() {
   setInterval(function() {
     if (getCookie("optionQUOTE") === "true") {
-      document.getElementById("quoteBox").style.opacity = "1";
+      opacity("quoteBox", 1, 0);
     } else {
-      document.getElementById("quoteBox").style.opacity = "0";
+      opacity("quoteBox", 0, 0);
     };
   }, 10);
   var quoteChoose = Array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20);
@@ -436,9 +434,10 @@ setTimeout(function() {
 }, 2000);
 
 setTimeout(function() {
-  document.getElementById("body").style.opacity = "1";
+  opacity("body", 1, 0);
+  opacity("optionsImg", 1, 1500);
+  opacity("unsplash", 1, 3500);
   setTimeout(function() {
-    document.getElementById("optionsImg").style.opacity = "1";
     if (getCookie("grayscaleBackCOOKIE") == 0) {
       document.getElementById("header").style.webkitFilter = "grayscale(0)";
     } else {
@@ -450,12 +449,12 @@ setTimeout(function() {
 setTimeout(function() {
   setInterval(function() {
     if (getCookie("iconVisi") === "0") {
-      document.getElementById("link1").style.opacity = "1";
-      document.getElementById("link2").style.opacity = "1";
-      document.getElementById("link3").style.opacity = "1";
-      document.getElementById("link4").style.opacity = "1";
-      document.getElementById("link5").style.opacity = "1";
-      document.getElementById("link6").style.opacity = "1";
+      opacity("link1", 0.8, 0);
+      opacity("link2", 0.8, 0);
+      opacity("link3", 0.8, 0);
+      opacity("link4", 0.8, 0);
+      opacity("link5", 0.8, 0);
+      opacity("link6", 0.8, 0);
       document.getElementById("link1").style.webkitFilter = "grayscale(1)";
       setTimeout(function() {
         document.getElementById("link2").style.webkitFilter = "grayscale(1)";
@@ -473,12 +472,12 @@ setTimeout(function() {
         }, 500);
       }, 500);
     } else if (getCookie("iconVisi") === "1") {
-      document.getElementById("link1").style.opacity = "1";
-      document.getElementById("link2").style.opacity = "1";
-      document.getElementById("link3").style.opacity = "1";
-      document.getElementById("link4").style.opacity = "1";
-      document.getElementById("link5").style.opacity = "1";
-      document.getElementById("link6").style.opacity = "1";
+      opacity("link1", 0.8, 0);
+      opacity("link2", 0.8, 0);
+      opacity("link3", 0.8, 0);
+      opacity("link4", 0.8, 0);
+      opacity("link5", 0.8, 0);
+      opacity("link6", 0.8, 0);
       document.getElementById("link1").style.webkitFilter = "grayscale(0)";
       setTimeout(function() {
         document.getElementById("link2").style.webkitFilter = "grayscale(0)";
@@ -496,12 +495,12 @@ setTimeout(function() {
         }, 500);
       }, 500);
     } else if (getCookie("iconVisi") === "2") {
-      document.getElementById("link1").style.opacity = "0";
-      document.getElementById("link2").style.opacity = "0";
-      document.getElementById("link3").style.opacity = "0";
-      document.getElementById("link4").style.opacity = "0";
-      document.getElementById("link5").style.opacity = "0";
-      document.getElementById("link6").style.opacity = "0";
+      opacity("link1", 0, 0);
+      opacity("link2", 0, 0);
+      opacity("link3", 0, 0);
+      opacity("link4", 0, 0);
+      opacity("link5", 0, 0);
+      opacity("link6", 0, 0);
     };
   }, 100);
 }, 2000);
@@ -579,9 +578,7 @@ function GetClock() {
     var dateAlert = function(thisAlert) {
       document.getElementById("welcomeMessage").style.visibility = "hidden";
       document.getElementById("dateAlert").innerHTML = thisAlert;
-      setTimeout(function() {
-        document.getElementById("dateAlert").style.opacity = "1";
-      }, 1000);
+      opacity("dateAlert", 1, 1000);
     };
     if (tmonth[nmonth] === "January") {
       if (ndate === 1) {
@@ -645,62 +642,52 @@ function GetClock() {
         document.getElementById("welcomeMessage").innerHTML = "Good evening," + " " + getCookie("name");
       }
     };
-    document.getElementById("welcomeMessage").style.opacity = "1";
   }, 500);
-}
+  opacity("welcomeMessage", 1, 500);
+};
 
-setTimeout(function() {
-  document.getElementById("clockbox").style.opacity = "1";
-  setTimeout(function() {
-    document.getElementById("datebox").style.opacity = "1";
-  }, 500);
-}, 1000);
+opacity("clockbox", 1, 1000);
+opacity("datebox", 1, 1500);
 
 var dimScreen = 1;
 var lookedConsole = 0;
 document.addEventListener("keydown", function(e) {
   e = e || window.event;
   if (e.keyCode == "27") {
-    document.getElementById("optionsMenu").style.opacity = "0";
-    document.getElementById("shortcutMenu").style.opacity = "0";
-    document.getElementById("dateFormatMenu").style.opacity = "0";
+    opacity("optionsMenu", 0, 0);
+    opacity("shortcutMenu", 0, 0);
+    opacity("dateFormatMenu", 0, 0);
+    opacity("iconVisibilitySettings", 0, 0);
+    opacity("optionsImg", 0.9, 600);
     setTimeout(function() {
       document.getElementById("optionsMenu").style.visibility = "hidden";
       document.getElementById("shortcutMenu").style.visibility = "hidden";
       document.getElementById("dateFormatMenu").style.visibility = "hidden";
       document.getElementById("optionsImg").style.visibility = "visible";
-      document.getElementById("optionsImg").style.opacity = "0.9";
     }, 600);
   } else if (e.keyCode == "79") {
     document.getElementById("optionsMenu").style.visibility = "visible";
-    document.getElementById("optionsMenu").style.opacity = "0.9";
-    document.getElementById("optionsImg").style.opacity = "0";
-    document.getElementById("shortcutMenu").style.opacity = "0";
-    document.getElementById("dateFormatMenu").style.opacity = "0";
+    opacity("optionsMenu", 0.9, 0);
+    opacity("optionsImg", 0, 0);
+    opacity("shortcutMenu", 0, 0);
+    opacity("dateFormatMenu", 0, 0);
+    opaicty("iconVisibilitySettings", 0, 0);
     setTimeout(function() {
       document.getElementById("shortcutMenu").style.visibility = "hidden";
       document.getElementById("dateFormatMenu").style.visibility = "hidden";
       document.getElementById("optionsImg").style.visibility = "hidden";
     }, 600);
   } else if (e.keyCode == "82") {
-    document.getElementById("optionsMenu").style.opacity = "0";
-    document.getElementById("shortcutMenu").style.opacity = "0";
-    document.getElementById("link").style.opacity = "0";
-    setTimeout(function() {
-      document.getElementById("header").style.opacity = "0";
-      setTimeout(function() {
-        window.location = "";
-      }, 500);
-    }, 500);
+    window.location = "";
   } else if (e.keyCode == "38") {
     if (dimScreen !== 1) {
       dimScreen = dimScreen + 0.1;
-      document.getElementById("body").style.opacity = dimScreen;
+      opacity("body", dimScreen, 0);
     }
   } else if (e.keyCode == "40") {
     if (dimScreen > 0) {
       dimScreen = dimScreen - 0.1;
-      document.getElementById("body").style.opacity = dimScreen;
+      opacity("body", dimScreen, 0);
     }
   } else if (e.keyCode == "71") {
     if (getCookie("grayscaleBackCOOKIE") == 0) {
@@ -738,42 +725,42 @@ setTimeout(function() {
     iconLinkMouseover(1, "https://www.google.com/");
   }
   document.getElementById("link1").onmouseout = function() {
-    document.getElementById("link1").style.opacity = "0.7";
+    opacity("link1", 0.7, 0);
     document.getElementById("link1").style.webkitFilter = "grayscale(1)";
   }
   document.getElementById("link2").onmouseover = function() {
     iconLinkMouseover(2, "https://www.twitter.com/");
   }
   document.getElementById("link2").onmouseout = function() {
-    document.getElementById("link2").style.opacity = "0.7";
+    opacity("link2", 0.7, 0);
     document.getElementById("link2").style.webkitFilter = "grayscale(1)";
   }
   document.getElementById("link3").onmouseover = function() {
     iconLinkMouseover(3, "https://www.facebook.com/");
   }
   document.getElementById("link3").onmouseout = function() {
-    document.getElementById("link3").style.opacity = "0.7";
+    opacity("link3", 0.7, 0);
     document.getElementById("link3").style.webkitFilter = "grayscale(1)";
   }
   document.getElementById("link4").onmouseover = function() {
     iconLinkMouseover(4, "https://www.youtube.com/");
   }
   document.getElementById("link4").onmouseout = function() {
-    document.getElementById("link4").style.opacity = "0.7";
+    opacity("link4", 0.7, 0);
     document.getElementById("link4").style.webkitFilter = "grayscale(1)";
   }
   document.getElementById("link5").onmouseover = function() {
     iconLinkMouseover(5, "https://www.pinterest.com/");
   }
   document.getElementById("link5").onmouseout = function() {
-    document.getElementById("link5").style.opacity = "0.7";
+    opacity("link5", 0.7, 0);
     document.getElementById("link5").style.webkitFilter = "grayscale(1)";
   }
   document.getElementById("link6").onmouseover = function() {
     iconLinkMouseover(6, "https://www.instagram.com/");
   }
   document.getElementById("link6").onmouseout = function() {
-    document.getElementById("link6").style.opacity = "0.7";
+    opacity("link6", 0.7, 0);
     document.getElementById("link6").style.webkitFilter = "grayscale(1)";
   }
 }, 100);
@@ -795,22 +782,14 @@ var hour = 0;
 function timer() {
   var secondCount;
   secondCount = setInterval(time, 1000);
-  document.getElementById("timer").style.opacity = "1";
-  document.getElementById("optionsMenu").style.opacity = "0";
-  document.getElementById("optionsImg").style.visibility = "visible";
-  setTimeout(function() {
-    document.getElementById("optionsImg").style.opacity = "1";
-    document.getElementById("optionsMenu").style.visibility = "hidden";
-  }, 1100);
+  opacity("timer", 1, 0);
 
   document.getElementById("timerButton").innerHTML = "<span id='timerStop'><a>Stop the timer</a></span>";
 
   document.getElementById("timerStop").addEventListener("click", function() {
     document.getElementById("timerButton").innerHTML = "Timer stopped.";
     clearInterval(secondCount);
-    setTimeout(function() {
-      document.getElementById("timer").style.opacity = "0";
-    }, 500);
+    opacity("timer", 0, 500);
   }, false);
 }
 
@@ -861,11 +840,9 @@ function time() {
 }
 
 setInterval(function() {
-  document.getElementById("header").style.opacity = "0";
+  opacity("header", 0, 0);
   setTimeout(function() {
     backgroundChange("random");
   }, 600);
-  setTimeout(function() {
-    document.getElementById("header").style.opacity = "1";
-  }, 900);
+  opacity("header", 1, 900);
 }, 600000);

@@ -176,6 +176,8 @@ img > #link {
 	position: relative;
   z-index: 1;
   cursor: default;
+  opacity: 0;
+  transition: opacity 1s;
 }
 
 #dateAlert {

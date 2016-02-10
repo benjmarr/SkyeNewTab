@@ -1,8 +1,8 @@
 // Copyright Benjamin (c) All rights reserved - 2016
 
 console.log("Skye New Tab page copyright (c) Benjamin, 2016 - All rights reserved.");
-var backgroundNumber = Array(41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,37,38,39,40);
-document.getElementById("ImageUpdateDate").innerHTML = "Sunday, 31<sup>st</sup> January 2016";
+var backgroundNumber = Array(41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60);
+document.getElementById("ImageUpdateDate").innerHTML = "Wednesday, 10<sup>th</sup> February 2016";
 // NOTE Maximum of 20 backgrounds NOTE Add number onto end for new images, delete lowest number (This is just a weird developer note)
 var PAGEurl = "https://github.com/BenAndy/SkyeNewTab/tree/master";
 var randBack = function() {
@@ -177,14 +177,14 @@ if (currentBackgroundID === 41) {
   unsplashImageData("https://unsplash.com/photos/R3LcfTvcGWY", "Annie Spratt", "https://unsplash.com/fableandfolk");
 } else if (currentBackgroundID === 56) {
   unsplashImageData("https://unsplash.com/photos/GSzD6vGIWKM", "Mickey O'neil", "https://unsplash.com/mickeyoneil");
-} else if (currentBackgroundID === 37) {
-  unsplashImageData("", "", "");
-} else if (currentBackgroundID === 38) {
-  unsplashImageData("", "", "");
-} else if (currentBackgroundID === 39) {
-  unsplashImageData("", "", "");
-} else if (currentBackgroundID === 40) {
-  unsplashImageData("", "", "");
+} else if (currentBackgroundID === 57) {
+  unsplashImageData("https://unsplash.com/photos/uAgLGG1WBd4", "Scott Webb", "https://unsplash.com/scottwebb");
+} else if (currentBackgroundID === 58) {
+  unsplashImageData("https://unsplash.com/photos/JibIPPrvITE", "Micheal Hull", "https://unsplash.com/michaelhull");
+} else if (currentBackgroundID === 59) {
+  unsplashImageData("https://unsplash.com/photos/-wWRHIUklxM", "Vladimir Kudinov", "https://unsplash.com/madbyte");
+} else if (currentBackgroundID === 60) {
+  unsplashImageData("https://unsplash.com/photos/tBtuxtLvAZs", "Matthew Wiebe", "https://unsplash.com/matthewwiebe");
 };
 
 function setCookie(cname, cvalue, exdays) {

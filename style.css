@@ -61,6 +61,7 @@ img > #link {
   padding-top: 30px;
   padding-left: 10px;
   padding-bottom: 10px;
+  margin-top: -5%;
   transition: width 1s, height 1s, opacity 0.2s;
 }
 

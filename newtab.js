@@ -330,6 +330,7 @@ document.getElementById("optionsImg").addEventListener("click", function() {
   opacity("optionsImg", 0, 0);
   opacity("shortcutMenu", 0, 0);
   opacity("dateFormatMenu", 0, 0);
+  opacity("iconVisibilitySettings", 0, 0);
   setTimeout(function() {
     document.getElementById("optionsImg").style.visibility = "hidden";
     document.getElementById("shortcutMenu").style.visibility = "hidden";
@@ -446,8 +447,9 @@ setTimeout(function() {
   }, 1500);
 }, 50);
 
-setTimeout(function() {
-  setInterval(function() {
+var checkIconVisiInterval;
+var checkIconVisi = function() {
+  checkIconVisiInterval = setInterval(function() {
     if (getCookie("iconVisi") === "0") {
       opacity("link1", 0.8, 0);
       opacity("link2", 0.8, 0);
@@ -503,6 +505,9 @@ setTimeout(function() {
       opacity("link6", 0, 0);
     };
   }, 100);
+};
+setTimeout(function() {
+  checkIconVisi();
 }, 2000);
 
 var tday = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
@@ -723,45 +728,57 @@ var iconLinkMouseover = function(linkID, linkURL) {
 setTimeout(function() {
   document.getElementById("link1").onmouseover = function() {
     iconLinkMouseover(1, "https://www.google.com/");
+    clearInterval(checkIconVisiInterval);
   }
   document.getElementById("link1").onmouseout = function() {
     opacity("link1", 0.7, 0);
     document.getElementById("link1").style.webkitFilter = "grayscale(1)";
+    checkIconVisi();
   }
   document.getElementById("link2").onmouseover = function() {
     iconLinkMouseover(2, "https://www.twitter.com/");
+    clearInterval(checkIconVisiInterval);
   }
   document.getElementById("link2").onmouseout = function() {
     opacity("link2", 0.7, 0);
     document.getElementById("link2").style.webkitFilter = "grayscale(1)";
+    checkIconVisi();
   }
   document.getElementById("link3").onmouseover = function() {
     iconLinkMouseover(3, "https://www.facebook.com/");
+    clearInterval(checkIconVisiInterval);
   }
   document.getElementById("link3").onmouseout = function() {
     opacity("link3", 0.7, 0);
     document.getElementById("link3").style.webkitFilter = "grayscale(1)";
+    checkIconVisi();
   }
   document.getElementById("link4").onmouseover = function() {
     iconLinkMouseover(4, "https://www.youtube.com/");
+    clearInterval(checkIconVisiInterval);
   }
   document.getElementById("link4").onmouseout = function() {
     opacity("link4", 0.7, 0);
     document.getElementById("link4").style.webkitFilter = "grayscale(1)";
+    checkIconVisi();
   }
   document.getElementById("link5").onmouseover = function() {
     iconLinkMouseover(5, "https://www.pinterest.com/");
+    clearInterval(checkIconVisiInterval);
   }
   document.getElementById("link5").onmouseout = function() {
     opacity("link5", 0.7, 0);
     document.getElementById("link5").style.webkitFilter = "grayscale(1)";
+    checkIconVisi();
   }
   document.getElementById("link6").onmouseover = function() {
     iconLinkMouseover(6, "https://www.instagram.com/");
+    clearInterval(checkIconVisiInterval);
   }
   document.getElementById("link6").onmouseout = function() {
     opacity("link6", 0.7, 0);
     document.getElementById("link6").style.webkitFilter = "grayscale(1)";
+    checkIconVisi();
   }
 }, 100);
 

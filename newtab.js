@@ -36,6 +36,17 @@ var opacity = function(id, opacity, delay) {
   }, delay);
 };
 
+// grayscale() method
+var grayscale = function(id, delay, truefalse) {
+  setTimeout(function() {
+    if (truefalse) {
+      document.getElementById(id).style.webkitFilter = "grayscale(1)";
+    } else {
+      document.getElementById(id).style.webkitFilter = "grayscale(0)";
+    };
+  }, delay);
+};
+
 // backgroundChange() method
 var currentBackgroundID;
 var backgroundChange = function(id) {
@@ -438,13 +449,11 @@ setTimeout(function() {
   opacity("body", 1, 0);
   opacity("optionsImg", 1, 1500);
   opacity("unsplash", 1, 3500);
-  setTimeout(function() {
-    if (getCookie("grayscaleBackCOOKIE") == 0) {
-      document.getElementById("header").style.webkitFilter = "grayscale(0)";
-    } else {
-      document.getElementById("header").style.webkitFilter = "grayscale(1)";
-    };
-  }, 1500);
+  if (getCookie("grayscaleBackCOOKIE") == 0) {
+    grayscale("header", 1500, false);
+  } else {
+    grayscale("header", 1500, true);
+  };
 }, 50);
 
 var checkIconVisiInterval;
@@ -457,22 +466,12 @@ var checkIconVisi = function() {
       opacity("link4", 0.8, 0);
       opacity("link5", 0.8, 0);
       opacity("link6", 0.8, 0);
-      document.getElementById("link1").style.webkitFilter = "grayscale(1)";
-      setTimeout(function() {
-        document.getElementById("link2").style.webkitFilter = "grayscale(1)";
-        setTimeout(function() {
-          document.getElementById("link3").style.webkitFilter = "grayscale(1)";
-          setTimeout(function() {
-            document.getElementById("link4").style.webkitFilter = "grayscale(1)";
-            setTimeout(function() {
-              document.getElementById("link5").style.webkitFilter = "grayscale(1)";
-              setTimeout(function() {
-                document.getElementById("link6").style.webkitFilter = "grayscale(1)";
-              }, 500);
-            }, 500);
-          }, 500);
-        }, 500);
-      }, 500);
+      grayscale("link1", 0, true);
+      grayscale("link2", 500, true);
+      grayscale("link3", 1000, true);
+      grayscale("link4", 1500, true);
+      grayscale("link5", 2000, true);
+      grayscale("link6", 2500, true);
     } else if (getCookie("iconVisi") === "1") {
       opacity("link1", 0.8, 0);
       opacity("link2", 0.8, 0);
@@ -480,22 +479,12 @@ var checkIconVisi = function() {
       opacity("link4", 0.8, 0);
       opacity("link5", 0.8, 0);
       opacity("link6", 0.8, 0);
-      document.getElementById("link1").style.webkitFilter = "grayscale(0)";
-      setTimeout(function() {
-        document.getElementById("link2").style.webkitFilter = "grayscale(0)";
-        setTimeout(function() {
-          document.getElementById("link3").style.webkitFilter = "grayscale(0)";
-          setTimeout(function() {
-            document.getElementById("link4").style.webkitFilter = "grayscale(0)";
-            setTimeout(function() {
-              document.getElementById("link5").style.webkitFilter = "grayscale(0)";
-              setTimeout(function() {
-                document.getElementById("link6").style.webkitFilter = "grayscale(0)";
-              }, 500);
-            }, 500);
-          }, 500);
-        }, 500);
-      }, 500);
+      grayscale("link1", 0, false);
+      grayscale("link2", 500, false);
+      grayscale("link3", 1000, false);
+      grayscale("link4", 1500, false);
+      grayscale("link5", 2000, false);
+      grayscale("link6", 2500, false);
     } else if (getCookie("iconVisi") === "2") {
       opacity("link1", 0, 0);
       opacity("link2", 0, 0);
@@ -696,10 +685,10 @@ document.addEventListener("keydown", function(e) {
     }
   } else if (e.keyCode == "71") {
     if (getCookie("grayscaleBackCOOKIE") == 0) {
-      document.getElementById("header").style.webkitFilter = "grayscale(1)";
+      grayscale("header", 0, true);
       setCookie("grayscaleBackCOOKIE", 1, 365);
     } else {
-      document.getElementById("header").style.webkitFilter = "grayscale(0)";
+      grayscale("header", 0, false);
       setCookie("grayscaleBackCOOKIE", 0, 365);
     }
   } else if (e.keyCode == "123") {
@@ -732,7 +721,7 @@ setTimeout(function() {
   }
   document.getElementById("link1").onmouseout = function() {
     opacity("link1", 0.7, 0);
-    document.getElementById("link1").style.webkitFilter = "grayscale(1)";
+    grayscale("link1", 0, true);
     checkIconVisi();
   }
   document.getElementById("link2").onmouseover = function() {
@@ -741,7 +730,7 @@ setTimeout(function() {
   }
   document.getElementById("link2").onmouseout = function() {
     opacity("link2", 0.7, 0);
-    document.getElementById("link2").style.webkitFilter = "grayscale(1)";
+    grayscale("link2", 0, true);
     checkIconVisi();
   }
   document.getElementById("link3").onmouseover = function() {
@@ -750,7 +739,7 @@ setTimeout(function() {
   }
   document.getElementById("link3").onmouseout = function() {
     opacity("link3", 0.7, 0);
-    document.getElementById("link3").style.webkitFilter = "grayscale(1)";
+    grayscale("link3", 0, true);
     checkIconVisi();
   }
   document.getElementById("link4").onmouseover = function() {
@@ -759,7 +748,7 @@ setTimeout(function() {
   }
   document.getElementById("link4").onmouseout = function() {
     opacity("link4", 0.7, 0);
-    document.getElementById("link4").style.webkitFilter = "grayscale(1)";
+    grayscale("link4", 0, true);
     checkIconVisi();
   }
   document.getElementById("link5").onmouseover = function() {
@@ -768,7 +757,7 @@ setTimeout(function() {
   }
   document.getElementById("link5").onmouseout = function() {
     opacity("link5", 0.7, 0);
-    document.getElementById("link5").style.webkitFilter = "grayscale(1)";
+    grayscale("link5", 0, true);
     checkIconVisi();
   }
   document.getElementById("link6").onmouseover = function() {
@@ -777,7 +766,7 @@ setTimeout(function() {
   }
   document.getElementById("link6").onmouseout = function() {
     opacity("link6", 0.7, 0);
-    document.getElementById("link6").style.webkitFilter = "grayscale(1)";
+    grayscale("link6", 0, true);
     checkIconVisi();
   }
 }, 100);

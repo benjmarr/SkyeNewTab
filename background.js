@@ -3,7 +3,7 @@
 console.log("background.js loaded.");
 
 var backgroundNumber = Array(41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60);
-document.getElementById("ImageUpdateDate").innerHTML = "Wednesday, 10<sup>th</sup> February 2016";
+document.getElementById("ImageUpdateDate").innerHTML = "Sunday, 14<sup>th</sup> February 2016";
 // NOTE Maximum of 20 backgrounds NOTE Add number onto end for new images, delete lowest number (This is just a weird developer note)
 var randBack = function() {
   return backgroundNumber[Math.floor(Math.random() * backgroundNumber.length)];

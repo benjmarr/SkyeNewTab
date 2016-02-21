@@ -2,8 +2,8 @@
 
 console.log("background.js loaded.");
 
-var backgroundNumber = Array(41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60);
-document.getElementById("ImageUpdateDate").innerHTML = "Sunday, 14<sup>th</sup> February 2016";
+var backgroundNumber = Array(61,62,63,64,65,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60);
+document.getElementById("ImageUpdateDate").innerHTML = "Sunday, 21<sup>st</sup> February 2016";
 // NOTE Maximum of 20 backgrounds NOTE Add number onto end for new images, delete lowest number (This is just a weird developer note)
 var randBack = function() {
   return backgroundNumber[Math.floor(Math.random() * backgroundNumber.length)];
@@ -118,16 +118,16 @@ var unsplashImageData = function(imgUrl, imgAuth, imgAuthPro) {
   // Feature soon to come
 };
 
-if (currentBackgroundID === 41) {
-
+if (currentBackgroundID === 61) {
+  unsplashImageData("https://unsplash.com/photos/7ALI0RYyq6s", "Мартин Тасев", "https://unsplash.com/pumabg");
 } else if (currentBackgroundID === 42) {
-  unsplashImageData("https://unsplash.com/photos/hIMdKs_0cSE", "Sylvain Guiheneuc", "https://unsplash.com/sylvain_guiheneuc");
+  unsplashImageData("https://unsplash.com/photos/bClr95glx6k", "Vashishta Jogi", "https://unsplash.com/jogi");
 } else if (currentBackgroundID === 43) {
-  unsplashImageData("https://unsplash.com/photos/T8gIOL3_sdI", "Frances Gunn", "https://unsplash.com/francesgunn");
+  unsplashImageData("https://unsplash.com/photos/_h7aBovKia4", "Philippe Wuyts", "https://unsplash.com/photos/_h7aBovKia4");
 } else if (currentBackgroundID === 44) {
-  unsplashImageData("https://unsplash.com/photos/85hdWh8KtR4", "Jean-Marie Grange", "https://unsplash.com/jeanmariegrange");
+  unsplashImageData("https://unsplash.com/photos/-oWyJoSqBRM", "Alexey Topolyanskiy", "https://unsplash.com/devilcoders");
 } else if (currentBackgroundID === 45) {
-  unsplashImageData("https://unsplash.com/photos/FQgHHJzbwo0", "Leeroy", "https://unsplash.com/leeroy");
+  unsplashImageData("https://unsplash.com/photos/93Ep1dhTd2s", "William Hook", "https://unsplash.com/williamtm")
 } else if (currentBackgroundID === 46) {
   unsplashImageData("https://unsplash.com/photos/ywnnwzcdR5o", "Jonathan Bean", "https://unsplash.com/jonathanbean");
 } else if (currentBackgroundID === 47) {

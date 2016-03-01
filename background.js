@@ -2,7 +2,7 @@
 
 console.log("background.js loaded.");
 
-var backgroundNumber = Array(61,62,63,64,65,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60);
+var backgroundNumber = Array(61,62,63,64,65,66,67,68,49,50,51,52,53,54,55,56,57,58,59,60);
 document.getElementById("ImageUpdateDate").innerHTML = "Sunday, 21<sup>st</sup> February 2016";
 // NOTE Maximum of 20 backgrounds NOTE Add number onto end for new images, delete lowest number (This is just a weird developer note)
 var randBack = function() {
@@ -120,20 +120,20 @@ var unsplashImageData = function(imgUrl, imgAuth, imgAuthPro) {
 
 if (currentBackgroundID === 61) {
   unsplashImageData("https://unsplash.com/photos/7ALI0RYyq6s", "Мартин Тасев", "https://unsplash.com/pumabg");
-} else if (currentBackgroundID === 42) {
+} else if (currentBackgroundID === 62) {
   unsplashImageData("https://unsplash.com/photos/bClr95glx6k", "Vashishta Jogi", "https://unsplash.com/jogi");
-} else if (currentBackgroundID === 43) {
+} else if (currentBackgroundID === 63) {
   unsplashImageData("https://unsplash.com/photos/_h7aBovKia4", "Philippe Wuyts", "https://unsplash.com/photos/_h7aBovKia4");
-} else if (currentBackgroundID === 44) {
+} else if (currentBackgroundID === 64) {
   unsplashImageData("https://unsplash.com/photos/-oWyJoSqBRM", "Alexey Topolyanskiy", "https://unsplash.com/devilcoders");
-} else if (currentBackgroundID === 45) {
+} else if (currentBackgroundID === 65) {
   unsplashImageData("https://unsplash.com/photos/93Ep1dhTd2s", "William Hook", "https://unsplash.com/williamtm")
-} else if (currentBackgroundID === 46) {
-  unsplashImageData("https://unsplash.com/photos/ywnnwzcdR5o", "Jonathan Bean", "https://unsplash.com/jonathanbean");
-} else if (currentBackgroundID === 47) {
-  unsplashImageData("https://unsplash.com/photos/r75qppvP-FE", "Eric Huang", "https://unsplash.com/erichuang78910");
-} else if (currentBackgroundID === 48) {
-  unsplashImageData("https://unsplash.com/photos/DjlKxYFJlTc", "Elliott Engelmann", "https://unsplash.com/elliottengelmann");
+} else if (currentBackgroundID === 66) {
+  unsplashImageData("https://unsplash.com/photos/KqVHRmHVwwM", "Erez Attias", "https://unsplash.com/erezattias");
+} else if (currentBackgroundID === 67) {
+  unsplashImageData("https://unsplash.com/photos/E7q00J_8N7A", "NASA", "https://unsplash.com/nasa");
+} else if (currentBackgroundID === 68) {
+  unsplashImageData("https://unsplash.com/photos/U5rMrSI7Pn4", "Metthew Wiebe", "https://unsplash.com/matthewwiebe");
 } else if (currentBackgroundID === 49) {
   unsplashImageData("https://unsplash.com/photos/Xwk4gkiMNGc", "Oliver & Hen Pritchard-Barrett", "https://unsplash.com/olliepb");
 } else if (currentBackgroundID === 50) {

@@ -80,6 +80,11 @@ img > #link {
   height: 10%;
 }
 
+#imageInformationX {
+  width: 10%;
+  height: 10%;
+}
+
 #shortcutX {
   width: 10%;
   height: 10%;
@@ -136,6 +141,23 @@ img > #link {
   transition: opacity 0.5s;
 }
 
+#imageInformationMenu {
+  background-color: black;
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  font-size: 120%;
+  transition: opacity 0.5s;
+}
+
 #optionsMenu {
   background-color: black;
   border-radius: 10px;
@@ -145,7 +167,7 @@ img > #link {
   padding-right: 10px;
   margin-left: 20%;
   margin-right: 20%;
-  margin-top: 6%;
+  margin-top: 2%;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s;

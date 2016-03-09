@@ -186,6 +186,7 @@ document.getElementById("optionsImg").addEventListener("click", function() {
   opacity("shortcutMenu", 0, 0);
   opacity("dateFormatMenu", 0, 0);
   opacity("iconVisibilitySettings", 0, 0);
+  opacity("imageInformationMenu", 0, 0);
   setTimeout(function() {
     document.getElementById("optionsImg").style.visibility = "hidden";
     document.getElementById("shortcutMenu").style.visibility = "hidden";
@@ -496,6 +497,7 @@ document.addEventListener("keydown", function(e) {
     opacity("shortcutMenu", 0, 0);
     opacity("dateFormatMenu", 0, 0);
     opacity("iconVisibilitySettings", 0, 0);
+    opacity("imageInformationMenu", 0, 0);
     opacity("optionsImg", 0.9, 600);
     setTimeout(function() {
       document.getElementById("optionsMenu").style.visibility = "hidden";
@@ -510,6 +512,7 @@ document.addEventListener("keydown", function(e) {
     opacity("shortcutMenu", 0, 0);
     opacity("dateFormatMenu", 0, 0);
     opaicty("iconVisibilitySettings", 0, 0);
+    opacity("imageInformationMenu", 0, 0);
     setTimeout(function() {
       document.getElementById("shortcutMenu").style.visibility = "hidden";
       document.getElementById("dateFormatMenu").style.visibility = "hidden";

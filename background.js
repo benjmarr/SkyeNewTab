@@ -115,7 +115,9 @@ if (getCookie("setBack") === "") {
 
 // Image data
 var unsplashImageData = function(imgUrl, imgAuth, imgAuthPro) {
-  // Feature soon to come
+  document.getElementById("imgUrlBOX").innerHTML = "<a href='" + imgUrl + "' target='_blank'>" + imgUrl + "</a>";
+  document.getElementById("imgAuthBOX").innerHTML = imgAuth;
+  document.getElementById("imgAuthProBOX").innerHTML = "<a href='" + imgAuthPro + "' target='_blank'>" + imgAuthPro + "</a>";
 };
 
 if (currentBackgroundID === 61) {
@@ -159,3 +161,21 @@ if (currentBackgroundID === 61) {
 } else if (currentBackgroundID === 60) {
   unsplashImageData("https://unsplash.com/photos/tBtuxtLvAZs", "Matthew Wiebe", "https://unsplash.com/matthewwiebe");
 };
+
+document.getElementById("optionIMAGEDATA").addEventListener("click", function() {
+  document.getElementById("imageInformationMenu").style.visibility = "visible";
+  opacity("imageInformationMenu", 0.9, 0);
+  document.getElementById("optionsImg").style.visibility = "visible";
+  opacity("optionsImg", 1, 0);
+  opacity("optionsMenu", 0, 0);
+  setTimeout(function() {
+    document.getElementById("optionsMenu").style.visibility = "hidden";
+  }, 600);
+}, false);
+
+document.getElementById("imageInformationX").addEventListener("click", function() {
+  opacity("imageInformationMenu", 0, 0);
+  setTimeout(function() {
+    document.getElementById("imageInformationMenu").style.visibility = "hidden";
+  }, 600);
+}, false);

@@ -1,5 +1,5 @@
 {
-  "version": "1.14.113",
+  "version": "2.14.121",
   "name": "Skye New Tab",
   "short_name": "Skye New Tab",
   "description": "Replace your new tab page with a more modern page! Featuring time, dates, many background images, welcome messages and more!",
@@ -9,7 +9,7 @@
   "homepage_url": "http://benandy.github.io/skye",
   "incognito": "split",
   "icons": {
-    "128": "content/favicon128x128.png"
+    "128": "assets/images/favicon128x128.png"
   },
   "chrome_url_overrides": {
     "newtab": "index.html"

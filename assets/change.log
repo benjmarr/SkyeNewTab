@@ -30,3 +30,6 @@ Changed the old cookie policy link (http://benandy.github.io/skye/cookiepolicy) 
 
 v2.14.123:
 Fixed small issue where the second date formatting option was missing a space between the month and the date values.
+
+v2.14.124:
+Added terms and conditions link into footers.

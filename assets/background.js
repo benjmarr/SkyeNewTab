@@ -3,8 +3,8 @@
 console.log("background.js loaded.");
 
 // Random background selection script
-var backgroundNames = Array(61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 54, 55, 56, 57, 58, 59, 60);
-var imageUpdateDate = "Sunday, 21<sup>st</sup> February 2016";
+var backgroundNames = Array(61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 57, 58, 59, 60);
+var imageUpdateDate = "Sunday, 31<sup>st</sup> February 2016";
 var backgroundNumber = function() {
   return backgroundNames[Math.floor(Math.random() * backgroundNames.length)];
 };
@@ -92,12 +92,12 @@ var backImageData = function() {
     backImgInfo("https://unsplash.com/photos/HkTMcmlMOUQ", "Ales Krivec", "https://unsplash.com/aleskrivec");
   } else if (setBackID === 73) {
     backImgInfo("https://unsplash.com/photos/xcC5ozHk_N8", "Joseph Barrientos", "https://unsplash.com/thata7guy");
-  } else if (setBackID === 54) {
-    backImgInfo("https://unsplash.com/photos/6-jTZysYY_U", "NASA", "https://unsplash.com/nasa");
-  } else if (setBackID === 55) {
-    backImgInfo("https://unsplash.com/photos/R3LcfTvcGWY", "Annie Spratt", "https://unsplash.com/fableandfolk");
-  } else if (setBackID === 56) {
-    backImgInfo("https://unsplash.com/photos/GSzD6vGIWKM", "Mickey O'neil", "https://unsplash.com/mickeyoneil");
+  } else if (setBackID === 74) {
+    backImgInfo("https://unsplash.com/photos/sai-x7brics", "Alexandre Perotto", "https://unsplash.com/perotto");
+  } else if (setBackID === 75) {
+    backImgInfo("https://unsplash.com/photos/vC-GqGbakJo", "Clark Street Mercantile", "https://unsplash.com/mercantile");
+  } else if (setBackID === 76) {
+    backImgInfo("https://unsplash.com/photos/_SmZSuZwkHg", "Setfan Kunze", "https://unsplash.com/stefankunze");
   } else if (setBackID === 57) {
     backImgInfo("https://unsplash.com/photos/uAgLGG1WBd4", "Scott Webb", "https://unsplash.com/scottwebb");
   } else if (setBackID === 58) {

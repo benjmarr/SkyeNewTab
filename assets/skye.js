@@ -236,6 +236,8 @@ document.addEventListener("keydown", function(e) {
     setTimeout(function() {
       setBack("random");
     }, 1000);
+  } else if (e.keyCode === 71) {
+    opGryscl();
   };
 }, false);
 
@@ -385,6 +387,24 @@ document.getElementById("opTwntyFrHrTm").addEventListener("click", function() {
     document.getElementById("opTwntyFrHrTm").innerHTML = "Change to 24 hour time";
   };
 }, false);
+if (getCookie("opGryscl") === "") {
+  setCookie("opGryscl", false, 365);
+} else if (getCookie("opGryscl") === "true") {
+  styleGrayscale(0, "header", "true");
+};
+var opGryscl = function() {
+  if (getCookie("opGryscl") === "true") {
+    setCookie("opGryscl", "false", 365);
+    styleGrayscale(0, "header", "false");
+  } else {
+    setCookie("opGryscl", "true", 365);
+    styleGrayscale(0, "header", "true");
+  };
+};
+document.getElementById("opGryscl").addEventListener("click", function() {
+  opGryscl();
+}, false);
+
 
 // Run when page finished loading
 window.onload = function() {

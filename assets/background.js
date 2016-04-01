@@ -29,8 +29,12 @@ var setBack = function(id) {
 // Five minute background change
 var newBackID;
 newBackTimer = setInterval(function() {
-  styleOpacity(0, "header", "0");
+  styleGrayscale(0, "header", "true");
+  styleOpacity(200, "header", "0");
   styleOpacity(1100, "header", "1");
+  if (getCookie("opGryscl") === "false") {
+    styleGrayscale(1300, "header", "false");
+  };
   setTimeout(function() {
     setBack("random");
   }, 1000);
@@ -39,8 +43,12 @@ newBackTimer = setInterval(function() {
 // New background image option
 var opChBkImgFnctn = function() {
   clearInterval(newBackTimer);
-  styleOpacity(0, "header", 0);
+  styleGrayscale(0, "header", "true");
+  styleOpacity(200, "header", "0");
   styleOpacity(1100, "header", "1");
+  if (getCookie("opGryscl") === "false") {
+    styleGrayscale(1300, "header", "false");
+  };
   setTimeout(function() {
     setBack("random");
   }, 1000);

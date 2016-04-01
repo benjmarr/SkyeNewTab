@@ -21,6 +21,7 @@ header {
   z-index: -1;
   background-size: cover;
   opacity: 0.8;
+  -webkit-filter: grayscale(1);
   transition: -webkit-filter 1s, opacity 1s;
 }
 

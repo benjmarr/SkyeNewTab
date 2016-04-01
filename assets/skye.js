@@ -231,11 +231,7 @@ document.addEventListener("keydown", function(e) {
     styleVisibility(1000, "opM", "visible");
     styleOpacity(1000, "opM", 0.9);
   } else if (e.keyCode === 78) {
-    styleOpacity(0, "header", "0");
-    styleOpacity(1100, "header", "1");
-    setTimeout(function() {
-      setBack("random");
-    }, 1000);
+    opChBkImgFnctn();
   } else if (e.keyCode === 71) {
     opGryscl();
   };
@@ -409,6 +405,9 @@ document.getElementById("opGryscl").addEventListener("click", function() {
 // Run when page finished loading
 window.onload = function() {
   styleOpacity(0, "body", 1);
+  if (getCookie("opGryscl") === "false") {
+    styleGrayscale(100, "header", "false");
+  };
   styleOpacity(200, "options", 1);
   styleOpacity(400, "unsplash", 1);
   styleOpacity(600, "title", 1);

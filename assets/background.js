@@ -1,7 +1,5 @@
 // Copyright Benjamin Developments (c) 2015 - All rights reserved
 
-console.log("background.js loaded.");
-
 // Random background selection script
 var backgroundNames = Array(61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 57, 58, 59, 60);
 var imageUpdateDate = "Sunday, 31<sup>st</sup> February 2016";

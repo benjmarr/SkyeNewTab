@@ -45,3 +45,10 @@ Added grayscale animations when changing background images.
 
 v2.14.128:
 Fixed change log URL.
+
+v2.14.129:
+Small changes.
+
+v2.14.130:
+Added new search engines to the search box. You can change the search engine you search with in the options menu, under "Search box options".
+Moved search box visibility settings to "Search box options", under the options menu.

@@ -38,7 +38,7 @@
       <br />&bull;<a><span id="opChBkImg">Change the background image</span></a>
       <br />&bull;<a><span id="opChngNme">Change or remove your name</span></a>
       <br />&bull;<a><span id="opChngeDteFrmt">Change the date formatting</span></a>
-      <br />&bull;<a><span id="opGSearch"></span></a>
+      <br />&bull;<a><span id="opSrchBx">Search box options</span></a>
       <br />&bull;<a><span id="opIcnVsblty">Icon link display options</span></a>
       <br />&bull;<a><span id="opWlcmMsgs"></span></a>
       <br />&bull;<a><span id="opTwntyFrHrTm"></span></a>
@@ -90,10 +90,15 @@
       <br />"N" &bull; Change the background image
       <br />"G" &bull; Toggle background grayscale
     </div>
-    <form method="get" action="https://www.google.com/search" id="gSearchF">
-      <img src="assets/images/link/google.png" alt="Google Search" class="gSearchImg" />
-      <input type="text" name="q" size="31" id="gSearch" />
-    </form>
+    <div class="optionsMenu" id="srchBxChcs">
+      <img src="assets/images/x.png" alt="Close" class="x" id="srchBxChcsclose" />
+      <div class="opTtl">Seacrh box engines</div>
+      <br />&bull;<a><span id="srchBxChcsHS"></span></a>
+      <br />&bull;<a><span id="srchBxChcs1"></span></a>
+      <br />&bull;<a><span id="srchBxChcs2"></span></a>
+      <br />&bull;<a><span id="srchBxChcs3"></span></a>
+    </div>
+    <div id="srchBx"></div>
     <div class="optionsMenu" id="ckiUpd">
       <img src="assets/images/x.png" alt="Close" class="x" id="ckiUpdclose" />
       <div class="opTtl">Cookies Updated</div>
@@ -105,5 +110,6 @@
     <script src="assets/skye.js"></script>
     <script src="assets/background.js"></script>
     <script src="assets/links.js"></script>
+    <script src="assets/searchBox.js"></script>
   </body>
 </html>

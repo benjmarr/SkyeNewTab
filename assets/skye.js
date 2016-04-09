@@ -1,8 +1,7 @@
 // Copyright Benjamin Developments (c) 2015 - All rights reserved
 console.log("Skye New Tab copyright Benjamin Developments (c) 2015 - All rights reserved");
-console.log("skye.js loaded.");
 var rootUrl = "https://github.com/BenAndy/SkyeNewTab/tree/master";
-var ckiUpdDte = "March 31, 2016";
+var ckiUpdDte = "April 10, 2016";
 
 // Cookie handlers
 function setCookie(cname, cvalue, exdays) {
@@ -77,6 +76,8 @@ var clearMenu = function(opB) {
   styleVisibility(300, "kybdCntrls", "hidden");
   styleOpacity(0, "ckiUpd", 0);
   styleVisibility(300, "ckiUpd", "hidden");
+  styleOpacity(0, "srchBxChcs", 0);
+  styleVisibility(300, "srchBxChcs", "hidden");
   if (opB === "true") {
     styleVisibility(0, "options", "visible");
     styleOpacity(0, "options", 1);
@@ -312,28 +313,6 @@ document.getElementById("opDteFom3").addEventListener("click", function() {
 document.getElementById("opDteFom4").addEventListener("click", function() {
   setCookie("opDteFom", 4, 365);
 }, false);
-  // Hide or show the Google search box
-if (getCookie("opGSearch") === "") {
-  setCookie("opGSearch", "show", 365);
-  document.getElementById("opGSearch").innerHTML = "Hide the Google search box";
-} else if (getCookie("opGSearch") === "show") {
-  document.getElementById("opGSearch").innerHTML = "Hide the Google search box";
-} else {
-  document.getElementById("opGSearch").innerHTML = "Show the Google search box";
-}
-document.getElementById("opGSearch").addEventListener("click", function() {
-  if (getCookie("opGSearch") === "show") {
-    setCookie("opGSearch", "hide", 365);
-    document.getElementById("opGSearch").innerHTML = "Show the Google Search box";
-    styleOpacity(0, "gSearchF", 0);
-    styleVisibility(300, "gSearchF", "hidden");
-  } else {
-    setCookie("opGSearch", "show", 365);
-    document.getElementById("opGSearch").innerHTML = "Hide the Google search box";
-    styleOpacity(0, "gSearchF", 1);
-    styleVisibility(0, "gSearchF", "visible");
-  }
-}, false);
   // Hide or show the welcome messages
 if (getCookie("opWlcmMsgs") === "") {
   setCookie("opWlcmMsgs", "show", 365);
@@ -417,7 +396,5 @@ window.onload = function() {
     styleOpacity(1200, "alertBox", 1);
   };
   styleOpacity(1400, "linkDiv", 1);
-  if (getCookie("opGSearch") === "show") {
-    styleOpacity(1600, "gSearchF", 1);
-  };
+  setTimeout(opSrchBx, 1600);
 };

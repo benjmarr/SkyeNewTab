@@ -1,5 +1,4 @@
 // Copyright Benjamin Developments (c) 2015 - All rights reserved
-console.log("links.js loaded.");
 
 if (getCookie("opIcnVsblty") === "") {
   setCookie("opIcnVsblty", "1", 365);

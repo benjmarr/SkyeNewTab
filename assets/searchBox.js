@@ -5,25 +5,25 @@ if (getCookie("opSrchBx") === "") {
 };
 var opSrchBx = function() {
   if (getCookie("opSrchBx") === "hide") {
-    document.getElementById("srchBxChcsHS").innerHTML = "Show the search box";
+    innerHTML("srchBxChcsHS", "Show the search box");
     styleOpacity(0, "srchBx", 0);
     styleVisibility(300, "srchBx", "hidden");
   } else if (getCookie("opSrchBx") === "show") {
     setCookie("opSrchBx", "google", 365);
     opSrchBx();
   } else {
-    document.getElementById("srchBxChcsHS").innerHTML = "Hide the search box";
+    innerHTML("srchBxChcsHS", "Hide the search box");
     styleOpacity(0, "srchBx", 1);
     styleVisibility(0, "srchBx", "visible");
   };
   if (getCookie("opSrchBx") === "google") {
-    document.getElementById("srchBx").innerHTML = "<form method='get' action='https://www.google.com/search'><img src='assets/images/link/google.png' alt='Google Search' class='srchBxImg' /><input type='text' name='q' size='31' id='srchImg' /></form>";
+    innerHTML("srchBx", "<form method='get' action='https://www.google.com/search'><img src='assets/images/link/google.png' alt='Google Search' class='srchBxImg' /><input type='text' name='q' size='31' id='srchImg' /></form>");
   } else if (getCookie("opSrchBx") === "twitter") {
-    document.getElementById("srchBx").innerHTML = "<form method='get' action='https://www.twitter.com/search'><img src='assets/images/link/twtr.png' alt='Twitter Search' class='srchBxImg' /><input type='text' name='q' size='31' id='srchImg' /></form>";
+    innerHTML("srchBx", "<form method='get' action='https://www.twitter.com/search'><img src='assets/images/link/twtr.png' alt='Twitter Search' class='srchBxImg' /><input type='text' name='q' size='31' id='srchImg' /></form>");
   } else if (getCookie("opSrchBx") === "facebook") {
-    document.getElementById("srchBx").innerHTML = "<form method='get' action='https://www.facebook.com/search/top'><img src='assets/images/link/fb.png' alt='Facebook Search' class='srchBxImg' /><input type='text' name='q' size='31' id='srchImg' /></form>";
+    innerHTML("srchBx", "<form method='get' action='https://www.facebook.com/search/top'><img src='assets/images/link/fb.png' alt='Facebook Search' class='srchBxImg' /><input type='text' name='q' size='31' id='srchImg' /></form>");
   } else if (getCookie("opSrchBx") === "youtube") {
-    document.getElementById("srchBx").innerHTML = "<form method='get' action='https://www.youtube.com/results'><img src='assets/images/link/utube.png' alt='YouTube Search' class='srchBxImg' /><input type='text' name='search_query' size='31', id='srchImg' /></form>"
+    innerHTML("srchBx", "<form method='get' action='https://www.youtube.com/results'><img src='assets/images/link/utube.png' alt='YouTube Search' class='srchBxImg' /><input type='text' name='search_query' size='31', id='srchImg' /></form>");
   };
 };
 document.getElementById("opSrchBx").addEventListener("click", function() {
@@ -44,22 +44,22 @@ document.getElementById("srchBxChcsHS").addEventListener("click", function() {
   };
   opSrchBx();
 }, false);
-document.getElementById("srchBxChcs1").innerHTML = "Google Search Engine";
+innerHTML("srchBxChcs1", "Google Search Engine");
 document.getElementById("srchBxChcs1").addEventListener("click", function() {
   setCookie("opSrchBx", "google", 365);
   opSrchBx();
 }, false);
-document.getElementById("srchBxChcs2").innerHTML = "Twitter Search Engine";
+innerHTML("srchBxChcs2", "Twitter Search Engine");
 document.getElementById("srchBxChcs2").addEventListener("click", function() {
   setCookie("opSrchBx", "twitter", 365);
   opSrchBx();
 }, false);
-document.getElementById("srchBxChcs3").innerHTML = "Facebook Search Engine";
+innerHTML("srchBxChcs3", "Facebook Search Engine");
 document.getElementById("srchBxChcs3").addEventListener("click", function() {
   setCookie("opSrchBx", "facebook", 365);
   opSrchBx();
 }, false);
-document.getElementById("srchBxChcs4").innerHTML = "YouTube Search Engine";
+innerHTML("srchBxChcs4", "YouTube Search Engine");
 document.getElementById("srchBxChcs4").addEventListener("click", function() {
   setCookie("opSrchBx", "youtube", 365);
   opSrchBx();

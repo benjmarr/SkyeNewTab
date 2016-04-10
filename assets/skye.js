@@ -32,6 +32,11 @@ if (document.addEventListener) {
   });
 };
 
+// Custom 'document.getElementById().innerHTML' method
+var innerHTML = function(id, string) {
+  document.getElementById(id).innerHTML = string;
+};
+
 // Style methods
   // Opacity style
 var styleOpacity = function(delay, id, value) {
@@ -97,7 +102,7 @@ if (getCookie("ckiUpd") === ckiUpdDte) {
   setCookie("ckiUpd", ckiUpdDte, 365);
   styleVisibility(0, "ckiUpd", "visible");
   styleOpacity(0, "ckiUpd", 0.9);
-  document.getElementById("ckiUpdMsg").innerHTML = "New cookies have been added since you last visited this page. Cookies were last updated on " + ckiUpdDte + ". You can view our cookie polocy, privacy policy, terms of use and change log below.";
+  innerHTML("ckiUpdMsg", "New cookies have been added since you last visited this page. Cookies were last updated on " + ckiUpdDte + ". You can view our cookie policy, privacy policy, terms of use and change log below.");
 };
 document.getElementById("ckiUpdclose").addEventListener("click", function() {
   clearMenu("true");
@@ -160,65 +165,64 @@ function clock() {
   };
   if (tmonth[nmonth] === "January") {
     if (ndate === 1) {
-      document.getElementById("alertBox").innerHTML = "Happy new year!";
+      innerHTML("alertBox", "Happy new year!");
     };
   } else if (tmonth[nmonth] === "December") {
     if (ndate === 25) {
-      document.getElementById("alertBox").innerHTML = "Merry Christmas!";
+      innerHTML("alertBox", "Merry Christmas!");
     };
   } else {
     if (thour < 12) {
       if (getCookie("usingName") === "false") {
-        document.getElementById("alertBox").innerHTML = "Good morning";
+        innerHTML("alertBox", "Good morning");
       } else {
-        document.getElementById("alertBox").innerHTML = "Good morning, " + getCookie("userName");
+        innerHTML("alertBox", "Good morning, " + getCookie("userName"));
       };
     } else if (thour < 18) {
       if (getCookie("usingName") === "false") {
-        document.getElementById("alertBox").innerHTML = "Good afternoon";
+        innerHTML("alertBox", "Good afternoon");
       } else {
-        document.getElementById("alertBox").innerHTML = "Good afternoon, " + getCookie("userName");
+        innerHTML("alertBox", "Good afternoon, " + getCookie("userName"));
       };
     } else {
       if (getCookie("usingName") === "false") {
-        document.getElementById("alertBox").innerHTML = "Good evening";
+        innerHTML("alertBox", "Good evening");
       } else {
-        document.getElementById("alertBox").innerHTML = "Good evening, " + getCookie("userName");
-      }
+        innerHTML("alertBox", "Good evening, " + getCookie("userName"));
+      };
     };
   };
   if (getCookie("opTwntyFrHrTm") === "24") {
     hourtf = nhour + 12;
     if  (nhour < 12) {
       if (getCookie("opAMPM") === "show") {
-        document.getElementById("clockBox").innerHTML = hourtf + ":" + nmin + ap;
+        innerHTML("clockBox", hourtf + ":" + nmin + ap);
       } else {
-        document.getElementById("clockBox").innerHTML = hourtf + ":" + nmin;
+        innerHTML("clockBox", hourtf + ":" + nmin);
       };
     } else {
       if (getCookie("opAMPM") === "show") {
-        document.getElementById("clockBox").innerHTML = hourtf + ":" + nmin + ap;
+        innerHTML("clockBox", hourtf + ":" + nmin + ap);
       } else {
-        document.getElementById("clockBox").innerHTML = hourtf + ":" + nmin;
+        innerHTML("clockBox", hourtf + ":" + nmin);
       };
     };
   } else {
     if (getCookie("opAMPM") === "show") {
-      document.getElementById("clockBox").innerHTML = nhour + ":" + nmin + ap;
+      innerHTML("clockBox", nhour + ":" + nmin + ap);
     } else {
-      document.getElementById("clockBox").innerHTML = nhour + ":" + nmin;
+      innerHTML("clockBox", nhour + ":" + nmin);
     };
   };
 
-
   if (getCookie("opDteFom") === "1") {
-    document.getElementById("dateBox").innerHTML = tday[nday] + ", " + tmonth[nmonth] + " " + ndate + "<sup>" + strdndth + "</sup>";
+    innerHTML("dateBox", tday[nday] + ", " + tmonth[nmonth] + " " + ndate + "<sup>" + strdndth + "</sup>");
   } else if (getCookie("opDteFom") === "2") {
-    document.getElementById("dateBox").innerHTML = tmonth[nmonth] + " " + ndate + "<sup>" + strdndth + "</sup>";
+    innerHTML("dateBox", tmonth[nmonth] + " " + ndate + "<sup>" + strdndth + "</sup>");
   } else if (getCookie("opDteFom") === "3") {
-    document.getElementById("dateBox").innerHTML = tday[nday] + ", " + ndate + " " + tmonth[nmonth];
+    innerHTML("dateBox", tday[nday] + ", " + ndate + " " + tmonth[nmonth]);
   } else if (getCookie("opDteFom") === "4") {
-    document.getElementById("dateBox").innerHTML = tmonth[nmonth] + " " + ndate + "<sup>" + strdndth + "</sup>";
+    innerHTML("dateBox", tmonth[nmonth] + " " + ndate + "<sup>" + strdndth + "</sup>");
   };
 };
 
@@ -258,10 +262,10 @@ if (getCookie("opAMPM") === "") {
 var opAMPM = function(value) {
   if (value === "show") {
     setCookie("opAMPM", "show", 365);
-    document.getElementById("opAMPM").innerHTML = "Hide the AM/PM";
+    innerHTML("opAMPM", "Hide the AM/PM");
   } else if (value === "hide") {
     setCookie("opAMPM", "hide", 365);
-    document.getElementById("opAMPM").innerHTML = "Show the AM/PM";
+    innerHTML("opAMPM", "Show the AM/PM");
   } else if (value === "pageLoad") {
     if (getCookie("opAMPM") === "show") {
       opAMPM("show");
@@ -296,10 +300,10 @@ if (getCookie("opDteFom") === "") {
   setCookie("opDteFom", 1, 365);
 };
 setTimeout(function() {
-  document.getElementById("opDteFom1").innerHTML = tday[nday] + ", " + tmonth[nmonth] + " " + ndate + "<sup>" + strdndth + "</sup>";
-  document.getElementById("opDteFom2").innerHTML = tmonth[nmonth] + " " + ndate + "<sup>" + strdndth + "</sup>";
-  document.getElementById("opDteFom3").innerHTML = tday[nday] + ", " + ndate + " " + tmonth[nmonth];
-  document.getElementById("opDteFom4").innerHTML = tmonth[nmonth] + " " + ndate + "<sup>" + strdndth + "</sup>";
+  innerHTML("opDteFom1", tday[nday] + ", " + tmonth[nmonth] + " " + ndate + "<sup>" + strdndth + "</sup>");
+  innerHTML("opDteFom2", tmonth[nmonth] + " " + ndate + "<sup>" + strdndth + "</sup>");
+  innerHTML("opDteFom3", tday[nday] + ", " + ndate + " " + tmonth[nmonth]);
+  innerHTML("opDteFom4", tmonth[nmonth] + " " + ndate + "<sup>" + strdndth + "</sup>");
 }, 200);
 document.getElementById("opDteFom1").addEventListener("click", function() {
   setCookie("opDteFom", 1, 365);
@@ -316,20 +320,20 @@ document.getElementById("opDteFom4").addEventListener("click", function() {
   // Hide or show the welcome messages
 if (getCookie("opWlcmMsgs") === "") {
   setCookie("opWlcmMsgs", "show", 365);
-  document.getElementById("opWlcmMsgs").innerHTML = "Hide the welcome message";
+  innerHTML("opWlcmMsgs", "Hide the welcome message");
 } else if (getCookie("opWlcmMsgs") === "show") {
-  document.getElementById("opWlcmMsgs").innerHTML = "Hide the welcome message";
+  innerHTML("opWlcmMsgs", "Hide the welcome message");
 } else {
-  document.getElementById("opWlcmMsgs").innerHTML = "Show the welcome message";
+  innerHTML("opWlcmMsgs", "Show the welcome message");
 };
 document.getElementById("opWlcmMsgs").addEventListener("click", function() {
   if (getCookie("opWlcmMsgs") === "show") {
     setCookie("opWlcmMsgs", "hide", 365);
-    document.getElementById("opWlcmMsgs").innerHTML = "Show the welcome message";
+      innerHTML("opWlcmMsgs", "Show the welcome message");
     styleOpacity(0, "alertBox", 0);
   } else {
     setCookie("opWlcmMsgs", "show", 365);
-    document.getElementById("opWlcmMsgs").innerHTML = "Hide the welcome message";
+      innerHTML("opWlcmMsgs", "Hide the welcome message");
     styleOpacity(0, "alertBox", 1);
   };
 }, false);
@@ -345,21 +349,21 @@ document.getElementById("kybdCntrlsclose").addEventListener("click", function() 
   // 24 hour time option
 if (getCookie("opTwntyFrHrTm") === "") {
   setCookie("opTwntyFrHrTm", "12", 365);
-  document.getElementById("opTwntyFrHrTm").innerHTML = "Change to 24 hour time";
+  innerHTML("opTwntyFrHrTm", "Change to 24 hour time");
 } else if (getCookie("opTwntyFrHrTm") === "12") {
   setCookie("opTwntyFrHrTm", "12", 365);
-  document.getElementById("opTwntyFrHrTm").innerHTML = "Change to 24 hour time";
+  innerHTML("opTwntyFrHrTm", "Change to 24 hour time");
 } else {
   setCookie("opTwntyFrHrTm", "24", 365);
-  document.getElementById("opTwntyFrHrTm").innerHTML = "Change to 12 hour time";
+  innerHTML("opTwntyFrHrTm", "Change to 12 hour time");
 };
 document.getElementById("opTwntyFrHrTm").addEventListener("click", function() {
   if (getCookie("opTwntyFrHrTm") === "12") {
     setCookie("opTwntyFrHrTm", "24", 365);
-    document.getElementById("opTwntyFrHrTm").innerHTML = "Change to 12 hour time";
+    innerHTML("opTwntyFrHrTm", "Change to 12 hour time");
   } else {
     setCookie("opTwntyFrHrTm", "12", 365);
-    document.getElementById("opTwntyFrHrTm").innerHTML = "Change to 24 hour time";
+    innerHTML("opTwntyFrHrTm", "Change to 24 hour time");
   };
 }, false);
 if (getCookie("opGryscl") === "") {

@@ -8,7 +8,7 @@ var backgroundNumber = function() {
 };
 
 // Set last updated date in options & information menu
-document.getElementById("infoImgUpdt").innerHTML = imageUpdateDate;
+innerHTML("infoImgUpdt", imageUpdateDate);
 
 // Setting background
 var setBackID;
@@ -57,9 +57,9 @@ document.getElementById("opChBkImg").addEventListener("click", function() {
 
 // Background image information menu
 var backImgInfo = function(imgUrl, imgAuth, imgAuthPro) {
-  document.getElementById("bkgrndImgInf1").innerHTML = imgAuth;
-  document.getElementById("bkgrndImgInf2").innerHTML = "<a target='_blank' href='" + imgAuthPro + "'>" + imgAuthPro + "</a>";
-  document.getElementById("bkgrndImgInf3").innerHTML = "<a target='_blank' href='" + imgUrl + "'>" + imgUrl + "</a>";
+  innerHTML("bkgrndImgInf1", imgAuth);
+  innerHTML("bkgrndImgInf2", "<a target='_blank' href='" + imgAuthPro + "'>" + imgAuthPro + "</a>");
+  innerHTML("bkgrndImgInf3", "<a target='_blank' href='" + imgUrl + "'>" + imgUrl + "</a>");
 };
 document.getElementById("infoBackgroundImage").addEventListener("click", function() {
   clearMenu("true");

@@ -61,3 +61,6 @@ Fixed bug where hitting "ESC" on name prompt would return your name as "null" (h
 
 v2.14.132:
 Minor changes.
+
+v2.14.133:
+Introduction to 'innerHTML(id, string)' method.

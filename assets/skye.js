@@ -97,7 +97,7 @@ if (getCookie("ckiUpd") === ckiUpdDte) {
   setCookie("ckiUpd", ckiUpdDte, 365);
   styleVisibility(0, "ckiUpd", "visible");
   styleOpacity(0, "ckiUpd", 0.9);
-  document.getElementById("ckiUpdMsg").innerHTML = "New cookies have been added since you last visited Skye. Cookies were last updated on " + ckiUpdDte + ". You can view our cookie and privacy policy below, and also our terms and conditions.";
+  document.getElementById("ckiUpdMsg").innerHTML = "New cookies have been added since you last visited this page. Cookies were last updated on " + ckiUpdDte + ". You can view our cookie polocy, privacy policy, terms of use and change log below.";
 };
 document.getElementById("ckiUpdclose").addEventListener("click", function() {
   clearMenu("true");
@@ -106,7 +106,7 @@ document.getElementById("ckiUpdclose").addEventListener("click", function() {
 // Get name
 var retriveUserName = function() {
   var promptName = prompt("What's your name? If you don't wish to have your name shown, just press enter.", "Type your name here!");
-  if (promptName === "Type your name here!" || promptName === "" || promptName === "null") {
+  if (promptName === "Type your name here!" || promptName === "" || promptName === "null" || promptName === null) {
     alert("You can add your name in the options menu at any time!\nJust press 'O' for options!");
     setCookie("usingName", "false", 365);
   } else {

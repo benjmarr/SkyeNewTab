@@ -22,6 +22,8 @@ var opSrchBx = function() {
     document.getElementById("srchBx").innerHTML = "<form method='get' action='https://www.twitter.com/search'><img src='assets/images/link/twtr.png' alt='Twitter Search' class='srchBxImg' /><input type='text' name='q' size='31' id='srchImg' /></form>";
   } else if (getCookie("opSrchBx") === "facebook") {
     document.getElementById("srchBx").innerHTML = "<form method='get' action='https://www.facebook.com/search/top'><img src='assets/images/link/fb.png' alt='Facebook Search' class='srchBxImg' /><input type='text' name='q' size='31' id='srchImg' /></form>";
+  } else if (getCookie("opSrchBx") === "youtube") {
+    document.getElementById("srchBx").innerHTML = "<form method='get' action='https://www.youtube.com/results'><img src='assets/images/link/utube.png' alt='YouTube Search' class='srchBxImg' /><input type='text' name='search_query' size='31', id='srchImg' /></form>"
   };
 };
 document.getElementById("opSrchBx").addEventListener("click", function() {
@@ -55,5 +57,10 @@ document.getElementById("srchBxChcs2").addEventListener("click", function() {
 document.getElementById("srchBxChcs3").innerHTML = "Facebook Search Engine";
 document.getElementById("srchBxChcs3").addEventListener("click", function() {
   setCookie("opSrchBx", "facebook", 365);
+  opSrchBx();
+}, false);
+document.getElementById("srchBxChcs4").innerHTML = "YouTube Search Engine";
+document.getElementById("srchBxChcs4").addEventListener("click", function() {
+  setCookie("opSrchBx", "youtube", 365);
   opSrchBx();
 }, false);

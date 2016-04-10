@@ -52,3 +52,12 @@ Small changes.
 v2.14.130:
 Added new search engines to the search box. You can change the search engine you search with in the options menu, under "Search box options".
 Moved search box visibility settings to "Search box options", under the options menu.
+
+v2.14.131:
+Added YouTube search engine to the search box.
+
+v2.14.132:
+Fixed bug where hitting "ESC" on name prompt would return your name as "null" (https://github.com/BenAndy/SkyeNewTab/issues/6).
+
+v2.14.132:
+Minor changes.

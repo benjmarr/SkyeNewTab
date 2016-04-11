@@ -109,7 +109,7 @@ var backImageData = function() {
   } else if (setBackID === 78) {
     backImgInfo("https://unsplash.com/photos/iNmouRApXYM", "Padurariu Alexandru", "https://unsplash.com/worthyofelegance");
   } else if (setBackID === 79) {
-    backImgInfo("https://unsplash.com/photos/3I5j50pIXvU", "Sean Stratton" "https://unsplash.com/seanstratton");
+    backImgInfo("https://unsplash.com/photos/3I5j50pIXvU", "Sean Stratton", "https://unsplash.com/seanstratton");
   } else if (setBackID === 80) {
     backImgInfo("https://unsplash.com/photos/wpTWYBll4_w", "Marat Gilyadzinov", "https://unsplash.com/m3design");
   };

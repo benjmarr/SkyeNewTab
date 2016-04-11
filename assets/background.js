@@ -1,8 +1,8 @@
 // Copyright Benjamin Developments (c) 2015 - All rights reserved
 
 // Random background selection script
-var backgroundNames = Array(61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 57, 58, 59, 60);
-var imageUpdateDate = "Sunday, 31<sup>st</sup> February 2016";
+var backgroundNames = Array(81, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80);
+var imageUpdateDate = "Monday, 11<sup>th</sup> April 2016";
 var backgroundNumber = function() {
   return backgroundNames[Math.floor(Math.random() * backgroundNames.length)];
 };
@@ -72,8 +72,8 @@ document.getElementById("bkgrndImgInfclose").addEventListener("click", function(
 
 // Background image data
 var backImageData = function() {
-  if (setBackID === 61) {
-    backImgInfo("https://unsplash.com/photos/7ALI0RYyq6s", "Мартин Тасев", "https://unsplash.com/pumabg");
+  if (setBackID === 81) {
+    backImgInfo("https://unsplash.com/photos/SE96YSv1Xcc", "Padurariu Alexandru", "https://unsplash.com/worthyofelegance");
   } else if (setBackID === 62) {
     backImgInfo("https://unsplash.com/photos/bClr95glx6k", "Vashishta Jogi", "https://unsplash.com/jogi");
   } else if (setBackID === 63) {
@@ -104,14 +104,14 @@ var backImageData = function() {
     backImgInfo("https://unsplash.com/photos/vC-GqGbakJo", "Clark Street Mercantile", "https://unsplash.com/mercantile");
   } else if (setBackID === 76) {
     backImgInfo("https://unsplash.com/photos/_SmZSuZwkHg", "Setfan Kunze", "https://unsplash.com/stefankunze");
-  } else if (setBackID === 57) {
-    backImgInfo("https://unsplash.com/photos/uAgLGG1WBd4", "Scott Webb", "https://unsplash.com/scottwebb");
-  } else if (setBackID === 58) {
-    backImgInfo("https://unsplash.com/photos/JibIPPrvITE", "Micheal Hull", "https://unsplash.com/michaelhull");
-  } else if (setBackID === 59) {
-    backImgInfo("https://unsplash.com/photos/-wWRHIUklxM", "Vladimir Kudinov", "https://unsplash.com/madbyte");
-  } else if (setBackID === 60) {
-    backImgInfo("https://unsplash.com/photos/tBtuxtLvAZs", "Matthew Wiebe", "https://unsplash.com/matthewwiebe");
+  } else if (setBackID === 77) {
+    backImgInfo("https://unsplash.com/photos/sseiVD2XsOk", "Sam Scrimshaw", "https://unsplash.com/samscrim");
+  } else if (setBackID === 78) {
+    backImgInfo("https://unsplash.com/photos/iNmouRApXYM", "Padurariu Alexandru", "https://unsplash.com/worthyofelegance");
+  } else if (setBackID === 79) {
+    backImgInfo("https://unsplash.com/photos/3I5j50pIXvU", "Sean Stratton" "https://unsplash.com/seanstratton");
+  } else if (setBackID === 80) {
+    backImgInfo("https://unsplash.com/photos/wpTWYBll4_w", "Marat Gilyadzinov", "https://unsplash.com/m3design");
   };
 };
 

@@ -1,8 +1,8 @@
 // Copyright Benjamin Developments (c) 2015 - All rights reserved
 
 // Random background selection script
-var backgroundNames = Array(81, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80);
-var imageUpdateDate = "Monday, 11<sup>th</sup> April 2016";
+var backgroundNames = Array(81, 82, 83, 84, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80);
+var imageUpdateDate = "Thursday, 21<sup>st</sup> April 2016";
 var backgroundNumber = function() {
   return backgroundNames[Math.floor(Math.random() * backgroundNames.length)];
 };
@@ -74,12 +74,12 @@ document.getElementById("bkgrndImgInfclose").addEventListener("click", function(
 var backImageData = function() {
   if (setBackID === 81) {
     backImgInfo("https://unsplash.com/photos/SE96YSv1Xcc", "Padurariu Alexandru", "https://unsplash.com/worthyofelegance");
-  } else if (setBackID === 62) {
-    backImgInfo("https://unsplash.com/photos/bClr95glx6k", "Vashishta Jogi", "https://unsplash.com/jogi");
-  } else if (setBackID === 63) {
-    backImgInfo("https://unsplash.com/photos/_h7aBovKia4", "Philippe Wuyts", "https://unsplash.com/photos/_h7aBovKia4");
-  } else if (setBackID === 64) {
-    backImgInfo("https://unsplash.com/photos/-oWyJoSqBRM", "Alexey Topolyanskiy", "https://unsplash.com/devilcoders");
+  } else if (setBackID === 82) {
+    backImgInfo("https://unsplash.com/photos/dccIfU1V1VU", "Verne Ho", "https://unsplash.com/verneho");
+  } else if (setBackID === 83) {
+    backImgInfo("https://unsplash.com/photos/fwsvUxNgLRs", "Sweet Ice Cream Photography", "https://unsplash.com/sweeticecreamphotography");
+  } else if (setBackID === 84) {
+    backImgInfo("https://unsplash.com/photos/OJJIaFZOeX4", "veeterzy", "https://unsplash.com/veeterzy");
   } else if (setBackID === 65) {
     backImgInfo("https://unsplash.com/photos/93Ep1dhTd2s", "William Hook", "https://unsplash.com/williamtm")
   } else if (setBackID === 66) {

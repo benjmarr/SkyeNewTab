@@ -23,7 +23,9 @@ var opSrchBx = function() {
   } else if (getCookie("opSrchBx") === "facebook") {
     innerHTML("srchBx", "<form method='get' action='https://www.facebook.com/search/top'><img src='assets/images/link/fb.png' alt='Facebook Search' class='srchBxImg' /><input type='text' name='q' size='31' id='srchImg' /></form>");
   } else if (getCookie("opSrchBx") === "youtube") {
-    innerHTML("srchBx", "<form method='get' action='https://www.youtube.com/results'><img src='assets/images/link/utube.png' alt='YouTube Search' class='srchBxImg' /><input type='text' name='search_query' size='31', id='srchImg' /></form>");
+    innerHTML("srchBx", "<form method='get' action='https://www.youtube.com/results'><img src='assets/images/link/utube.png' alt='YouTube Search' class='srchBxImg' /><input type='text' name='search_query' size='31' id='srchImg' /></form>");
+  } else if (getCookie("opSrchBx") === "github") {
+    innerHTML("srchBx", "<form method='get' action='https://www.github.com/search'><img src='assets/images/link/github.png' alt='GitHub Search' class='srchBxImg' /><input type='text' name='search' size='31' id='srchImg' /></form>");
   };
 };
 document.getElementById("opSrchBx").addEventListener("click", function() {
@@ -62,5 +64,10 @@ document.getElementById("srchBxChcs3").addEventListener("click", function() {
 innerHTML("srchBxChcs4", "YouTube Search Engine");
 document.getElementById("srchBxChcs4").addEventListener("click", function() {
   setCookie("opSrchBx", "youtube", 365);
+  opSrchBx();
+}, false);
+innerHTML("srchBxChcs5", "GitHub Search Engine");
+document.getElementById("srchBxChcs5").addEventListener("click", function() {
+  setCookie("opSrchBx", "github", 365);
   opSrchBx();
 }, false);

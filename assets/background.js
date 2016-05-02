@@ -1,8 +1,8 @@
 // Copyright Benjamin Developments (c) 2015 - All rights reserved
 
 // Random background selection script
-var backgroundNames = Array(81, 82, 83, 84, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80);
-var imageUpdateDate = "Thursday, 21<sup>st</sup> April 2016";
+var backgroundNames = Array(81, 82, 83, 84, 85, 86, 87, 88, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80);
+var imageUpdateDate = "Monday, 2<sup>nd</sup> May 2016";
 var backgroundNumber = function() {
   return backgroundNames[Math.floor(Math.random() * backgroundNames.length)];
 };
@@ -80,14 +80,14 @@ var backImageData = function() {
     backImgInfo("https://unsplash.com/photos/fwsvUxNgLRs", "Sweet Ice Cream Photography", "https://unsplash.com/sweeticecreamphotography");
   } else if (setBackID === 84) {
     backImgInfo("https://unsplash.com/photos/OJJIaFZOeX4", "veeterzy", "https://unsplash.com/veeterzy");
-  } else if (setBackID === 65) {
-    backImgInfo("https://unsplash.com/photos/93Ep1dhTd2s", "William Hook", "https://unsplash.com/williamtm")
-  } else if (setBackID === 66) {
-    backImgInfo("https://unsplash.com/photos/KqVHRmHVwwM", "Erez Attias", "https://unsplash.com/erezattias");
-  } else if (setBackID === 67) {
-    backImgInfo("https://unsplash.com/photos/E7q00J_8N7A", "NASA", "https://unsplash.com/nasa");
-  } else if (setBackID === 68) {
-    backImgInfo("https://unsplash.com/photos/U5rMrSI7Pn4", "Metthew Wiebe", "https://unsplash.com/matthewwiebe");
+  } else if (setBackID === 85) {
+    backImgInfo("https://unsplash.com/photos/6wQId4r0uA4", "Vladimir Chuchadeev", "https://unsplash.com/@chuchad")
+  } else if (setBackID === 86) {
+    backImgInfo("https://unsplash.com/photos/aIYFR0vbADk", "Erol Ahmed", "https://unsplash.com/@erol");
+  } else if (setBackID === 87) {
+    backImgInfo("https://unsplash.com/photos/DMcI0cmYJYk", "Samuel Scrimshaw", "https://unsplash.com/@samscrim");
+  } else if (setBackID === 88) {
+    backImgInfo("https://unsplash.com/photos/TBQXwj3DEOY", "Sujan Sundarewaran", "https://unsplash.com/@sujansundareswaran");
   } else if (setBackID === 69) {
     backImgInfo("https://unsplash.com/photos/Ixp4YhCKZkI", "Steve Carter", "https://unsplash.com/stvcrtr");
   } else if (setBackID === 70) {

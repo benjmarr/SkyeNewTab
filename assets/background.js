@@ -1,8 +1,8 @@
 // Copyright Benjamin Developments (c) 2015 - All rights reserved
 
 // Random background selection script
-var backgroundNames = Array(81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 75, 76, 77, 78, 79, 80);
-var imageUpdateDate = "Saturday, 21<sup>st</sup> May 2016";
+var backgroundNames = Array(81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 78, 79, 80);
+var imageUpdateDate = "Monday, 30<sup>th</sup> May 2016";
 var backgroundNumber = function() {
   return backgroundNames[Math.floor(Math.random() * backgroundNames.length)];
 };
@@ -100,12 +100,12 @@ var backImageData = function() {
     backImgInfo("https://unsplash.com/photos/zFnk_bTLApo", "Ismael Nieto", "https://unsplash.com/@ismaelnieto");
   } else if (setBackID === 94) {
     backImgInfo("https://unsplash.com/photos/AbTa_gQ74fs/", "Matthew Wiebe", "https://unsplash.com/@matthewwiebe");
-  } else if (setBackID === 75) {
-    backImgInfo("https://unsplash.com/photos/vC-GqGbakJo", "Clark Street Mercantile", "https://unsplash.com/mercantile");
-  } else if (setBackID === 76) {
-    backImgInfo("https://unsplash.com/photos/_SmZSuZwkHg", "Setfan Kunze", "https://unsplash.com/stefankunze");
-  } else if (setBackID === 77) {
-    backImgInfo("https://unsplash.com/photos/sseiVD2XsOk", "Sam Scrimshaw", "https://unsplash.com/samscrim");
+  } else if (setBackID === 95) {
+    backImgInfo("https://unsplash.com/photos/qH36EgNjPJY", "Alex Siale", "https://unsplash.com/@alexsialecreative");
+  } else if (setBackID === 96) {
+    backImgInfo("https://unsplash.com/photos/kKxfELd_5pg", "Julian Lavallée", "https://unsplash.com/@julienlavallee");
+  } else if (setBackID === 97) {
+    backImgInfo("https://unsplash.com/photos/uohGiEVhWiQ", "Artem Verbo", "https://unsplash.com/@artemverbo");
   } else if (setBackID === 78) {
     backImgInfo("https://unsplash.com/photos/iNmouRApXYM", "Padurariu Alexandru", "https://unsplash.com/worthyofelegance");
   } else if (setBackID === 79) {

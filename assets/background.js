@@ -1,8 +1,8 @@
 // Copyright Benjamin Developments (c) 2015 - All rights reserved
 
 // Random background selection script
-var backgroundNames = Array(81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 80);
-var imageUpdateDate = "Thursday, 9<sup>th</sup> June 2016";
+var backgroundNames = Array(101, 102, 103, 104, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100);
+var imageUpdateDate = "Monday, 20<sup>th</sup> June 2016";
 var backgroundNumber = function() {
   return backgroundNames[Math.floor(Math.random() * backgroundNames.length)];
 };
@@ -72,16 +72,13 @@ document.getElementById("bkgrndImgInfclose").addEventListener("click", function(
 
 // Background image data
 var backImageData = function() {
-  if (setBackID === 81) {
-    backImgInfo("https://unsplash.com/photos/SE96YSv1Xcc", "Padurariu Alexandru", "https://unsplash.com/worthyofelegance");
-  } else if (setBackID === 82) {
-    backImgInfo("https://unsplash.com/photos/dccIfU1V1VU", "Verne Ho", "https://unsplash.com/verneho");
-  } else if (setBackID === 83) {
-    backImgInfo("https://unsplash.com/photos/fwsvUxNgLRs", "Sweet Ice Cream Photography", "https://unsplash.com/sweeticecreamphotography");
-  } else if (setBackID === 84) {
-    backImgInfo("https://unsplash.com/photos/OJJIaFZOeX4", "veeterzy", "https://unsplash.com/veeterzy");
+  if (setBackID === 101) {
+    backImgInfo("https://unsplash.com/photos/F9o7u-CnDJk", "Tony Webster", "https://unsplash.com/@tonywebster");
+  } else if (setBackID === 102) {
+    backImgInfo("https://unsplash.com/photos/VBNb52J8Trk", "SpaceX", "https://unsplash.com/@spacex");
+  } else if (setBackID === 103) {
+  } else if (setBackID === 104) {
   } else if (setBackID === 85) {
-    backImgInfo("https://unsplash.com/photos/6wQId4r0uA4", "Vladimir Chuchadeev", "https://unsplash.com/@chuchad")
   } else if (setBackID === 86) {
     backImgInfo("https://unsplash.com/photos/aIYFR0vbADk", "Erol Ahmed", "https://unsplash.com/@erol");
   } else if (setBackID === 87) {
@@ -110,8 +107,8 @@ var backImageData = function() {
     backImgInfo("https://unsplash.com/photos/HhCANDrFzZ0", "Priscilla Westra", "https://unsplash.com/@pwestra");
   } else if (setBackID === 99) {
     backImgInfo("https://unsplash.com/photos/44t1AZNIMIE", "Tobias van Schneider", "https://unsplash.com/@vanschneider");
-  } else if (setBackID === 80) {
-    backImgInfo("https://unsplash.com/photos/wpTWYBll4_w", "Marat Gilyadzinov", "https://unsplash.com/m3design");
+  } else if (setBackID === 100) {
+    backImgInfo("https://unsplash.com/photos/sfgH9dXcMRw", "Anton Repponen", "https://unsplash.com/@repponen");
   };
 };
 

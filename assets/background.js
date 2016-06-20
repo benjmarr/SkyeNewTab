@@ -77,8 +77,11 @@ var backImageData = function() {
   } else if (setBackID === 102) {
     backImgInfo("https://unsplash.com/photos/VBNb52J8Trk", "SpaceX", "https://unsplash.com/@spacex");
   } else if (setBackID === 103) {
+    backImgInfo("https://unsplash.com/photos/a8YV2C3yBMk", "Manik Rathee", "https://unsplash.com/@manikrathee");
   } else if (setBackID === 104) {
+    backImgInfo("https://unsplash.com/photos/iOWEyl7sEgY", "Jimmy Musto", "https://unsplash.com/@jmust13");
   } else if (setBackID === 85) {
+    backImgInfo("https://unsplash.com/photos/6wQId4r0uA4", "Vladimir Chuchadeev", "https://unsplash.com/@chuchad");
   } else if (setBackID === 86) {
     backImgInfo("https://unsplash.com/photos/aIYFR0vbADk", "Erol Ahmed", "https://unsplash.com/@erol");
   } else if (setBackID === 87) {

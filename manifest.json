@@ -1,5 +1,5 @@
 {
-  "version": "2.14.148",
+  "version": "2.14.149",
   "name": "Skye New Tab",
   "short_name": "Skye New Tab",
   "description": "Replace your new tab page with a more modern page! Featuring time, dates, many background images, welcome messages and more!",
@@ -18,5 +18,8 @@
     "cookies",
     "unlimitedStorage",
     "*://benandy.github.io/*"
-  ]
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  }
 }

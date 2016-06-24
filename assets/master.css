@@ -73,7 +73,7 @@ a:hover {
   margin-top: -3%;
   text-align: right;
   opacity: 0;
-  transition: opacity 1s;
+  transition: opacity 0.5s;
 }
 
 .mainClock {

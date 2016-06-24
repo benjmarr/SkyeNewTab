@@ -409,16 +409,16 @@ i.src = 'http://gfx2.hotmail.com/mail/uxp/w4/m4/pr014/h/s7.png?d=' + escape(Date
 window.onload = function() {
   styleOpacity(0, "body", 1);
   if (getCookie("opGryscl") === "false") {
-    styleGrayscale(100, "header", "false");
+    styleGrayscale(50, "header", "false");
   };
-  styleOpacity(200, "options", 1);
-  styleOpacity(400, "unsplash", 1);
-  styleOpacity(600, "title", 1);
-  styleOpacity(800, "clockBox", 1);
-  styleOpacity(1000, "dateBox", 1);
+  styleOpacity(100, "options", 1);
+  styleOpacity(200, "unsplash", 1);
+  styleOpacity(300, "title", 1);
+  styleOpacity(400, "clockBox", 1);
+  styleOpacity(500, "dateBox", 1);
   if (getCookie("opWlcmMsgs") === "show") {
-    styleOpacity(1200, "alertBox", 1);
+    styleOpacity(600, "alertBox", 1);
   };
-  styleOpacity(1400, "linkDiv", 1);
-  setTimeout(opSrchBx, 1600);
+  styleOpacity(700, "linkDiv", 1);
+  setTimeout(opSrchBx, 800);
 };

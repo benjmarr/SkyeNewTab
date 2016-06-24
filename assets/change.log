@@ -105,3 +105,6 @@ v2.14.147:
 Added an online/offline indicator (top right corner) (https://github.com/BenAndy/SkyeNewTab/issues/9).
 Fixed typo - line 100 (skye.js).
 Added some of the font data locally, to decrease external source load time.
+
+v2.14.148
+Decreased page opening animation time.

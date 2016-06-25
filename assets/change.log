@@ -111,3 +111,8 @@ Decreased page opening animation time.
 
 v2.14.149:
 Added a pop up menu.
+
+v2.14.150:
+Added spacing below the pop up menu.
+Disabled keyboard shortcuts in pop up menu.
+Implemented popup.js code into skye.js and searchBox.js & removed popup.js.

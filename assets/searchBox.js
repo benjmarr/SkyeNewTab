@@ -4,28 +4,32 @@ if (getCookie("opSrchBx") === "") {
   setCookie("opSrchBx", "google", 365);
 };
 var opSrchBx = function() {
-  if (getCookie("opSrchBx") === "hide") {
-    innerHTML("srchBxChcsHS", "Show the search box");
-    styleOpacity(0, "srchBx", 0);
-    styleVisibility(300, "srchBx", "hidden");
-  } else if (getCookie("opSrchBx") === "show") {
-    setCookie("opSrchBx", "google", 365);
-    opSrchBx();
+  if (main) {
+    if (getCookie("opSrchBx") === "hide") {
+      innerHTML("srchBxChcsHS", "Show the search box");
+      styleOpacity(0, "srchBx", 0);
+      styleVisibility(300, "srchBx", "hidden");
+    } else if (getCookie("opSrchBx") === "show") {
+      setCookie("opSrchBx", "google", 365);
+      opSrchBx();
+    } else {
+      innerHTML("srchBxChcsHS", "Hide the search box");
+      styleOpacity(0, "srchBx", 1);
+      styleVisibility(0, "srchBx", "visible");
+    };
+    if (getCookie("opSrchBx") === "google") {
+      innerHTML("srchBx", "<form method='get' action='https://www.google.com/search'><img src='assets/images/link/google.png' alt='Google Search' class='srchBxImg' /><input type='text' name='q' size='31' id='srchImg' /></form>");
+    } else if (getCookie("opSrchBx") === "twitter") {
+      innerHTML("srchBx", "<form method='get' action='https://www.twitter.com/search'><img src='assets/images/link/twtr.png' alt='Twitter Search' class='srchBxImg' /><input type='text' name='q' size='31' id='srchImg' /></form>");
+    } else if (getCookie("opSrchBx") === "facebook") {
+      innerHTML("srchBx", "<form method='get' action='https://www.facebook.com/search/top'><img src='assets/images/link/fb.png' alt='Facebook Search' class='srchBxImg' /><input type='text' name='q' size='31' id='srchImg' /></form>");
+    } else if (getCookie("opSrchBx") === "youtube") {
+      innerHTML("srchBx", "<form method='get' action='https://www.youtube.com/results'><img src='assets/images/link/utube.png' alt='YouTube Search' class='srchBxImg' /><input type='text' name='search_query' size='31' id='srchImg' /></form>");
+    } else if (getCookie("opSrchBx") === "github") {
+      innerHTML("srchBx", "<form method='get' action='https://www.github.com/search'><img src='assets/images/link/github.png' alt='GitHub Search' class='srchBxImg' /><input type='text' name='search' size='31' id='srchImg' /></form>");
+    };
   } else {
-    innerHTML("srchBxChcsHS", "Hide the search box");
-    styleOpacity(0, "srchBx", 1);
-    styleVisibility(0, "srchBx", "visible");
-  };
-  if (getCookie("opSrchBx") === "google") {
-    innerHTML("srchBx", "<form method='get' action='https://www.google.com/search'><img src='assets/images/link/google.png' alt='Google Search' class='srchBxImg' /><input type='text' name='q' size='31' id='srchImg' /></form>");
-  } else if (getCookie("opSrchBx") === "twitter") {
-    innerHTML("srchBx", "<form method='get' action='https://www.twitter.com/search'><img src='assets/images/link/twtr.png' alt='Twitter Search' class='srchBxImg' /><input type='text' name='q' size='31' id='srchImg' /></form>");
-  } else if (getCookie("opSrchBx") === "facebook") {
-    innerHTML("srchBx", "<form method='get' action='https://www.facebook.com/search/top'><img src='assets/images/link/fb.png' alt='Facebook Search' class='srchBxImg' /><input type='text' name='q' size='31' id='srchImg' /></form>");
-  } else if (getCookie("opSrchBx") === "youtube") {
-    innerHTML("srchBx", "<form method='get' action='https://www.youtube.com/results'><img src='assets/images/link/utube.png' alt='YouTube Search' class='srchBxImg' /><input type='text' name='search_query' size='31' id='srchImg' /></form>");
-  } else if (getCookie("opSrchBx") === "github") {
-    innerHTML("srchBx", "<form method='get' action='https://www.github.com/search'><img src='assets/images/link/github.png' alt='GitHub Search' class='srchBxImg' /><input type='text' name='search' size='31' id='srchImg' /></form>");
+    document.getElementById("srchBx").innerHTML = "";
   };
 };
 document.getElementById("opSrchBx").addEventListener("click", function() {

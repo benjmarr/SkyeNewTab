@@ -228,17 +228,19 @@ function clock() {
 
 // Keyboard shortcuts
 document.addEventListener("keydown", function(e) {
-  e = e || window.event;
-  if (e.keyCode === 27) {
-    clearMenu("true");
-  } else if (e.keyCode === 79) {
-    clearMenu("false");
-    styleVisibility(1000, "opM", "visible");
-    styleOpacity(1000, "opM", 0.9);
-  } else if (e.keyCode === 78) {
-    opChBkImgFnctn();
-  } else if (e.keyCode === 71) {
-    opGryscl();
+  if (main) {
+    e = e || window.event;
+    if (e.keyCode === 27) {
+      clearMenu("true");
+    } else if (e.keyCode === 79) {
+      clearMenu("false");
+      styleVisibility(1000, "opM", "visible");
+      styleOpacity(1000, "opM", 0.9);
+    } else if (e.keyCode === 78) {
+      opChBkImgFnctn();
+    } else if (e.keyCode === 71) {
+      opGryscl();
+    };
   };
 }, false);
 
@@ -411,14 +413,20 @@ window.onload = function() {
   if (getCookie("opGryscl") === "false") {
     styleGrayscale(50, "header", "false");
   };
-  styleOpacity(100, "options", 1);
-  styleOpacity(200, "unsplash", 1);
+  if (main) {
+    styleOpacity(100, "options", 1);
+    styleOpacity(200, "unsplash", 1);
+  };
   styleOpacity(300, "title", 1);
   styleOpacity(400, "clockBox", 1);
   styleOpacity(500, "dateBox", 1);
   if (getCookie("opWlcmMsgs") === "show") {
     styleOpacity(600, "alertBox", 1);
   };
-  styleOpacity(700, "linkDiv", 1);
+  if (main) {
+    styleOpacity(700, "linkDiv", 1);
+  } else {
+    document.getElementById("linkDiv").innerHTML = "";
+  };
   setTimeout(opSrchBx, 800);
 };

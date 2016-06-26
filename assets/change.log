@@ -135,3 +135,7 @@ Added line 2 to change.log.
 
 v2.14.155:
 Fixed version number error in change.log.
+
+v2.14.156:
+Speed up background change animations.
+background.js enhancements.

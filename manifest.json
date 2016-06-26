@@ -1,5 +1,5 @@
 {
-  "version": "2.14.155",
+  "version": "2.14.156",
   "name": "Skye New Tab",
   "short_name": "Skye New Tab",
   "description": "Replace your new tab page with a more modern page! Featuring time, dates, many background images, welcome messages and more!",
@@ -8,7 +8,7 @@
   "offline_enabled": true,
   "homepage_url": "http://benandy.github.io/skye",
   "incognito": "split",
-  "content_security_policy": "script-src 'self' 'sha256-L50E3FZTH+qUfRLPgQ2uOeSsf0LiuK9XS7QZuoNoX0w='; object-src 'self'",
+  "content_security_policy": "script-src 'self' 'unsafe-eval' 'sha256-L50E3FZTH+qUfRLPgQ2uOeSsf0LiuK9XS7QZuoNoX0w='; object-src 'self'",
   "icons": {
     "128": "assets/images/favicon128x128.png"
   },

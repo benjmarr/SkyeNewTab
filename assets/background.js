@@ -24,36 +24,25 @@ var setBack = function(id) {
   };
 };
 
-// Five minute background change
-var newBackID;
-newBackTimer = setInterval(function() {
-  styleGrayscale(0, "header", "true");
-  styleOpacity(200, "header", "0");
-  styleOpacity(1100, "header", "1");
-  if (getCookie("opGryscl") === "false") {
-    styleGrayscale(1300, "header", "false");
-  };
-  setTimeout(function() {
-    setBack("random");
-  }, 1000);
-}, 300000);
-
 // New background image option
 var opChBkImgFnctn = function() {
-  clearInterval(newBackTimer);
   styleGrayscale(0, "header", "true");
-  styleOpacity(200, "header", "0");
-  styleOpacity(1100, "header", "1");
+  styleOpacity(100, "header", "0");
+  styleOpacity(550, "header", "1");
   if (getCookie("opGryscl") === "false") {
-    styleGrayscale(1300, "header", "false");
+    styleGrayscale(650, "header", "false");
   };
   setTimeout(function() {
     setBack("random");
-  }, 1000);
+  }, 500);
 };
 document.getElementById("opChBkImg").addEventListener("click", function() {
   opChBkImgFnctn();
 }, false);
+
+// Five minute background change
+var newBackID;
+setInterval(opChBkImgFnctn, 300000);
 
 // Background image information menu
 var backImgInfo = function(imgUrl, imgAuth, imgAuthPro) {

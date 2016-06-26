@@ -125,10 +125,13 @@ Fixed issue where keyboard controls where still active while typing in search bo
 v2.14.152:
 Pop up menu enhancements.
 
-v2.14.154:
+v2.14.153:
 Added spacing above pop up menu title.
 
-v2.14.155:
+v2.14.154:
 Made online/offline notice bigger.
 Minor enhancements.
 Added line 2 to change.log.
+
+v2.14.155:
+Fixed version number error in change.log.

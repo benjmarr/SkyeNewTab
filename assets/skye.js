@@ -228,7 +228,7 @@ function clock() {
 
 // Keyboard shortcuts
 document.addEventListener("keydown", function(e) {
-  if (main) {
+  if (main && document.activeElement.tagName != "INPUT") {
     e = e || window.event;
     if (e.keyCode === 27) {
       clearMenu("true");
@@ -388,11 +388,13 @@ document.getElementById("opGryscl").addEventListener("click", function() {
 
 // Online/offline detection
 function showUnsplash() {
-  styleOpacity(2000, "unsplash", "0");
-  setTimeout(function() {
-    document.getElementById("unsplash").innerHTML = "Images provided by <a href='https://unsplash.com' target='_blank'>unsplash.com</a>";
-  }, 2501);
-  styleOpacity(2502, "unsplash", "1");
+  if (main) {
+    styleOpacity(2000, "unsplash", "0");
+    setTimeout(function() {
+      document.getElementById("unsplash").innerHTML = "Images provided by <a href='https://unsplash.com' target='_blank'>unsplash.com</a>";
+    }, 2501);
+    styleOpacity(2502, "unsplash", "1");
+  };
 };
 function doConnectFunction() {
   document.getElementById("unsplash").innerHTML = "Connected";

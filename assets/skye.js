@@ -245,11 +245,14 @@ document.addEventListener("keydown", function(e) {
 }, false);
 
 // Options button click
-document.getElementById("options").addEventListener("click", function() {
-  clearMenu("false");
-  styleVisibility(300, "opM", "visible");
-  styleOpacity(300, "opM", 0.9);
-}, false);
+if (main) {
+  document.getElementById("options").addEventListener("click", function() {
+    clearMenu("false");
+    styleVisibility(300, "opM", "visible");
+    styleOpacity(300, "opM", 0.9);
+  }, false);
+};
+
 
 // Options close
 document.getElementById("opMclose").addEventListener("click", function() {
@@ -387,27 +390,28 @@ document.getElementById("opGryscl").addEventListener("click", function() {
 }, false);
 
 // Online/offline detection
-function showUnsplash() {
-  if (main) {
+if (main) {
+  function showUnsplash() {
     styleOpacity(2000, "unsplash", "0");
     setTimeout(function() {
       document.getElementById("unsplash").innerHTML = "Images provided by <a href='https://unsplash.com' target='_blank'>unsplash.com</a>";
     }, 2501);
     styleOpacity(2502, "unsplash", "1");
   };
+  function doConnectFunction() {
+    document.getElementById("unsplash").innerHTML = "Connected";
+    showUnsplash();
+  };
+  function doNotConnectFunction() {
+    document.getElementById("unsplash").innerHTML = "Not connected";
+    showUnsplash();
+  };
+  var i = new Image();
+  i.onload = doConnectFunction;
+  i.onerror = doNotConnectFunction;
+  i.src = 'http://gfx2.hotmail.com/mail/uxp/w4/m4/pr014/h/s7.png?d=' + escape(Date());
 };
-function doConnectFunction() {
-  document.getElementById("unsplash").innerHTML = "Connected";
-  showUnsplash();
-};
-function doNotConnectFunction() {
-  document.getElementById("unsplash").innerHTML = "Not connected";
-  showUnsplash();
-};
-var i = new Image();
-i.onload = doConnectFunction;
-i.onerror = doNotConnectFunction;
-i.src = 'http://gfx2.hotmail.com/mail/uxp/w4/m4/pr014/h/s7.png?d=' + escape(Date());
+
 
 // Run when page finished loading
 window.onload = function() {
@@ -427,8 +431,6 @@ window.onload = function() {
   };
   if (main) {
     styleOpacity(700, "linkDiv", 1);
-  } else {
-    document.getElementById("linkDiv").innerHTML = "";
   };
   setTimeout(opSrchBx, 800);
 };

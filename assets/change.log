@@ -120,3 +120,6 @@ Implemented popup.js code into skye.js and searchBox.js & removed popup.js.
 v2.14.151:
 Fixed issue where unsplash credit would show in pop up (https://github.com/BenAndy/SkyeNewTab/issues/11).
 Fixed issue where keyboard controls where still active while typing in search boxes (https://github.com/BenAndy/SkyeNewTab/issues/10).
+
+v2.14.152:
+Pop up menu enhancements.

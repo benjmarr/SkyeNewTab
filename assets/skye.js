@@ -389,26 +389,28 @@ document.getElementById("opGryscl").addEventListener("click", function() {
   opGryscl();
 }, false);
 
-// Online/offline detection
+// Online/offline & Unsplash credit & text advertisement
 if (main) {
-  function doConnectFunction() {
-    innerHTML("unsplash", "Connected");
-  };
-  function doNotConnectFunction() {
-    innerHTML("unsplash", "Not connected");
-  };
+  // Online/offline
   var i = new Image();
-  i.onload = doConnectFunction;
-  i.onerror = doNotConnectFunction;
+  i.onload = function() {innerHTML("adText", "Connected")};
+  i.onerror = function() {innerHTML("adText", "Not connected")};
   i.src = 'http://gfx2.hotmail.com/mail/uxp/w4/m4/pr014/h/s7.png?d=' + escape(Date());
-  styleOpacity(2000, "unsplash", "0");
+  // Unsplash credit
+  styleOpacity(2000, "adText", "0");
   setTimeout(function() {
-    document.getElementById("unsplash").style.fontSize = "70%";
-    innerHTML("unsplash", "Images provided by <a href='https://unsplash.com' target='_blank'>unsplash.com</a>");
+    innerHTML("adText", "Images provided by <a href='https://unsplash.com' target='_blank'>unsplash.com</a>");
   }, 2501);
-  styleOpacity(3000, "unsplash", "1");
+  styleOpacity(3000, "adText", "1");
+  // Text advertisement
+  styleOpacity(5000, "adText", "0");
+  setTimeout(function() {
+    // Adverts are limited to 70 characters
+    innerHTML("adText", "Want to advertise right here on Skye New Tab for free?! Contact <a href='mailto:benjaminandyy@gmail.com'>benjaminandyy@gmail.com</a> for information. We look forward to hearing from you!");
+    document.getElementById("adText").style.fontSize = "80%";
+  }, 5501);
+  styleOpacity(6000, "adText", "1");
 };
-
 
 // Run when page finished loading
 window.onload = function() {
@@ -418,7 +420,7 @@ window.onload = function() {
   };
   if (main) {
     styleOpacity(100, "options", 1);
-    styleOpacity(200, "unsplash", 1);
+    styleOpacity(200, "adText", 1);
   };
   styleOpacity(300, "title", 1);
   styleOpacity(400, "clockBox", 1);

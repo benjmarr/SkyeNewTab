@@ -64,13 +64,25 @@ a:hover {
   text-align: center;
 }
 
+.textStyle {
+  font-family: 'Titillium Web', sans-serif;
+  display: block;
+  color: white;
+  font-size: 80%;
+  cursor: default;
+  margin-top: -3%;
+  text-align: right;
+  opacity: 0;
+  transition: opacity 0.5s, font-size 0.5s;
+}
+
 .adTextStyle {
   font-family: 'Titillium Web', sans-serif;
   display: block;
   color: white;
-  font-size: 100%;
+  font-size: 80%;
   cursor: default;
-  margin-left: 70%;
+  margin-left: 60%;
   text-align: right;
   opacity: 0;
   padding-right: 1%;

@@ -393,23 +393,22 @@ document.getElementById("opGryscl").addEventListener("click", function() {
 if (main) {
   // Online/offline
   var i = new Image();
-  i.onload = function() {innerHTML("adText", "Connected")};
-  i.onerror = function() {innerHTML("adText", "Not connected")};
+  i.onload = function() {innerHTML("dText", "Connected")};
+  i.onerror = function() {innerHTML("dText", "Not connected")};
   i.src = 'http://gfx2.hotmail.com/mail/uxp/w4/m4/pr014/h/s7.png?d=' + escape(Date());
   // Unsplash credit
-  styleOpacity(2000, "adText", "0");
+  styleOpacity(2000, "dText", "0");
   setTimeout(function() {
-    innerHTML("adText", "Images provided by <a href='https://unsplash.com' target='_blank'>unsplash.com</a>");
+    innerHTML("dText", "Images provided by <a href='https://unsplash.com' target='_blank'>unsplash.com</a>");
   }, 2501);
-  styleOpacity(3000, "adText", "1");
+  styleOpacity(3000, "dText", "1");
+  styleOpacity(7000, "dText", "0");
   // Text advertisement
-  styleOpacity(5000, "adText", "0");
   setTimeout(function() {
-    // Adverts are limited to 70 characters
+    // Adverts are limited to 50 characters
     innerHTML("adText", "Want to advertise right here on Skye New Tab for free?! Contact <a href='mailto:benjaminandyy@gmail.com'>benjaminandyy@gmail.com</a> for information. We look forward to hearing from you!");
-    document.getElementById("adText").style.fontSize = "80%";
   }, 5501);
-  styleOpacity(6000, "adText", "1");
+  styleOpacity(15000, "adText", "1");
 };
 
 // Run when page finished loading
@@ -420,7 +419,7 @@ window.onload = function() {
   };
   if (main) {
     styleOpacity(100, "options", 1);
-    styleOpacity(200, "adText", 1);
+    styleOpacity(200, "dText", 1);
   };
   styleOpacity(300, "title", 1);
   styleOpacity(400, "clockBox", 1);

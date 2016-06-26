@@ -144,3 +144,7 @@ v2.14.157:
 Added text advertisement area.
 Compacted online/offline code.
 Moved advertisement area to bottom right.
+
+v2.14.158:
+Separated advertisement from online/offline and Unsplash credit.
+Moved online/offline and Unsplash credit back to it's original place.

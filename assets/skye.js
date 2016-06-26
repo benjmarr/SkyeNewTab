@@ -395,7 +395,7 @@ if (main) {
   var i = new Image();
   i.onload = function() {innerHTML("dText", "Connected")};
   i.onerror = function() {innerHTML("dText", "Not connected")};
-  i.src = 'http://gfx2.hotmail.com/mail/uxp/w4/m4/pr014/h/s7.png?d=' + escape(Date());
+  i.src = 'http://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png?d=' + escape(Date());
   // Unsplash credit
   styleOpacity(2000, "dText", "0");
   setTimeout(function() {

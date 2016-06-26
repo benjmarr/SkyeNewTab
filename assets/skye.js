@@ -391,25 +391,22 @@ document.getElementById("opGryscl").addEventListener("click", function() {
 
 // Online/offline detection
 if (main) {
-  function showUnsplash() {
-    styleOpacity(2000, "unsplash", "0");
-    setTimeout(function() {
-      document.getElementById("unsplash").innerHTML = "Images provided by <a href='https://unsplash.com' target='_blank'>unsplash.com</a>";
-    }, 2501);
-    styleOpacity(2502, "unsplash", "1");
-  };
   function doConnectFunction() {
-    document.getElementById("unsplash").innerHTML = "Connected";
-    showUnsplash();
+    innerHTML("unsplash", "Connected");
   };
   function doNotConnectFunction() {
-    document.getElementById("unsplash").innerHTML = "Not connected";
-    showUnsplash();
+    innerHTML("unsplash", "Not connected");
   };
   var i = new Image();
   i.onload = doConnectFunction;
   i.onerror = doNotConnectFunction;
   i.src = 'http://gfx2.hotmail.com/mail/uxp/w4/m4/pr014/h/s7.png?d=' + escape(Date());
+  styleOpacity(2000, "unsplash", "0");
+  setTimeout(function() {
+    document.getElementById("unsplash").style.fontSize = "70%";
+    innerHTML("unsplash", "Images provided by <a href='https://unsplash.com' target='_blank'>unsplash.com</a>");
+  }, 2501);
+  styleOpacity(3000, "unsplash", "1");
 };
 
 

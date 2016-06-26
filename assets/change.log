@@ -1,4 +1,5 @@
 Skye New Tab change log
+All changes can be view at https://github.com/BenAndy/SkyeNewTab/commits/master
 
 v2.14.114:
 Implemented change log.
@@ -126,3 +127,8 @@ Pop up menu enhancements.
 
 v2.14.154:
 Added spacing above pop up menu title.
+
+v2.14.155:
+Made online/offline notice bigger.
+Minor enhancements.
+Added line 2 to change.log.

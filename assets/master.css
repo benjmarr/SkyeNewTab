@@ -68,12 +68,12 @@ a:hover {
   font-family: 'Titillium Web', sans-serif;
   display: block;
   color: white;
-  font-size: 70%;
+  font-size: 100%;
   cursor: default;
   margin-top: -3%;
   text-align: right;
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: opacity 0.5s, font-size 0.5s;
 }
 
 .mainClock {

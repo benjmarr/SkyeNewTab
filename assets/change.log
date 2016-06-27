@@ -1,6 +1,9 @@
 Skye New Tab change log
 All changes can be view at https://github.com/BenAndy/SkyeNewTab/commits/master
 
+v2.14.162:
+Added placeholder for background image author's web address.
+
 v2.14.161:
 Fixed issue where AM/PM would still show in 24 hour time.
 Moved advertisement related things to advertisement.js.

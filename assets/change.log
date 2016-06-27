@@ -1,6 +1,11 @@
 Skye New Tab change log
 All changes can be view at https://github.com/BenAndy/SkyeNewTab/commits/master
 
+v2.14.161:
+Fixed issue where AM/PM would still show in 24 hour time.
+Moved advertisement related things to advertisement.js.
+Minor changes in background.js.
+
 v2.14.160:
 Small changes with gathering user's name.
 Reversed change.log from oldest-newest to newest-oldest.

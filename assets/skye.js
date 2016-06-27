@@ -192,19 +192,7 @@ function clock() {
   };
   if (getCookie("opTwntyFrHrTm") === "24") {
     hourtf = nhour + 12;
-    if  (nhour < 12) {
-      if (getCookie("opAMPM") === "show") {
-        innerHTML("clockBox", hourtf + ":" + nmin + ap);
-      } else {
-        innerHTML("clockBox", hourtf + ":" + nmin);
-      };
-    } else {
-      if (getCookie("opAMPM") === "show") {
-        innerHTML("clockBox", hourtf + ":" + nmin + ap);
-      } else {
-        innerHTML("clockBox", hourtf + ":" + nmin);
-      };
-    };
+    innerHTML("clockBox", hourtf + ":" + nmin);
   } else {
     if (getCookie("opAMPM") === "show") {
       innerHTML("clockBox", nhour + ":" + nmin + ap);
@@ -238,6 +226,8 @@ document.addEventListener("keydown", function(e) {
       opChBkImgFnctn();
     } else if (e.keyCode === 71) {
       opGryscl();
+    } else if (e.keyCode === 65) {
+      window.location = advertWeb;
     };
   };
 }, false);
@@ -387,7 +377,7 @@ document.getElementById("opGryscl").addEventListener("click", function() {
   opGryscl();
 }, false);
 
-// Online/offline & Unsplash credit & text advertisement
+// Online/offline & Unsplash credit
 if (main) {
   // Online/offline
   var i = new Image();
@@ -401,12 +391,6 @@ if (main) {
   }, 2501);
   styleOpacity(3000, "dText", "1");
   styleOpacity(7000, "dText", "0");
-  // Text advertisement
-  setTimeout(function() {
-    // Adverts are limited to 50 characters
-    innerHTML("adText", "Want to advertise right here on Skye New Tab for free?! Contact <a href='mailto:benjaminandyy@gmail.com'>benjaminandyy@gmail.com</a> for information. We look forward to hearing from you!");
-  }, 5501);
-  styleOpacity(15000, "adText", "1");
 };
 
 // Run when page finished loading

@@ -7,7 +7,7 @@ var backgroundNumber = function() {
   return backgroundNames[Math.floor(Math.random() * backgroundNames.length)];
 };
 
-// Set last updated date in options & information menu
+// Set last background image update date in options & information menu
 innerHTML("infoImgUpdt", imageUpdateDate);
 
 // Setting background
@@ -24,7 +24,7 @@ var setBack = function(id) {
   };
 };
 
-// New background image option
+// New background image function
 var opChBkImgFnctn = function() {
   styleGrayscale(0, "header", "true");
   styleOpacity(100, "header", "0");

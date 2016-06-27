@@ -110,12 +110,10 @@ document.getElementById("ckiUpdclose").addEventListener("click", function() {
 
 // Get name
 var retriveUserName = function() {
-  var promptName = prompt("What's your name? If you don't wish to have your name shown, just press enter.", "Type your name here!");
+  var promptName = prompt("What would you like to be called? If you don't wish to have your name shown, just press enter.", "Type your name here!");
   if (promptName === "Type your name here!" || promptName === "" || promptName === "null" || promptName === null) {
-    alert("You can add your name in the options menu at any time!\nJust press 'O' for options!");
     setCookie("usingName", "false", 365);
   } else {
-    alert("Thanks, " + promptName + ". You can change your name in the options menu at any time!\nJust press 'O' for options!");
     setCookie("userName", promptName, 365);
     setCookie("usingName", "true", 365);
   };

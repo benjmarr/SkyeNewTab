@@ -49,7 +49,11 @@ var backImgInfo = function(imgUrl, imgAuth, imgAuthPro, imgAuthWeb) {
   innerHTML("bkgrndImgInf1", imgAuth);
   innerHTML("bkgrndImgInf2", "<a target='_blank' href='" + imgAuthPro + "'>" + imgAuthPro + "</a>");
   innerHTML("bkgrndImgInf3", "<a target='_blank' href='" + imgUrl + "'>" + imgUrl + "</a>");
-  // innerHTML("bkgrndImgInf4", "<a target='_blank' href='" + imgAuthWeb + "'>" + imgAuthWeb + "</a>");
+  if (imgAuthWeb === "" || imgAuthWeb === "web_address") {
+    innerHTML("bkgrndImgInf4", "Not available");
+  } else {
+    innerHTML("bkgrndImgInf4", "<a target='_blank' href='" + imgAuthWeb + "'>" + imgAuthWeb + "</a>");
+  };
 };
 document.getElementById("infoBackgroundImage").addEventListener("click", function() {
   clearMenu("true");

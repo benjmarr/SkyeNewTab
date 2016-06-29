@@ -1,6 +1,13 @@
 Skye New Tab change log
 All changes can be view at https://github.com/BenAndy/SkyeNewTab/commits/master
 
+v2.14.165:
+Removed background image author's web address data and now use https://unsplash.com/AUTHOR/portfolio.
+Added one new background image.
+Compacted image data array.
+Link to https://unsplash.com in background image data menu now opens in new tab.
+Updated author in index.html and popup.html's meta data.
+
 v2.14.164:
 Added background image author's web address to image information.
 

@@ -1,8 +1,8 @@
 // Copyright Benjamin Developments (c) 2015 - All rights reserved
 
 // Random background selection script
-var backgroundNames = Array(101, 102, 103, 104, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100);
-var imageUpdateDate = "Monday, 20<sup>th</sup> June 2016";
+var backgroundNames = Array(101, 102, 103, 104, 105, 106, 107, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100);
+var imageUpdateDate = "Wednesday, 29<sup>th</sup> June 2016";
 var backgroundNumber = function() {
   return backgroundNames[Math.floor(Math.random() * backgroundNames.length)];
 };
@@ -70,12 +70,12 @@ var backImageData = function() {
     backImgInfo("https://unsplash.com/photos/a8YV2C3yBMk", "Manik Rathee", "https://unsplash.com/@manikrathee", "web_address");
   } else if (setBackID === 104) {
     backImgInfo("https://unsplash.com/photos/iOWEyl7sEgY", "Jimmy Musto", "https://unsplash.com/@jmust13", "web_address");
-  } else if (setBackID === 85) {
-    backImgInfo("https://unsplash.com/photos/6wQId4r0uA4", "Vladimir Chuchadeev", "https://unsplash.com/@chuchad", "web_address");
-  } else if (setBackID === 86) {
-    backImgInfo("https://unsplash.com/photos/aIYFR0vbADk", "Erol Ahmed", "https://unsplash.com/@erol", "web_address");
-  } else if (setBackID === 87) {
-    backImgInfo("https://unsplash.com/photos/DMcI0cmYJYk", "Samuel Scrimshaw", "https://unsplash.com/@samscrim", "web_address");
+  } else if (setBackID === 105) {
+    backImgInfo("https://unsplash.com/photos/eh_vUyioHhc", "João Silas", "https://unsplash.com/@joaosilaas", "https://www.instagram.com/joaosilas");
+  } else if (setBackID === 106) {
+    backImgInfo("https://unsplash.com/photos/Hc42xXu_WOg", "veeterzy", "https://unsplash.com/@veeterzy", "https://veeterzy.com");
+  } else if (setBackID === 107) {
+    backImgInfo("https://unsplash.com/photos/O_uHS1bru2k", "Steve Richey", "https://unsplash.com/@steverichey", "https://www.rvcmedia.com/");
   } else if (setBackID === 88) {
     backImgInfo("https://unsplash.com/photos/TBQXwj3DEOY", "Sujan Sundarewaran", "https://unsplash.com/@sujansundareswaran", "web_address");
   } else if (setBackID === 89) {

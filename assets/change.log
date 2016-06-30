@@ -1,6 +1,10 @@
 Skye New Tab change log
 All changes can be view at https://github.com/BenAndy/SkyeNewTab/commits/master
 
+v2.14.166:
+Clicking on the image next to the search box now brings up the search box menu.
+Small grammar changes in search box menu.
+
 v2.14.165:
 Removed background image author's web address data and now use https://unsplash.com/AUTHOR/portfolio.
 Added one new background image.

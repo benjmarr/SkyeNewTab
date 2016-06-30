@@ -10,6 +10,7 @@ if (main) {
         innerHTML("srchBxChcsHS", "Show the search box");
         styleOpacity(0, "srchBx", 0);
         styleVisibility(300, "srchBx", "hidden");
+        hideAllSearchImages();
       } else if (getCookie("opSrchBx") === "show") {
         setCookie("opSrchBx", "google", 365);
         opSrchBx();
@@ -19,15 +20,30 @@ if (main) {
         styleVisibility(0, "srchBx", "visible");
       };
       if (getCookie("opSrchBx") === "google") {
-        innerHTML("srchBx", "<form id='formForm' method='get' action='https://www.google.com/search'><img src='assets/images/link/google.png' alt='Google Search' class='srchBxImg' /><input type='text' name='q' size='31' id='srchImg' /></form>");
+        innerHTML("srchBx", "<form id='formForm' method='get' action='https://www.google.com/search'><input type='text' name='q' size='31' id='srchImg' /></form>");
+        hideAllSearchImages();
+        styleOpacity(5, "searchImage1", 1);
+        styleVisibility(5, "searchImage1", "visible");
       } else if (getCookie("opSrchBx") === "twitter") {
-        innerHTML("srchBx", "<form id='formForm' method='get' action='https://www.twitter.com/search'><img src='assets/images/link/twtr.png' alt='Twitter Search' class='srchBxImg' /><input type='text' name='q' size='31' id='srchImg' /></form>");
+        innerHTML("srchBx", "<form id='formForm' method='get' action='https://www.twitter.com/search'><input type='text' name='q' size='31' id='srchImg' /></form>");
+        hideAllSearchImages();
+        styleOpacity(5, "searchImage2", 1);
+        styleVisibility(5, "searchImage2", "visible");
       } else if (getCookie("opSrchBx") === "facebook") {
-        innerHTML("srchBx", "<form id='formForm' method='get' action='https://www.facebook.com/search/top'><img src='assets/images/link/fb.png' alt='Facebook Search' class='srchBxImg' /><input type='text' name='q' size='31' id='srchImg' /></form>");
+        innerHTML("srchBx", "<form id='formForm' method='get' action='https://www.facebook.com/search/top'><input type='text' name='q' size='31' id='srchImg' /></form>");
+        hideAllSearchImages();
+        styleOpacity(5, "searchImage3", 1);
+        styleVisibility(5, "searchImage3", "visible");
       } else if (getCookie("opSrchBx") === "youtube") {
-        innerHTML("srchBx", "<form id='formForm' method='get' action='https://www.youtube.com/results'><img src='assets/images/link/utube.png' alt='YouTube Search' class='srchBxImg' /><input type='text' name='search_query' size='31' id='srchImg' /></form>");
+        innerHTML("srchBx", "<form id='formForm' method='get' action='https://www.youtube.com/results'><input type='text' name='search_query' size='31' id='srchImg' /></form>");
+        hideAllSearchImages();
+        styleOpacity(5, "searchImage4", 1);
+        styleVisibility(5, "searchImage4", "visible");
       } else if (getCookie("opSrchBx") === "github") {
-        innerHTML("srchBx", "<form id='formForm' method='get' action='https://www.github.com/search'><img src='assets/images/link/github.png' alt='GitHub Search' class='srchBxImg' /><input type='text' name='search' size='31' id='srchImg' /></form>");
+        innerHTML("srchBx", "<form id='formForm' method='get' action='https://www.github.com/search'><input type='text' name='search' size='31' id='srchImg' /></form>");
+        hideAllSearchImages();
+        styleOpacity(5, "searchImage5", 1);
+        styleVisibility(5, "searchImage5", "visible");
       };
     } else {
       document.getElementById("srchBx").innerHTML = "";
@@ -51,29 +67,49 @@ if (main) {
     };
     opSrchBx();
   }, false);
-  innerHTML("srchBxChcs1", "Google Search Engine");
+  innerHTML("srchBxChcs1", "Google search engine");
   document.getElementById("srchBxChcs1").addEventListener("click", function() {
     setCookie("opSrchBx", "google", 365);
     opSrchBx();
   }, false);
-  innerHTML("srchBxChcs2", "Twitter Search Engine");
+  innerHTML("srchBxChcs2", "Twitter search engine");
   document.getElementById("srchBxChcs2").addEventListener("click", function() {
     setCookie("opSrchBx", "twitter", 365);
     opSrchBx();
   }, false);
-  innerHTML("srchBxChcs3", "Facebook Search Engine");
+  innerHTML("srchBxChcs3", "Facebook search engine");
   document.getElementById("srchBxChcs3").addEventListener("click", function() {
     setCookie("opSrchBx", "facebook", 365);
     opSrchBx();
   }, false);
-  innerHTML("srchBxChcs4", "YouTube Search Engine");
+  innerHTML("srchBxChcs4", "YouTube search engine");
   document.getElementById("srchBxChcs4").addEventListener("click", function() {
     setCookie("opSrchBx", "youtube", 365);
     opSrchBx();
   }, false);
-  innerHTML("srchBxChcs5", "GitHub Search Engine");
+  innerHTML("srchBxChcs5", "GitHub search engine");
   document.getElementById("srchBxChcs5").addEventListener("click", function() {
     setCookie("opSrchBx", "github", 365);
     opSrchBx();
+  }, false);
+
+  // Hide all search images function
+  var hideAllSearchImages = function() {
+    styleOpacity(0, "searchImage1", 0);
+    styleOpacity(0, "searchImage2", 0);
+    styleOpacity(0, "searchImage3", 0);
+    styleOpacity(0, "searchImage4", 0);
+    styleOpacity(0, "searchImage5", 0);
+
+
+    // styleOpacity(0, "searchImage1", 1);
+    // styleVisibility(0, "searchImage1", "visible");
+  };
+
+  // Search image click
+  document.getElementById("searchImageBox").addEventListener("click", function() {
+    clearMenu("true");
+    styleVisibility(300, "srchBxChcs", "visible");
+    styleOpacity(300, "srchBxChcs", 0.9);
   }, false);
 };

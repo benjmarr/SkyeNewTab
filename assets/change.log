@@ -1,6 +1,9 @@
 Skye New Tab change log
 All changes can be view at https://github.com/BenAndy/SkyeNewTab/commits/master
 
+v2.14.167:
+Right click now works in the search box (https://github.com/BenAndy/SkyeNewTab/issues/13).
+
 v2.14.166:
 Clicking on the image next to the search box now brings up the search box menu.
 Small grammar changes in search box menu.

@@ -22,13 +22,21 @@ function getCookie(cname) {
 };
 
 // Anti-Right click
+//   if (main && document.activeElement.tagName != "INPUT") {
+setInterval(function() {
+  console.log(document.activeElement.tagName);
+}, 1);
 if (document.addEventListener) {
   document.addEventListener("contextmenu", function(e) {
-    e.preventDefault();
+    if (document.activeElement.tagName != "INPUT") {
+      e.preventDefault();
+    };
   }, false);
 } else {
   document.attachEvent("oncontextmenu", function() {
-    window.event.returnValue = false;
+    if (document.activeElement.tagName != "INPUT") {
+      window.event.returnValue = false;
+    };
   });
 };
 

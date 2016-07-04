@@ -22,10 +22,6 @@ function getCookie(cname) {
 };
 
 // Anti-Right click
-//   if (main && document.activeElement.tagName != "INPUT") {
-setInterval(function() {
-  console.log(document.activeElement.tagName);
-}, 1);
 if (document.addEventListener) {
   document.addEventListener("contextmenu", function(e) {
     if (document.activeElement.tagName != "INPUT") {

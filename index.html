@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Benjamin Developments" />
     <meta charset="utf-8" />
-    <title>New Tab</title>
   </head>
   <body id="body">
     <header id="header"></header>
@@ -50,9 +49,8 @@
       <br />&bull;<a><span id="infoBackgroundImage">View background image information</span></a>
       <br /><br />
       <div class="optionsMenuFoot">
-        <a href="https://benandy.github.io/cookie">Cookie Policy</a> - <a href="https://benandy.github.io/privacy">Privacy Policy</a> - <a href="https://benandy.typeform.com/to/zlElxa">Contact</a> - <a href="https://unsplash.com/license">Image License</a> - <a href="https://github.com/BenAndy/SkyeNewTab/blob/master/assets/change.log">Change Log</a> - <a href="https://benandy.github.io/terms">Terms and Conditions</a>
-        <br />
-        Skye New Tab copyright <a href="https://benandy.github.io">Benjamin Developments</a> &copy; 2015 - All rights reserved
+        <span id="footerTop1"></span>
+        <span id="footerBottom1"></span>
       </div>
     </div>
     <div class="optionsMenu" id="dteFom">
@@ -62,6 +60,10 @@
       <br />&bull;<a><span id="opDteFom2"></span></a>
       <br />&bull;<a><span id="opDteFom3"></span></a>
       <br />&bull;<a><span id="opDteFom4"></span></a>
+      <div class="optionsMenuFoot">
+        <span id="footerTop2"></span>
+        <span id="footerBottom2"></span>
+      </div>
     </div>
     <div class="optionsMenu" id="bkgrndImgInf">
       <img src="assets/images/x.png" alt="Close" class="x" id="bkgrndImgInfclose" />
@@ -127,5 +129,10 @@
     <script src="assets/links.js"></script>
     <script src="assets/searchBox.js"></script>
     <script src="assets/advertisement.js"></script>
+    <script src="assets/footer.js"></script>
+    <script type="text/javascript">
+      createFooter(true, true, 1);
+      createFooter(true, false, 2);
+    </script>
   </body>
 </html>

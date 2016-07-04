@@ -1,6 +1,14 @@
 Skye New Tab change log
 All changes can be view at https://github.com/BenAndy/SkyeNewTab/commits/master
 
+v2.14.168:
+Removed a comment that is no longer needed.
+Removed an interval function that is no longer needed.
+Removed a title tag that is no longer needed.
+Updated homepage URL in manifest.json.
+Updated security policy in manifest.json.
+Added footer.js for footer API.
+
 v2.14.167:
 Right click now works in the search box (https://github.com/BenAndy/SkyeNewTab/issues/13).
 

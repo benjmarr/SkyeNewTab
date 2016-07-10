@@ -1,8 +1,8 @@
 // Copyright Benjamin Developments (c) 2015 - All rights reserved
 
 // Random background selection script
-var backgroundNames = Array(101, 102, 103, 104, 105, 106, 107, 108, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100);
-var imageUpdateDate = "Wednesday, 29<sup>th</sup> June 2016";
+var backgroundNames = Array(101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 93, 94, 95, 96, 97, 98, 99, 100);
+var imageUpdateDate = "Sunday, 10<sup>th</sup> July 2016";
 var backgroundNumber = function() {
   return backgroundNames[Math.floor(Math.random() * backgroundNames.length)];
 };
@@ -83,14 +83,14 @@ var backImageData = function() {
     backImgInfo("O_uHS1bru2k", "Steve Richey", "https://unsplash.com/@steverichey");
   } else if (setBackID === 108) {
     backImgInfo("T16-cG1gEdo", "Jimmy Musto", "https://unsplash.com/@jmust13");
-  } else if (setBackID === 89) {
-    backImgInfo("c8TWWQ5ZnUw", "Hoach Le Dinh", "https://unsplash.com/@hachld");
-  } else if (setBackID === 90) {
-    backImgInfo("TZCehSn-T-o/", "Anders Jildén", "https://unsplash.com/@andersjilden");
-  } else if (setBackID === 91) {
-    backImgInfo("3wbxAMUj7sg/", "Roksolana Zasiadko", "https://unsplash.com/@cieloadentro");
-  } else if (setBackID === 92) {
-    backImgInfo("rTZW4f02zY8/", "NASA", "https://unsplash.com/@nasa");
+  } else if (setBackID === 109) {
+    backImgInfo("RRNbMiPmTZY", "Denys Nevozhai", "https://unsplash.com/@dnevozhai");
+  } else if (setBackID === 110) {
+    backImgInfo("_4Ib-a8g9aA", "Teddy Kelley", "https://unsplash.com/@teddykelley");
+  } else if (setBackID === 111) {
+    backImgInfo("U713MZX1x0w", "Drew Collins", "https://unsplash.com/@drewjohncollins");
+  } else if (setBackID === 112) {
+    backImgInfo("NF2K1dI3Gew", "Benny Jackson", "https://unsplash.com/@themightymerlin");
   } else if (setBackID === 93) {
     backImgInfo("zFnk_bTLApo", "Ismael Nieto", "https://unsplash.com/@ismaelnieto");
   } else if (setBackID === 94) {

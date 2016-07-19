@@ -1,6 +1,10 @@
 Skye New Tab change log
 All changes can be view at https://github.com/BenAndy/SkyeNewTab/commits/master
 
+v2.14.170:
+Added five new background images.
+Added 'sha256-gtWI+QKNgFNitrRjtO4FMMtjswIRSSEukir/J8SGoWk=' hash to CSP (https://github.com/BenAndy/SkyeNewTab/issues/14).
+
 v2.14.169:
 Added four new background images.
 

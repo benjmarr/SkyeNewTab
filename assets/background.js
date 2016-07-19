@@ -1,8 +1,8 @@
 // Copyright Benjamin Developments (c) 2015 - All rights reserved
 
 // Random background selection script
-var backgroundNames = Array(101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 93, 94, 95, 96, 97, 98, 99, 100);
-var imageUpdateDate = "Sunday, 10<sup>th</sup> July 2016";
+var backgroundNames = Array(101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 98, 99, 100);
+var imageUpdateDate = "Tuesday, 19<sup>th</sup> July 2016";
 var backgroundNumber = function() {
   return backgroundNames[Math.floor(Math.random() * backgroundNames.length)];
 };
@@ -91,16 +91,16 @@ var backImageData = function() {
     backImgInfo("U713MZX1x0w", "Drew Collins", "https://unsplash.com/@drewjohncollins");
   } else if (setBackID === 112) {
     backImgInfo("NF2K1dI3Gew", "Benny Jackson", "https://unsplash.com/@themightymerlin");
-  } else if (setBackID === 93) {
-    backImgInfo("zFnk_bTLApo", "Ismael Nieto", "https://unsplash.com/@ismaelnieto");
-  } else if (setBackID === 94) {
-    backImgInfo("AbTa_gQ74fs/", "Matthew Wiebe", "https://unsplash.com/@matthewwiebe");
-  } else if (setBackID === 95) {
-    backImgInfo("qH36EgNjPJY", "Alex Siale", "https://unsplash.com/@alexsialecreative");
-  } else if (setBackID === 96) {
-    backImgInfo("kKxfELd_5pg", "Julian Lavallée", "https://unsplash.com/@julienlavallee");
-  } else if (setBackID === 97) {
-    backImgInfo("uohGiEVhWiQ", "Artem Verbo", "https://unsplash.com/@artemverbo");
+  } else if (setBackID === 113) {
+    backImgInfo("Rdsc2L517iQ", "Roya Ann Miller", "https://unsplash.com/@royaannmiller");
+  } else if (setBackID === 114) {
+    backImgInfo("FgPGGFlY1gY", "Dan Carlson", "https://unsplash.com/@dan_carl5on");
+  } else if (setBackID === 115) {
+    backImgInfo("A0l8ZExLuwk", "Tim Marshall", "https://unsplash.com/@timmarshall");
+  } else if (setBackID === 116) {
+    backImgInfo("BfLyP-vPoOI", "Paul Gilmore", "https://unsplash.com/@paulgilmore_");
+  } else if (setBackID === 117) {
+    backImgInfo("rNcSTzp0Xv8", "Brian Erickson", "https://unsplash.com/@bw_erickson");
   } else if (setBackID === 98) {
     backImgInfo("HhCANDrFzZ0", "Priscilla Westra", "https://unsplash.com/@pwestra");
   } else if (setBackID === 99) {

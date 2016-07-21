@@ -42,7 +42,25 @@ document.getElementById("opChBkImg").addEventListener("click", function() {
 
 // Five minute background change
 var newBackID;
-setInterval(opChBkImgFnctn, 300000);
+var min;
+var minNum;
+setInterval(function() {
+  min = new Date();
+  minNum = min.getMinutes();
+}, 1);
+var checkBackgroundTimer;
+var startBackgroundTimer = function() {
+  checkBackgroundTimer = setInterval(function() {
+    if (minNum === 00 || minNum === 05 || minNum === 10 || minNum === 15 || minNum === 20 || minNum === 25 || minNum === 30 || minNum === 35 || minNum === 40 || minNum === 45 || minNum === 50 || minNum === 55) {
+      clearInterval(checkBackgroundTimer);
+      setTimeout(function() {
+        startBackgroundTimer();
+      }, 60001);
+      opChBkImgFnctn();
+    };
+  }, 2);
+};
+startBackgroundTimer();
 
 // Background image information menu
 var backImgInfo = function(imgID, imgAuth, imgAuthPro, imgAuthWeb) {
@@ -50,11 +68,6 @@ var backImgInfo = function(imgID, imgAuth, imgAuthPro, imgAuthWeb) {
   innerHTML("bkgrndImgInf2", "<a target='_blank' href='" + imgAuthPro + "'>" + imgAuthPro + "</a>");
   innerHTML("bkgrndImgInf3", "<a target='_blank' href='https://unsplash.com/photos/" + imgID + "'>" + "https://unsplash.com/photos/" + imgID + "</a>");
   innerHTML("bkgrndImgInf4", "<a target='_blank' href='" + imgAuthPro + "/portfolio'>Click to see</a>");
-  // if (imgAuthWeb === "" || imgAuthWeb === "web_address") {
-  //   innerHTML("bkgrndImgInf4", "Not available");
-  // } else {
-  //   innerHTML("bkgrndImgInf4", "<a target='_blank' href='" + imgAuthWeb + "'>" + imgAuthWeb + "</a>");
-  // };
 };
 document.getElementById("infoBackgroundImage").addEventListener("click", function() {
   clearMenu("true");

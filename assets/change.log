@@ -1,6 +1,11 @@
 Skye New Tab change log
 All changes can be view at https://github.com/BenAndy/SkyeNewTab/commits/master
 
+v2.14.172:
+Fixed an issue where background images wouldn't display in popup window.
+Minor changes to the popup window.
+Fixed an issue where cookie update alerts would show when you open Skye for the very first time.
+
 v2.14.171:
 Changed the five minute background change interval from since you loaded the page, from every five minutes according to clock (https://github.com/BenAndy/SkyeNewTab/issues/15).
 Removed old commented code that is no longed needed.

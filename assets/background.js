@@ -64,10 +64,12 @@ startBackgroundTimer();
 
 // Background image information menu
 var backImgInfo = function(imgID, imgAuth, imgAuthPro, imgAuthWeb) {
-  innerHTML("bkgrndImgInf1", imgAuth);
-  innerHTML("bkgrndImgInf2", "<a target='_blank' href='" + imgAuthPro + "'>" + imgAuthPro + "</a>");
-  innerHTML("bkgrndImgInf3", "<a target='_blank' href='https://unsplash.com/photos/" + imgID + "'>" + "https://unsplash.com/photos/" + imgID + "</a>");
-  innerHTML("bkgrndImgInf4", "<a target='_blank' href='" + imgAuthPro + "/portfolio'>Click to see</a>");
+  if (main) {
+    innerHTML("bkgrndImgInf1", imgAuth);
+    innerHTML("bkgrndImgInf2", "<a target='_blank' href='" + imgAuthPro + "'>" + imgAuthPro + "</a>");
+    innerHTML("bkgrndImgInf3", "<a target='_blank' href='https://unsplash.com/photos/" + imgID + "'>" + "https://unsplash.com/photos/" + imgID + "</a>");
+    innerHTML("bkgrndImgInf4", "<a target='_blank' href='" + imgAuthPro + "/portfolio'>Click to see</a>");
+  };
 };
 document.getElementById("infoBackgroundImage").addEventListener("click", function() {
   clearMenu("true");

@@ -1,7 +1,7 @@
 // Copyright Benjamin Developments (c) 2015 - All rights reserved
 console.log("Skye New Tab copyright Benjamin Developments (c) 2015 - All rights reserved");
 var rootUrl = "https://github.com/BenAndy/SkyeNewTab/tree/master";
-var ckiUpdDte = "April 10, 2016";
+var ckiUpdDte = "July 28, 2016";
 
 // Cookie handlers
 function setCookie(cname, cvalue, exdays) {
@@ -98,15 +98,17 @@ var clearMenu = function(opB) {
 
 // Cookie update alerts
 if (getCookie("ckiUpd") === "") {
-  setCookie("ckiUpd", "January 1, 1970", 365);
+  setCookie("ckiUpd", "firstLoad", 365);
 };
-if (getCookie("ckiUpd") === ckiUpdDte) {
+if (getCookie("ckiUpd") === ckiUpdDte || getCookie("ckiUpd") === "firstLoad") {
   console.log("Cookies last updated on " + ckiUpdDte);
+  setCookie("ckiUpd", ckiUpdDte, 365);
 } else {
   setCookie("ckiUpd", ckiUpdDte, 365);
   styleVisibility(0, "ckiUpd", "visible");
   styleOpacity(0, "ckiUpd", 0.9);
   innerHTML("ckiUpdMsg", "New cookies have been added since you last visited this page. Cookies were last updated on " + ckiUpdDte + ". You can view our cookie policy, privacy policy, terms of use and change log below.");
+  console.log("Cookies last updated on " + ckiUpdDte);
 };
 document.getElementById("ckiUpdclose").addEventListener("click", function() {
   clearMenu("true");

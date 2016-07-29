@@ -1,8 +1,8 @@
 // Copyright Benjamin Developments (c) 2015 - All rights reserved
 
 // Random background selection script
-var backgroundNames = Array(101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 98, 99, 100);
-var imageUpdateDate = "Tuesday, 19<sup>th</sup> July 2016";
+var backgroundNames = Array(121, 122, 123, 124, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120);
+var imageUpdateDate = "Friday, 29<sup>th</sup> July 2016";
 var backgroundNumber = function() {
   return backgroundNames[Math.floor(Math.random() * backgroundNames.length)];
 };
@@ -82,14 +82,14 @@ document.getElementById("bkgrndImgInfclose").addEventListener("click", function(
 
 // Background image data
 var backImageData = function() {
-  if (setBackID === 101) {
-    backImgInfo("F9o7u-CnDJk", "Tony Webster", "https://unsplash.com/@tonywebster");
-  } else if (setBackID === 102) {
-    backImgInfo("VBNb52J8Trk", "SpaceX", "https://unsplash.com/@spacex");
-  } else if (setBackID === 103) {
-    backImgInfo("a8YV2C3yBMk", "Manik Rathee", "https://unsplash.com/@manikrathee");
-  } else if (setBackID === 104) {
-    backImgInfo("iOWEyl7sEgY", "Jimmy Musto", "https://unsplash.com/@jmust13");
+  if (setBackID === 121) {
+    backImgInfo("O85h02qZ24w", "Anders Jildén", "https://unsplash.com/@andersjilden");
+  } else if (setBackID === 122) {
+    backImgInfo("kVf7VRgg4p8", "Samuel Zeller", "https://unsplash.com/@samuelzeller");
+  } else if (setBackID === 123) {
+    backImgInfo("O0dEH-UPj68", "NASA", "https://unsplash.com/@nasa");
+  } else if (setBackID === 124) {
+    backImgInfo("MKLRMeKctI4", "Matt Benson", "https://unsplash.com/@mattgyver");
   } else if (setBackID === 105) {
     backImgInfo("eh_vUyioHhc", "João Silas", "https://unsplash.com/@joaosilaas");
   } else if (setBackID === 106) {
@@ -116,12 +116,12 @@ var backImageData = function() {
     backImgInfo("BfLyP-vPoOI", "Paul Gilmore", "https://unsplash.com/@paulgilmore_");
   } else if (setBackID === 117) {
     backImgInfo("rNcSTzp0Xv8", "Brian Erickson", "https://unsplash.com/@bw_erickson");
-  } else if (setBackID === 98) {
-    backImgInfo("HhCANDrFzZ0", "Priscilla Westra", "https://unsplash.com/@pwestra");
-  } else if (setBackID === 99) {
-    backImgInfo("44t1AZNIMIE", "Tobias van Schneider", "https://unsplash.com/@vanschneider");
-  } else if (setBackID === 100) {
-    backImgInfo("sfgH9dXcMRw", "Anton Repponen", "https://unsplash.com/@repponen");
+  } else if (setBackID === 118) {
+    backImgInfo("gvLRWYcPEs4", "Phoebe Dill", "https://unsplash.com/@phoebe_dill");
+  } else if (setBackID === 119) {
+    backImgInfo("b2-fBVrfx0o", "Dominik Martin", "https://unsplash.com/@dominikmartin");
+  } else if (setBackID === 120) {
+    backImgInfo("9i9RquPtXsg", "Lionello DelPiccolo", "https://unsplash.com/@liodp");
   };
 };
 

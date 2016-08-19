@@ -1,6 +1,11 @@
 Skye New Tab change log
 All changes can be view at https://github.com/BenAndy/SkyeNewTab/commits/master
 
+v2.14.175:
+Small changes in background.js decrease file size (https://github.com/BenAndy/SkyeNewTab/issues/16).
+Added six new background images.
+Removed 10 images from the download file in an attempt to decrease extension download times. There will now be a range of 10 background images, instead of 20 (https://github.com/BenAndy/SkyeNewTab/issues/16).
+
 v2.14.174:
 Added six new background images.
 

@@ -1,8 +1,8 @@
 // Copyright Benjamin Developments (c) 2015 - All rights reserved
 
 // Random background selection script
-var backgroundNames = Array(121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120);
-var imageUpdateDate = "Friday, 29<sup>th</sup> July 2016";
+var backgroundNames = Array(131, 132, 133, 134, 135, 136, 127, 128, 129, 130);
+var imageUpdateDate = "Friday, 19<sup>th</sup> August 2016";
 var backgroundNumber = function() {
   return backgroundNames[Math.floor(Math.random() * backgroundNames.length)];
 };
@@ -82,46 +82,27 @@ document.getElementById("bkgrndImgInfclose").addEventListener("click", function(
 
 // Background image data
 var backImageData = function() {
-  if (setBackID === 121) {
-    backImgInfo("O85h02qZ24w", "Anders Jildén", "https://unsplash.com/@andersjilden");
-  } else if (setBackID === 122) {
-    backImgInfo("kVf7VRgg4p8", "Samuel Zeller", "https://unsplash.com/@samuelzeller");
-  } else if (setBackID === 123) {
-    backImgInfo("O0dEH-UPj68", "NASA", "https://unsplash.com/@nasa");
-  } else if (setBackID === 124) {
-    backImgInfo("MKLRMeKctI4", "Matt Benson", "https://unsplash.com/@mattgyver");
-  } else if (setBackID === 125) {
-    backImgInfo("hXOGHaGCtdA", "Aron Van de Pol", "https://unsplash.com/@aronvandepol");
-  } else if (setBackID === 126) {
-    backImgInfo("-sQ4FsomXEs", "Alexander Rotker", "https://unsplash.com/@alex_zandric");
+  var uURL = "https://unsplash.com/@";
+  if (setBackID === 131) {
+    backImgInfo("hx6kTWs1sHI", "Dmitri Popov", uURL + "dmpop");
+  } else if (setBackID === 132) {
+    backImgInfo("HnUHOBuJ7s4", "Rick Barrett", uURL + "weareambitious");
+  } else if (setBackID === 133) {
+    backImgInfo("4xv3lqnanYc", "Joe Gardner", uURL + "josephgardnerphotography");
+  } else if (setBackID === 134) {
+    backImgInfo("gWDPk5KYLc4", "Zbysiu Rodak", uURL + "zbigniew");
+  } else if (setBackID === 135) {
+    backImgInfo("AjrCbkUGeYc", "Daniel Roizer", uURL + "danny159");
+  } else if (setBackID === 136) {
+    backImgInfo("BgrJ7KBikgU", "Samuel Zeller", uURL + "samuelzeller");
   } else if (setBackID === 127) {
-    backImgInfo("VZ07w73ta-k", "Mike Wilson", "https://unsplash.com/@mkwlsn");
+    backImgInfo("VZ07w73ta-k", "Mike Wilson", uURL + "mkwlsn");
   } else if (setBackID === 128) {
-    backImgInfo("Sq7WPOjHGDs", "Loic Djim", "https://unsplash.com/@loic");
+    backImgInfo("Sq7WPOjHGDs", "Loic Djim", uURL + "loic");
   } else if (setBackID === 129) {
-    backImgInfo("xRbArjajH2o", "LoboStudio Hamburg", "https://unsplash.com/@lobostudiohamburg");
+    backImgInfo("xRbArjajH2o", "LoboStudio Hamburg", uURL + "lobostudiohamburg");
   } else if (setBackID === 130) {
-    backImgInfo("TV2gg2kZD1o", "SpaceX", "https://unsplash.com/@spacex");
-  } else if (setBackID === 111) {
-    backImgInfo("U713MZX1x0w", "Drew Collins", "https://unsplash.com/@drewjohncollins");
-  } else if (setBackID === 112) {
-    backImgInfo("NF2K1dI3Gew", "Benny Jackson", "https://unsplash.com/@themightymerlin");
-  } else if (setBackID === 113) {
-    backImgInfo("Rdsc2L517iQ", "Roya Ann Miller", "https://unsplash.com/@royaannmiller");
-  } else if (setBackID === 114) {
-    backImgInfo("FgPGGFlY1gY", "Dan Carlson", "https://unsplash.com/@dan_carl5on");
-  } else if (setBackID === 115) {
-    backImgInfo("A0l8ZExLuwk", "Tim Marshall", "https://unsplash.com/@timmarshall");
-  } else if (setBackID === 116) {
-    backImgInfo("BfLyP-vPoOI", "Paul Gilmore", "https://unsplash.com/@paulgilmore_");
-  } else if (setBackID === 117) {
-    backImgInfo("rNcSTzp0Xv8", "Brian Erickson", "https://unsplash.com/@bw_erickson");
-  } else if (setBackID === 118) {
-    backImgInfo("gvLRWYcPEs4", "Phoebe Dill", "https://unsplash.com/@phoebe_dill");
-  } else if (setBackID === 119) {
-    backImgInfo("b2-fBVrfx0o", "Dominik Martin", "https://unsplash.com/@dominikmartin");
-  } else if (setBackID === 120) {
-    backImgInfo("9i9RquPtXsg", "Lionello DelPiccolo", "https://unsplash.com/@liodp");
+    backImgInfo("TV2gg2kZD1o", "SpaceX", uURL + "spacex");
   };
 };
 

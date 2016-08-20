@@ -1,6 +1,13 @@
 Skye New Tab change log
 All changes can be view at https://github.com/BenAndy/SkyeNewTab/commits/master
 
+v2.14.176:
+Removed some unnecessary lines of code from popup.html.
+Spaced out the popup menu.
+Changed the date font size on the popup menu.
+Removed the AM/PM indicator from the popup menu.
+Updated "author" in manifest.json from "Benjamin" to "Benjamin Developments".
+
 v2.14.175:
 Small changes in background.js decrease file size (https://github.com/BenAndy/SkyeNewTab/issues/16).
 Added six new background images.

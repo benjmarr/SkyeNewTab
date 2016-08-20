@@ -1,10 +1,10 @@
 {
-  "version": "2.14.175",
+  "version": "2.14.176",
   "name": "Skye New Tab",
   "short_name": "Skye New Tab",
   "description": "Replace your new tab page with a more modern page! Featuring time, dates, many background images, welcome messages and more!",
   "manifest_version": 2,
-  "author": "Benjamin",
+  "author": "Benjamin Developments",
   "offline_enabled": true,
   "homepage_url": "https://benandy.github.io/skye",
   "incognito": "split",

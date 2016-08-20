@@ -73,46 +73,51 @@ var styleBackgroundColor = function(delay, id, value) {
 
 // Clear menus
 var clearMenu = function(opB) {
-  styleOpacity(0, "opM", 0);
-  styleVisibility(300, "opM", "hidden");
-  styleOpacity(0, "dteFom", 0);
-  styleVisibility(300, "dteFom", "hidden");
-  styleOpacity(0, "bkgrndImgInf", 0);
-  styleVisibility(300, "bkgrndImgInf", "hidden");
-  styleOpacity(0, "icnVsblty", 0);
-  styleVisibility(300, "icnVsblty", "hidden");
-  styleOpacity(0, "kybdCntrls", 0);
-  styleVisibility(300, "kybdCntrls", "hidden");
-  styleOpacity(0, "ckiUpd", 0);
-  styleVisibility(300, "ckiUpd", "hidden");
-  styleOpacity(0, "srchBxChcs", 0);
-  styleVisibility(300, "srchBxChcs", "hidden");
-  if (opB === "true") {
-    styleVisibility(0, "options", "visible");
-    styleOpacity(0, "options", 1);
-  } else {
-    styleVisibility(300, "options", "hidden");
-    styleOpacity(0, "options", 0);
+  if (main) {
+    styleOpacity(0, "opM", 0);
+    styleVisibility(300, "opM", "hidden");
+    styleOpacity(0, "dteFom", 0);
+    styleVisibility(300, "dteFom", "hidden");
+    styleOpacity(0, "bkgrndImgInf", 0);
+    styleVisibility(300, "bkgrndImgInf", "hidden");
+    styleOpacity(0, "icnVsblty", 0);
+    styleVisibility(300, "icnVsblty", "hidden");
+    styleOpacity(0, "kybdCntrls", 0);
+    styleVisibility(300, "kybdCntrls", "hidden");
+    styleOpacity(0, "ckiUpd", 0);
+    styleVisibility(300, "ckiUpd", "hidden");
+    styleOpacity(0, "srchBxChcs", 0);
+    styleVisibility(300, "srchBxChcs", "hidden");
+    if (opB === "true") {
+      styleVisibility(0, "options", "visible");
+      styleOpacity(0, "options", 1);
+    } else {
+      styleVisibility(300, "options", "hidden");
+      styleOpacity(0, "options", 0);
+    };
   };
 };
 
 // Cookie update alerts
-if (getCookie("ckiUpd") === "") {
-  setCookie("ckiUpd", "firstLoad", 365);
+if (main) {
+  if (getCookie("ckiUpd") === "") {
+    setCookie("ckiUpd", "firstLoad", 365);
+  };
+  if (getCookie("ckiUpd") === ckiUpdDte || getCookie("ckiUpd") === "firstLoad") {
+    console.log("Cookies last updated on " + ckiUpdDte);
+    setCookie("ckiUpd", ckiUpdDte, 365);
+  } else {
+    setCookie("ckiUpd", ckiUpdDte, 365);
+    styleVisibility(0, "ckiUpd", "visible");
+    styleOpacity(0, "ckiUpd", 0.9);
+    innerHTML("ckiUpdMsg", "New cookies have been added since you last visited this page. Cookies were last updated on " + ckiUpdDte + ". You can view our cookie policy, privacy policy, terms of use and change log below.");
+    console.log("Cookies last updated on " + ckiUpdDte);
+  };
+  document.getElementById("ckiUpdclose").addEventListener("click", function() {
+    clearMenu("true");
+  }, false);
 };
-if (getCookie("ckiUpd") === ckiUpdDte || getCookie("ckiUpd") === "firstLoad") {
-  console.log("Cookies last updated on " + ckiUpdDte);
-  setCookie("ckiUpd", ckiUpdDte, 365);
-} else {
-  setCookie("ckiUpd", ckiUpdDte, 365);
-  styleVisibility(0, "ckiUpd", "visible");
-  styleOpacity(0, "ckiUpd", 0.9);
-  innerHTML("ckiUpdMsg", "New cookies have been added since you last visited this page. Cookies were last updated on " + ckiUpdDte + ". You can view our cookie policy, privacy policy, terms of use and change log below.");
-  console.log("Cookies last updated on " + ckiUpdDte);
-};
-document.getElementById("ckiUpdclose").addEventListener("click", function() {
-  clearMenu("true");
-}, false);
+
 
 // Get name
 var retriveUserName = function() {
@@ -196,17 +201,28 @@ function clock() {
       };
     };
   };
-  if (getCookie("opTwntyFrHrTm") === "24") {
-    hourtf = nhour + 12;
-    innerHTML("clockBox", hourtf + ":" + nmin);
+  if (main) {
+    if (getCookie("opTwntyFrHrTm") === "24") {
+      hourtf = nhour + 12;
+      innerHTML("clockBox", hourtf + ":" + nmin);
+    } else {
+      if (getCookie("opAMPM") === "show") {
+        innerHTML("clockBox", nhour + ":" + nmin + ap);
+      } else {
+        innerHTML("clockBox", nhour + ":" + nmin);
+      };
+    };
   } else {
-    if (getCookie("opAMPM") === "show") {
-      innerHTML("clockBox", nhour + ":" + nmin + ap);
+    if (getCookie("opTwntyFrHrTm") === "24") {
+      hourtf = nhour + 12;
+      innerHTML("clockBox", hourtf + ":" + nmin);
     } else {
       innerHTML("clockBox", nhour + ":" + nmin);
     };
   };
-
+  if (!main) {
+    document.getElementById("dateBox").style.fontSize = "150%";
+  };
   if (getCookie("opDteFom") === "1") {
     innerHTML("dateBox", tday[nday] + ", " + tmonth[nmonth] + " " + ndate + "<sup>" + strdndth + "</sup>");
   } else if (getCookie("opDteFom") === "2") {
@@ -337,14 +353,16 @@ document.getElementById("opWlcmMsgs").addEventListener("click", function() {
   };
 }, false);
   // Keyboard controls menu
-document.getElementById("opKybdCntrls").addEventListener("click", function() {
-  clearMenu("true");
-  styleVisibility(300, "kybdCntrls", "visible");
-  styleOpacity(300, "kybdCntrls", 1);
-}, false);
-document.getElementById("kybdCntrlsclose").addEventListener("click", function() {
-  clearMenu("true");
-}, false);
+if (main) {
+  document.getElementById("opKybdCntrls").addEventListener("click", function() {
+    clearMenu("true");
+    styleVisibility(300, "kybdCntrls", "visible");
+    styleOpacity(300, "kybdCntrls", 1);
+  }, false);
+  document.getElementById("kybdCntrlsclose").addEventListener("click", function() {
+    clearMenu("true");
+  }, false);
+};
   // 24 hour time option
 if (getCookie("opTwntyFrHrTm") === "") {
   setCookie("opTwntyFrHrTm", "12", 365);

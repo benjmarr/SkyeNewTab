@@ -1,8 +1,8 @@
 // Copyright Benjamin Developments (c) 2015 - All rights reserved
 
 // Random background selection script
-var backgroundNames = Array(131, 132, 133, 134, 135, 136, 127, 128, 129, 130);
-var imageUpdateDate = "Friday, 19<sup>th</sup> August 2016";
+var backgroundNames = Array(141, 132, 133, 134, 135, 136, 137, 138, 139, 140);
+var imageUpdateDate = "Sunday, 28<sup>th</sup> August 2016";
 var backgroundNumber = function() {
   return backgroundNames[Math.floor(Math.random() * backgroundNames.length)];
 };
@@ -83,8 +83,8 @@ document.getElementById("bkgrndImgInfclose").addEventListener("click", function(
 // Background image data
 var backImageData = function() {
   var uURL = "https://unsplash.com/@";
-  if (setBackID === 131) {
-    backImgInfo("hx6kTWs1sHI", "Dmitri Popov", uURL + "dmpop");
+  if (setBackID === 141) {
+    backImgInfo("le60j2br1BI", "Zachary Staines", uURL + "zac_staines");
   } else if (setBackID === 132) {
     backImgInfo("HnUHOBuJ7s4", "Rick Barrett", uURL + "weareambitious");
   } else if (setBackID === 133) {
@@ -95,14 +95,14 @@ var backImageData = function() {
     backImgInfo("AjrCbkUGeYc", "Daniel Roizer", uURL + "danny159");
   } else if (setBackID === 136) {
     backImgInfo("BgrJ7KBikgU", "Samuel Zeller", uURL + "samuelzeller");
-  } else if (setBackID === 127) {
-    backImgInfo("VZ07w73ta-k", "Mike Wilson", uURL + "mkwlsn");
-  } else if (setBackID === 128) {
-    backImgInfo("Sq7WPOjHGDs", "Loic Djim", uURL + "loic");
-  } else if (setBackID === 129) {
-    backImgInfo("xRbArjajH2o", "LoboStudio Hamburg", uURL + "lobostudiohamburg");
-  } else if (setBackID === 130) {
-    backImgInfo("TV2gg2kZD1o", "SpaceX", uURL + "spacex");
+  } else if (setBackID === 137) {
+    backImgInfo("Gacd_XeSGQk", "Charlie Harutaka", uURL + "charlieharutaka");
+  } else if (setBackID === 138) {
+    backImgInfo("g-AklIvI1aI", "Steven Wei", uURL + "stevenwei");
+  } else if (setBackID === 139) {
+    backImgInfo("s1M0ncSl9l4", "Uğur Gürcüoğlu", uURL + "sharkdesignstudio");
+  } else if (setBackID === 140) {
+    backImgInfo("ahi73ZN5P0Y", "Federico Beccari", uURL + "federize");
   };
 };
 

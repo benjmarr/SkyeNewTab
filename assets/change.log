@@ -1,6 +1,11 @@
 Skye New Tab change log
 All changes can be view at https://github.com/BenAndy/SkyeNewTab/commits/master
 
+v2.14.179:
+Lowered the chance of getting the same background image twice in a row.
+Small changes to the background image data formatting.
+Added five new background images.
+
 v2.14.178:
 Updated Instragram logo (https://github.com/BenAndy/SkyeNewTab/issues/17).
 

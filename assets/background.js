@@ -1,8 +1,8 @@
 // Copyright Benjamin Developments (c) 2015 - All rights reserved
 
 // Random background selection script
-var backgroundNames = Array(141, 132, 133, 134, 135, 136, 137, 138, 139, 140);
-var imageUpdateDate = "Sunday, 28<sup>th</sup> August 2016";
+var backgroundNames = Array(141, 142, 143, 144, 145, 146, 137, 138, 139, 140);
+var imageUpdateDate = "Wednesday, 7<sup>th</sup> September 2016";
 var backgroundNumber = function() {
   return backgroundNames[Math.floor(Math.random() * backgroundNames.length)];
 };
@@ -14,14 +14,22 @@ innerHTML("infoImgUpdt", imageUpdateDate);
 var setBackID;
 var setBack = function(id) {
   if (id === "random") {
-    setBackID = backgroundNumber();
-    backImageData();
-    document.getElementById("header").style.backgroundImage = "url('assets/images/backgrounds/" + setBackID + ".jpg')";
+    if (setBackID === "") {
+      setBackID = backgroundNumber();
+    } else {
+      var x = backgroundNumber();
+      setBackID = backgroundNumber();
+      if (setBackID === x) {
+        setBackID = backgroundNumber();
+      };
+    };
   } else {
     setBackID = id;
-    backImageData();
-    document.getElementById("header").style.backgroundImage = "url('assets/images/backgrounds/" + setBackID + ".jpg')";
   };
+  setTimeout(function() {
+    document.getElementById("header").style.backgroundImage = "url('assets/images/backgrounds/" + setBackID + ".jpg')";
+    backImageData();
+  }, 50);
 };
 
 // New background image function
@@ -63,7 +71,8 @@ var startBackgroundTimer = function() {
 startBackgroundTimer();
 
 // Background image information menu
-var backImgInfo = function(imgID, imgAuth, imgAuthPro, imgAuthWeb) {
+var backImgInfo = function(imgID, imgAuth, imgAuthPro) {
+  imgAuthPro = "https://unsplash.com/@" + imgAuthPro;
   if (main) {
     innerHTML("bkgrndImgInf1", imgAuth);
     innerHTML("bkgrndImgInf2", "<a target='_blank' href='" + imgAuthPro + "'>" + imgAuthPro + "</a>");
@@ -82,27 +91,26 @@ document.getElementById("bkgrndImgInfclose").addEventListener("click", function(
 
 // Background image data
 var backImageData = function() {
-  var uURL = "https://unsplash.com/@";
   if (setBackID === 141) {
-    backImgInfo("le60j2br1BI", "Zachary Staines", uURL + "zac_staines");
-  } else if (setBackID === 132) {
-    backImgInfo("HnUHOBuJ7s4", "Rick Barrett", uURL + "weareambitious");
-  } else if (setBackID === 133) {
-    backImgInfo("4xv3lqnanYc", "Joe Gardner", uURL + "josephgardnerphotography");
-  } else if (setBackID === 134) {
-    backImgInfo("gWDPk5KYLc4", "Zbysiu Rodak", uURL + "zbigniew");
-  } else if (setBackID === 135) {
-    backImgInfo("AjrCbkUGeYc", "Daniel Roizer", uURL + "danny159");
-  } else if (setBackID === 136) {
-    backImgInfo("BgrJ7KBikgU", "Samuel Zeller", uURL + "samuelzeller");
+    backImgInfo("le60j2br1BI", "Zachary Staines", "zac_staines");
+  } else if (setBackID === 142) {
+    backImgInfo("jYBy2HCUve0", "Jeff King", "jeffkingla");
+  } else if (setBackID === 143) {
+    backImgInfo("TilfTdj3x6U", "Benny Jackson", "themightymerlin");
+  } else if (setBackID === 144) {
+    backImgInfo("KX1StEax7Jk", "Michael Ramey", "qtip94ramey");
+  } else if (setBackID === 145) {
+    backImgInfo("p3OzJuT_Dks", "Kace Rodriguez", "kace");
+  } else if (setBackID === 146) {
+    backImgInfo("pQS0ETF3KTI", "Arto Marttinen", "whiteboytravels");
   } else if (setBackID === 137) {
-    backImgInfo("Gacd_XeSGQk", "Charlie Harutaka", uURL + "charlieharutaka");
+    backImgInfo("Gacd_XeSGQk", "Charlie Harutaka", "charlieharutaka");
   } else if (setBackID === 138) {
-    backImgInfo("g-AklIvI1aI", "Steven Wei", uURL + "stevenwei");
+    backImgInfo("g-AklIvI1aI", "Steven Wei", "stevenwei");
   } else if (setBackID === 139) {
-    backImgInfo("s1M0ncSl9l4", "Uğur Gürcüoğlu", uURL + "sharkdesignstudio");
+    backImgInfo("s1M0ncSl9l4", "Uğur Gürcüoğlu", "sharkdesignstudio");
   } else if (setBackID === 140) {
-    backImgInfo("ahi73ZN5P0Y", "Federico Beccari", uURL + "federize");
+    backImgInfo("ahi73ZN5P0Y", "Federico Beccari", "federize");
   };
 };
 

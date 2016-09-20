@@ -1,8 +1,8 @@
 // Copyright Benjamin Developments (c) 2015 - All rights reserved
 
 // Random background selection script
-var backgroundNames = Array(141, 142, 143, 144, 145, 146, 137, 138, 139, 140);
-var imageUpdateDate = "Wednesday, 7<sup>th</sup> September 2016";
+var backgroundNames = Array(151, 142, 143, 144, 145, 146, 147, 148, 149, 150);
+var imageUpdateDate = "Tuesday, 20<sup>th</sup> September 2016";
 var backgroundNumber = function() {
   return backgroundNames[Math.floor(Math.random() * backgroundNames.length)];
 };
@@ -91,8 +91,8 @@ document.getElementById("bkgrndImgInfclose").addEventListener("click", function(
 
 // Background image data
 var backImageData = function() {
-  if (setBackID === 141) {
-    backImgInfo("le60j2br1BI", "Zachary Staines", "zac_staines");
+  if (setBackID === 151) {
+    backImgInfo("_SFJhRPzJHs", "NASA", "nasa");
   } else if (setBackID === 142) {
     backImgInfo("jYBy2HCUve0", "Jeff King", "jeffkingla");
   } else if (setBackID === 143) {
@@ -103,14 +103,14 @@ var backImageData = function() {
     backImgInfo("p3OzJuT_Dks", "Kace Rodriguez", "kace");
   } else if (setBackID === 146) {
     backImgInfo("pQS0ETF3KTI", "Arto Marttinen", "whiteboytravels");
-  } else if (setBackID === 137) {
-    backImgInfo("Gacd_XeSGQk", "Charlie Harutaka", "charlieharutaka");
-  } else if (setBackID === 138) {
-    backImgInfo("g-AklIvI1aI", "Steven Wei", "stevenwei");
-  } else if (setBackID === 139) {
-    backImgInfo("s1M0ncSl9l4", "Uğur Gürcüoğlu", "sharkdesignstudio");
-  } else if (setBackID === 140) {
-    backImgInfo("ahi73ZN5P0Y", "Federico Beccari", "federize");
+  } else if (setBackID === 147) {
+    backImgInfo("sAGXVK6bNFc", "Amar Yashlaha", "pictagramar");
+  } else if (setBackID === 148) {
+    backImgInfo("YrtFlrLo2DQ", "Marcela Laskoski", "ponicornio");
+  } else if (setBackID === 149) {
+    backImgInfo("IEHPDNk2-8w", "Sam Ferrara", "samferrara");
+  } else if (setBackID === 150) {
+    backImgInfo("USrZRcRS2Lw", "Todd Quackenbush", "toddquackenbush");
   };
 };
 

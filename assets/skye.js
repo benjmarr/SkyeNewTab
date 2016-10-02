@@ -176,6 +176,10 @@ function clock() {
     if (ndate === 1) {
       innerHTML("alertBox", "Happy new year!");
     };
+  } else if (tmonth[nmonth] === "November") {
+    if (ndate === 28) {
+      innerHTML("alretBox", "Happy birthday, Skye New Tab!");
+    };
   } else if (tmonth[nmonth] === "December") {
     if (ndate === 25) {
       innerHTML("alertBox", "Merry Christmas!");

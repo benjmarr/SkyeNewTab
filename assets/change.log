@@ -1,6 +1,10 @@
 Skye New Tab change log
 All changes can be viewed at https://github.com/BenAndy/SkyeNewTab/commits/master
 
+v2.14.186:
+Copyright updates.
+Updated manifest.json. You now must be running Google Chrome version 48.0.2564 or newer.
+
 v2.14.185:
 Added three new background images.
 

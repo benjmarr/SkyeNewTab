@@ -1,4 +1,4 @@
-// Copyright Benjamin Developments (c) 2015 - All rights reserved
+// Copyright Benjamin Developments (c) 2016 - All rights reserved
 
 // Random background selection script
 var backgroundNames = Array(161, 152, 153, 154, 155, 156, 157, 158, 159, 160);

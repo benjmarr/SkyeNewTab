@@ -1,4 +1,4 @@
-// Copyright Benjamin Developments (c) 2015 - All rights reserved
+// Copyright Benjamin Developments (c) 2016 - All rights reserved
 
 if (main) {
   if (getCookie("opSrchBx") === "") {

@@ -1,7 +1,7 @@
 // Copyright Benjamin Developments (c) 2016 - All rights reserved
 console.log("Skye New Tab copyright Benjamin Developments (c) 2016 - All rights reserved");
 var rootUrl = "https://github.com/BenAndy/SkyeNewTab/tree/master";
-var ckiUpdDte = "July 28, 2016";
+var ckiUpdDte = "October 27, 2016";
 
 // Cookie handlers
 function setCookie(cname, cvalue, exdays) {

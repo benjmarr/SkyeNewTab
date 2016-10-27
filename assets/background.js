@@ -1,7 +1,7 @@
 // Copyright Benjamin Developments (c) 2016 - All rights reserved
 
 // Random background selection script
-var backgroundNames = Array(161, 152, 153, 154, 155, 156, 157, 158, 159, 160);
+var backgroundNames = Array(161, 162, 163, 164, 165, 166, 167, 168, 169, 160);
 var imageUpdateDate = "Tuesday, 18<sup>th</sup> October 2016";
 var backgroundNumber = function() {
   return backgroundNames[Math.floor(Math.random() * backgroundNames.length)];
@@ -93,22 +93,22 @@ document.getElementById("bkgrndImgInfclose").addEventListener("click", function(
 var backImageData = function() {
   if (setBackID === 161) {
     backImgInfo("hzJi-v0wbRc", "Matt Jones", "mattrobinjones");
-  } else if (setBackID === 152) {
-    backImgInfo("_vPCiuXL2HE", "Li Yang", "ly0ns");
-  } else if (setBackID === 153) {
-    backImgInfo("bk4HoBc4k60", "Martin Ezequiel Sanchez", "mzeketv");
-  } else if (setBackID === 154) {
-    backImgInfo("CSIcgaLiFO0", "Mark Asthoff", "qa9de");
-  } else if (setBackID === 155) {
-    backImgInfo("tqT-Ef68y44", "Mike Wilson", "mkwlsn");
-  } else if (setBackID === 156) {
-    backImgInfo("7M_vny7cMnI", "Felix Russell-Saw", "frsphoto");
-  } else if (setBackID === 157) {
-    backImgInfo("qpemSW6_1Z0", "Claudio Testa", "claudiotesta");
-  } else if (setBackID === 158) {
-    backImgInfo("6x90rJDo-WA", "Kristopher Allison", "kristopher_allison");
-  } else if (setBackID === 159) {
-    backImgInfo("8UTyHv3xbr4", "Federico Beccari", "federize");
+  } else if (setBackID === 162) {
+    backImgInfo("qzgN45hseN0", "Geran de Klerk", "geran");
+  } else if (setBackID === 163) {
+    backImgInfo("bnYXiSr-Dss", "Alex Jodoin", "alexjodoin");
+  } else if (setBackID === 164) {
+    backImgInfo("1zA_mC846yU", "Ben White", "benwhitephotography");
+  } else if (setBackID === 165) {
+    backImgInfo("1-29wyvvLJA", "Andrew Neel", "andrewtneel");
+  } else if (setBackID === 166) {
+    backImgInfo("FHhfQv3d-D0", "Vladimir Kudinov", "madbyte");
+  } else if (setBackID === 167) {
+    backImgInfo("uGS_R4r46Cw", "Greg Rakozy", "grakozy");
+  } else if (setBackID === 168) {
+    backImgInfo("3OiYMgDKJ6k", "Dariusz Sankowski", "dariuszsankowski");
+  } else if (setBackID === 169) {
+    backImgInfo("AekHfFqOtgU", "Stefan Kunze", "stefankunze");
   } else if (setBackID === 160) {
     backImgInfo("tPqvCPHsuok", "Joshua K. Jackson", "joshua");
   };

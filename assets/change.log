@@ -1,6 +1,12 @@
 Skye New Tab change log
 All changes can be viewed at https://github.com/BenAndy/SkyeNewTab/commits/master
 
+v2.14.187:
+Added eight new background images.
+Fixed footer issues in menu.
+Fixed footer spacing issue in cookie update message.
+Triggered cookie update message on first v2.14.187 load.
+
 v2.14.186:
 Copyright updates.
 Updated manifest.json. You now must be running Google Chrome version 48.0.2564 or newer.

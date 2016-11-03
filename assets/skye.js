@@ -172,18 +172,12 @@ function clock() {
   } else {
     strdndth = "th";
   };
-  if (tmonth[nmonth] === "January") {
-    if (ndate === 1) {
-      innerHTML("alertBox", "Happy new year!");
-    };
-  } else if (tmonth[nmonth] === "November") {
-    if (ndate === 28) {
-      innerHTML("alretBox", "Happy birthday, Skye New Tab!");
-    };
-  } else if (tmonth[nmonth] === "December") {
-    if (ndate === 25) {
-      innerHTML("alertBox", "Merry Christmas!");
-    };
+  if (tmonth[nmonth] === "January" && ndate === 1) {
+    innerHTML("alertBox", "Happy new year!");
+  } else if (tmonth[nmonth] === "November" && ndate === 28) {
+    innerHTML("alretBox", "Happy birthday, Skye New Tab!");
+  } else if (tmonth[nmonth] === "December" && ndate === 25) {
+    innerHTML("alertBox", "Merry Christmas!");
   } else {
     if (thour < 12) {
       if (getCookie("usingName") === "false") {

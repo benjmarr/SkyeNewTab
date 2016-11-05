@@ -36,12 +36,11 @@ if (document.addEventListener) {
   });
 };
 
-// Custom 'document.getElementById().innerHTML' method
+// Style methods
+  // document.getElementById(x).innerHTML
 var innerHTML = function(id, string) {
   document.getElementById(id).innerHTML = string;
 };
-
-// Style methods
   // Opacity style
 var styleOpacity = function(delay, id, value) {
   setTimeout(function() {
@@ -435,4 +434,9 @@ window.onload = function() {
     styleOpacity(700, "linkDiv", 1);
   };
   setTimeout(opSrchBx, 800);
+  styleOpacity(1500, "title", 0);
+  setTimeout(function() {
+    innerHTML("title", "Skye New Tab");
+  }, 2500);
+  styleOpacity(2501, "title", 1);
 };

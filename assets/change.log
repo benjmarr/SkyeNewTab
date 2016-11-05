@@ -1,6 +1,11 @@
 Skye New Tab change log
 All changes can be viewed at https://github.com/BenAndy/SkyeNewTab/commits/master
 
+v2.14.190:
+Added "Fresh New Tab Page for Google Chrome" before "Skye New Tab" title.
+Moved innerHTML() code down a few lines with other custom methods.
+Reverted back to old icon.
+
 v2.14.189:
 Added icon image to assets/images/skyeIcon_128_edited-3.jpg.
 Added new icon into manifest.json.

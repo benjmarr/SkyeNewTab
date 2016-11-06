@@ -1,7 +1,7 @@
 // Copyright Benjamin Developments (c) 2016 - All rights reserved
 
 // Random background selection script
-var backgroundNames = Array(161, 162, 163, 164, 165, 166, 167, 168, 169, 160);
+var backgroundNames = Array(162, 163, 164, 165, 166, 167, 168, 169);
 var imageUpdateDate = "Tuesday, 18<sup>th</sup> October 2016";
 var backgroundNumber = function() {
   return backgroundNames[Math.floor(Math.random() * backgroundNames.length)];
@@ -91,9 +91,7 @@ document.getElementById("bkgrndImgInfclose").addEventListener("click", function(
 
 // Background image data
 var backImageData = function() {
-  if (setBackID === 161) {
-    backImgInfo("hzJi-v0wbRc", "Matt Jones", "mattrobinjones");
-  } else if (setBackID === 162) {
+  if (setBackID === 162) {
     backImgInfo("qzgN45hseN0", "Geran de Klerk", "geran");
   } else if (setBackID === 163) {
     backImgInfo("bnYXiSr-Dss", "Alex Jodoin", "alexjodoin");
@@ -109,8 +107,6 @@ var backImageData = function() {
     backImgInfo("3OiYMgDKJ6k", "Dariusz Sankowski", "dariuszsankowski");
   } else if (setBackID === 169) {
     backImgInfo("AekHfFqOtgU", "Stefan Kunze", "stefankunze");
-  } else if (setBackID === 160) {
-    backImgInfo("tPqvCPHsuok", "Joshua K. Jackson", "joshua");
   };
 };
 

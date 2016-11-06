@@ -1,6 +1,12 @@
 Skye New Tab change log
 All changes can be viewed at https://github.com/BenAndy/SkyeNewTab/commits/master
 
+v2.14.193:
+Removed two backgrounds images to decrease extension download size. There are now eight (8) background images on file.
+Removed old commented code from searchBox.js.
+Made a "makeSearchBox" function in searchBox.js.
+Removed favicon code from index.html as it's not needed.
+
 v2.14.192:
 Added "Fresh New Tab Page for Google Chrome" to popup page.
 

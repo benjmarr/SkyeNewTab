@@ -1,6 +1,12 @@
 // Copyright Benjamin Developments (c) 2016 - All rights reserved
 
 if (main) {
+  var makeSearchBox = function(url, id) {
+    innerHTML("srchBx", "<form id='formForm' method='get' action='" + url + "'><input type='text' name='q' size='31' id='srchImg' /></form>");
+    hideAllSearchImages();
+    styleOpacity(5, "searchImage" + id, 1);
+    styleVisibility(5, "searchImage" + id, "visible");
+  };
   if (getCookie("opSrchBx") === "") {
     setCookie("opSrchBx", "google", 365);
   };
@@ -20,33 +26,16 @@ if (main) {
         styleVisibility(0, "srchBx", "visible");
       };
       if (getCookie("opSrchBx") === "google") {
-        innerHTML("srchBx", "<form id='formForm' method='get' action='https://www.google.com/search'><input type='text' name='q' size='31' id='srchImg' /></form>");
-        hideAllSearchImages();
-        styleOpacity(5, "searchImage1", 1);
-        styleVisibility(5, "searchImage1", "visible");
+        makeSearchBox("https://www.google.com/search", 1);
       } else if (getCookie("opSrchBx") === "twitter") {
-        innerHTML("srchBx", "<form id='formForm' method='get' action='https://www.twitter.com/search'><input type='text' name='q' size='31' id='srchImg' /></form>");
-        hideAllSearchImages();
-        styleOpacity(5, "searchImage2", 1);
-        styleVisibility(5, "searchImage2", "visible");
+        makeSearchBox("https://www.twitter.com/search", 2);
       } else if (getCookie("opSrchBx") === "facebook") {
-        innerHTML("srchBx", "<form id='formForm' method='get' action='https://www.facebook.com/search/top'><input type='text' name='q' size='31' id='srchImg' /></form>");
-        hideAllSearchImages();
-        styleOpacity(5, "searchImage3", 1);
-        styleVisibility(5, "searchImage3", "visible");
+        makeSearchBox("https://www.facebook.com/search/top", 3);
       } else if (getCookie("opSrchBx") === "youtube") {
-        innerHTML("srchBx", "<form id='formForm' method='get' action='https://www.youtube.com/results'><input type='text' name='search_query' size='31' id='srchImg' /></form>");
-        hideAllSearchImages();
-        styleOpacity(5, "searchImage4", 1);
-        styleVisibility(5, "searchImage4", "visible");
+        makeSearchBox("https://www.youtube.com/results", 4);
       } else if (getCookie("opSrchBx") === "github") {
-        innerHTML("srchBx", "<form id='formForm' method='get' action='https://www.github.com/search'><input type='text' name='search' size='31' id='srchImg' /></form>");
-        hideAllSearchImages();
-        styleOpacity(5, "searchImage5", 1);
-        styleVisibility(5, "searchImage5", "visible");
+        makeSearchBox("https://www.github.com/search", 5);
       };
-    } else {
-      document.getElementById("srchBx").innerHTML = "";
     };
   };
   document.getElementById("opSrchBx").addEventListener("click", function() {
@@ -100,10 +89,6 @@ if (main) {
     styleOpacity(0, "searchImage3", 0);
     styleOpacity(0, "searchImage4", 0);
     styleOpacity(0, "searchImage5", 0);
-
-
-    // styleOpacity(0, "searchImage1", 1);
-    // styleVisibility(0, "searchImage1", "visible");
   };
 
   // Search image click

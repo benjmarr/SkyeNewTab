@@ -1,7 +1,7 @@
 // Copyright Benjamin Developments (c) 2016 - All rights reserved
 
 // Random background selection script
-var backgroundNames = Array(162, 163, 164, 165, 166, 167, 168, 169);
+var backgroundNames = Array(170, 171, 172, 173, 175, 176, 168, 169);
 var imageUpdateDate = "Tuesday, 18<sup>th</sup> October 2016";
 var backgroundNumber = function() {
   return backgroundNames[Math.floor(Math.random() * backgroundNames.length)];
@@ -91,18 +91,18 @@ document.getElementById("bkgrndImgInfclose").addEventListener("click", function(
 
 // Background image data
 var backImageData = function() {
-  if (setBackID === 162) {
-    backImgInfo("qzgN45hseN0", "Geran de Klerk", "geran");
-  } else if (setBackID === 163) {
-    backImgInfo("bnYXiSr-Dss", "Alex Jodoin", "alexjodoin");
-  } else if (setBackID === 164) {
-    backImgInfo("1zA_mC846yU", "Ben White", "benwhitephotography");
-  } else if (setBackID === 165) {
-    backImgInfo("1-29wyvvLJA", "Andrew Neel", "andrewtneel");
-  } else if (setBackID === 166) {
-    backImgInfo("FHhfQv3d-D0", "Vladimir Kudinov", "madbyte");
-  } else if (setBackID === 167) {
-    backImgInfo("uGS_R4r46Cw", "Greg Rakozy", "grakozy");
+  if (setBackID === 170) {
+    backImgInfo("3MNzGlQM7qs", "Anton Repponen", "repponen");
+  } else if (setBackID === 171) {
+    backImgInfo("zpkYWVAni30", "Pineapples", "pineapple");
+  } else if (setBackID === 172) {
+    backImgInfo("XF8gmVVDWYA", "John Chavez", "johnachavez");
+  } else if (setBackID === 173) {
+    backImgInfo("XtXdHH-Ib7c", "Olia Gozha", "olia");
+  } else if (setBackID === 174) {
+    backImgInfo("I1vgh8AJr94", "Alec Weir", "xcvii");
+  } else if (setBackID === 175) {
+    backImgInfo("O_uV3KhQuo8", "Elle Zhu", "eszhu");
   } else if (setBackID === 168) {
     backImgInfo("3OiYMgDKJ6k", "Dariusz Sankowski", "dariuszsankowski");
   } else if (setBackID === 169) {

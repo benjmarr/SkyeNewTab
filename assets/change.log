@@ -1,6 +1,9 @@
 Skye New Tab change log
 All changes can be viewed at https://github.com/BenAndy/SkyeNewTab/commits/master
 
+v2.14.194:
+Added six new background images.
+
 v2.14.193:
 Removed two backgrounds images to decrease extension download size. There are now eight (8) background images on file.
 Removed old commented code from searchBox.js.

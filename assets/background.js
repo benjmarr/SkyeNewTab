@@ -1,5 +1,7 @@
 // Copyright Benjamin Developments (c) 2016 - All rights reserved
 
+//TODO Re-write this entire document.
+
 // Random background selection script
 var backgroundNames = Array(170, 171, 172, 173, 175, 176, 168, 169);
 var imageUpdateDate = "Tuesday, 18<sup>th</sup> October 2016";
@@ -59,7 +61,7 @@ setInterval(function() {
 var checkBackgroundTimer;
 var startBackgroundTimer = function() {
   checkBackgroundTimer = setInterval(function() {
-    if (minNum === 00 || minNum === 05 || minNum === 10 || minNum === 15 || minNum === 20 || minNum === 25 || minNum === 30 || minNum === 35 || minNum === 40 || minNum === 45 || minNum === 50 || minNum === 55) {
+    if (minNum === 00 || minNum === 10 || minNum === 20 || minNum === 30 || minNum === 40 || minNum === 50) {
       clearInterval(checkBackgroundTimer);
       setTimeout(function() {
         startBackgroundTimer();

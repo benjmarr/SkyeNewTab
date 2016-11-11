@@ -242,7 +242,7 @@ document.addEventListener("keydown", function(e) {
       styleVisibility(1000, "opM", "visible");
       styleOpacity(1000, "opM", 0.9);
     } else if (e.keyCode === 78) {
-      opChBkImgFnctn();
+      newBackground();
     } else if (e.keyCode === 71) {
       opGryscl();
     } else if (e.keyCode === 65) {
@@ -399,20 +399,23 @@ document.getElementById("opGryscl").addEventListener("click", function() {
 }, false);
 
 // Online/offline & Unsplash credit
-if (main) {
-  // Online/offline
-  var i = new Image();
-  i.onload = function() {innerHTML("dText", "Connected")};
-  i.onerror = function() {innerHTML("dText", "Not connected")};
-  i.src = 'http://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png?d=' + escape(Date());
-  // Unsplash credit
-  styleOpacity(2000, "dText", "0");
-  setTimeout(function() {
-    innerHTML("dText", "Images provided by <a href='https://unsplash.com' target='_blank'>unsplash.com</a>");
-  }, 2501);
-  styleOpacity(3000, "dText", "1");
-  styleOpacity(7000, "dText", "0");
+var onlineYN = function() {
+  if (main) {
+    // Online/offline
+    var i = new Image();
+    i.onload = function() {innerHTML("dText", "Connected")};
+    i.onerror = function() {innerHTML("dText", "Not connected")};
+    i.src = 'http://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png?d=' + escape(Date());
+    // Unsplash credit
+    styleOpacity(2000, "dText", "0");
+    setTimeout(function() {
+      innerHTML("dText", "Images provided by <a href='https://unsplash.com' target='_blank'>unsplash.com</a>");
+    }, 2501);
+    styleOpacity(3000, "dText", "1");
+    styleOpacity(7000, "dText", "0");
+  };
 };
+
 
 // Run when page finished loading
 window.onload = function() {
@@ -437,6 +440,7 @@ window.onload = function() {
   styleOpacity(1500, "title", 0);
   setTimeout(function() {
     innerHTML("title", "Skye New Tab");
+    onlineYN();
   }, 2500);
   styleOpacity(2501, "title", 1);
 };

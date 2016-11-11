@@ -1,6 +1,10 @@
 Skye New Tab change log
 All changes can be viewed at https://github.com/BenAndy/SkyeNewTab/commits/master
 
+v2.15.195:
+Re-wrote background.js.
+Increased page opening load time.
+
 v2.14.195:
 Background now changes every ten minutes, instead of every five.
 

@@ -1,7 +1,7 @@
 // Copyright Benjamin Developments (c) 2016 - All rights reserved
 console.log("Skye New Tab copyright Benjamin Developments (c) 2016 - All rights reserved");
 var rootUrl = "https://github.com/BenAndy/SkyeNewTab/tree/master";
-var ckiUpdDte = "October 27, 2016";
+var ckiUpdDte = "November 17, 2016";
 
 // Cookie handlers
 function setCookie(cname, cvalue, exdays) {
@@ -241,8 +241,6 @@ document.addEventListener("keydown", function(e) {
       clearMenu("false");
       styleVisibility(1000, "opM", "visible");
       styleOpacity(1000, "opM", 0.9);
-    } else if (e.keyCode === 78) {
-      newBackground();
     } else if (e.keyCode === 71) {
       opGryscl();
     } else if (e.keyCode === 65) {
@@ -401,18 +399,16 @@ document.getElementById("opGryscl").addEventListener("click", function() {
 // Online/offline & Unsplash credit
 var onlineYN = function() {
   if (main) {
-    // Online/offline
-    var i = new Image();
-    i.onload = function() {innerHTML("dText", "Connected")};
-    i.onerror = function() {innerHTML("dText", "Not connected")};
-    i.src = 'http://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png?d=' + escape(Date());
-    // Unsplash credit
+    styleOpacity(0, "dText", "1");
     styleOpacity(2000, "dText", "0");
     setTimeout(function() {
-      innerHTML("dText", "Images provided by <a href='https://unsplash.com' target='_blank'>unsplash.com</a>");
+      var i = new Image();
+      i.onload = function() {innerHTML("dText", "Connected")};
+      i.onerror = function() {innerHTML("dText", "Not connected")};
+      i.src = 'http://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png?d=' + escape(Date());
     }, 2501);
     styleOpacity(3000, "dText", "1");
-    styleOpacity(7000, "dText", "0");
+    styleOpacity(5000, "dText", "0");
   };
 };
 

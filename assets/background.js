@@ -1,7 +1,7 @@
 // Copyright Benjamin Developments (c) 2016 - All rights reserved
 
-var backgroundNames = Array(170, 171, 172, 173, 175, 168, 169);
-var imageUpdateDate = "Sunday, 6<sup>th</sup> November 2016";
+var backgroundNames = Array(176, 177);
+var imageUpdateDate = "Thursday, 17<sup>th</sup> November 2016";
 var backgroundNumber = function() {
   return backgroundNames[Math.floor(Math.random() * backgroundNames.length)];
 };
@@ -32,7 +32,7 @@ setInterval(function() {
 var checkBackgroundTimer;
 var startBackgroundTimer = function() {
   checkBackgroundTimer = setInterval(function() {
-    if (minNum === 00 || minNum === 10 || minNum === 20 || minNum === 30 || minNum === 40 || minNum === 50) {
+    if (minNum === 00 || minNum === 20 || minNum === 40) {
       clearInterval(checkBackgroundTimer);
       setTimeout(function() {
         startBackgroundTimer();
@@ -61,22 +61,10 @@ document.getElementById("bkgrndImgInfclose").addEventListener("click", function(
   clearMenu("true");
 }, false);
 var backImageData = function() {
-  if (setBackID === 170) {
-    backImageInfo("3MNzGlQM7qs", "Anton Repponen", "repponen");
-  } else if (setBackID === 171) {
-    backImageInfo("zpkYWVAni30", "Pineapples", "pineapple");
-  } else if (setBackID === 172) {
-    backImageInfo("XF8gmVVDWYA", "John Chavez", "johnachavez");
-  } else if (setBackID === 173) {
-    backImageInfo("XtXdHH-Ib7c", "Olia Gozha", "olia");
-  } else if (setBackID === 174) {
-    backImageInfo("I1vgh8AJr94", "Alec Weir", "xcvii");
-  } else if (setBackID === 175) {
-    backImageInfo("O_uV3KhQuo8", "Elle Zhu", "eszhu");
-  } else if (setBackID === 168) {
-    backImageInfo("3OiYMgDKJ6k", "Dariusz Sankowski", "dariuszsankowski");
-  } else if (setBackID === 169) {
-    backImageInfo("AekHfFqOtgU", "Stefan Kunze", "stefankunze");
+  if (setBackID === 176) {
+    backImageInfo("1k5Qq4YQM0g", "Mark Basarab", "ignitedit");
+  } else if (setBackID === 177) {
+    backImageInfo("mGTaTw5lJio", "Lance Asper", "lance_asper");
   };
 };
 var newBackground = function() {

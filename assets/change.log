@@ -1,6 +1,15 @@
 Skye New Tab change log
 All changes can be viewed at https://github.com/BenAndy/SkyeNewTab/commits/master
 
+v2.15.196:
+Reduced stored background images to only two.
+Added two new background images.
+Removed keyboard shortcut to change background.
+Changed default icon visibility settings to option 4.
+Background image now automatically cycles every 20 minutes.
+Changed load animatins on icon visibility option 4.
+Added fade in animation to "connected"/"not connected" text.
+
 v2.15.195:
 Re-wrote background.js.
 Increased page opening load time.

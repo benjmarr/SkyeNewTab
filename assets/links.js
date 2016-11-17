@@ -2,7 +2,7 @@
 
 if (main) {
   if (getCookie("opIcnVsblty") === "") {
-    setCookie("opIcnVsblty", "1", 365);
+    setCookie("opIcnVsblty", "4", 365);
   };
   var goLink = function(url) {
     styleBackgroundColor(0, "body", "#FFFFFF");
@@ -163,7 +163,9 @@ if (main) {
   }, false);
   var opIcnVsblty4 = function() {
     setCookie("opIcnVsblty", "4", 365);
-    grayscaleOn();
+    setTimeout(function() {
+      grayscaleOn();
+    }, 1500);
     visibleOn();
     opacityOn();
   };

@@ -419,6 +419,9 @@ window.onload = function() {
   if (getCookie("opGryscl") === "false") {
     styleGrayscale(50, "header", "false");
   };
+  setTimeout(function() {
+      document.getElementById("body").style.backgroundColor = "#000000";
+  }, 1000);
   if (main) {
     styleOpacity(100, "options", 1);
     styleOpacity(200, "dText", 1);

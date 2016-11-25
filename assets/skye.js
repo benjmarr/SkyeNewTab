@@ -402,13 +402,13 @@ var onlineYN = function() {
     styleOpacity(0, "dText", "1");
     styleOpacity(2000, "dText", "0");
     setTimeout(function() {
+      innerHTML("dText", "Not connected");
       var i = new Image();
       i.onload = function() {innerHTML("dText", "Connected")};
-      i.onerror = function() {innerHTML("dText", "Not connected")};
       i.src = 'http://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png?d=' + escape(Date());
     }, 2501);
-    styleOpacity(3000, "dText", "1");
-    styleOpacity(5000, "dText", "0");
+    styleOpacity(4000, "dText", "1");
+    styleOpacity(6000, "dText", "0");
   };
 };
 

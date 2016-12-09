@@ -1,7 +1,7 @@
 // Copyright Benjamin Developments (c) 2016 - All rights reserved
 
-var backgroundNames = Array(178, 179, 180);
-var imageUpdateDate = "Sunday, 27<sup>th</sup> November 2016";
+var backgroundNames = Array(181, 182);
+var imageUpdateDate = "Friday, 9<sup>th</sup> December 2016";
 var backgroundNumber = function() {
   return backgroundNames[Math.floor(Math.random() * backgroundNames.length)];
 };
@@ -61,12 +61,10 @@ document.getElementById("bkgrndImgInfclose").addEventListener("click", function(
   clearMenu("true");
 }, false);
 var backImageData = function() {
-  if (setBackID === 178) {
-    backImageInfo("iceEanqk6BQ", "Bartłomiej Jacak", "bartlomiej");
-  } else if (setBackID === 178) {
-    backImageInfo("PAykYb-8Er8", "Ian Schneider", "goian");
-  } else if (setBackID === 180) {
-    backImageInfo("kZ8dyUT0h30", "Jessica Weiller", "jweiller");
+  if (setBackID === 181) {
+    backImageInfo("wMY9DWzqjCo", "Allef Vinicius", "seteales");
+  } else if (setBackID === 182) {
+    backImageInfo("I3xo-4LpcY4", "Matthew Henry", "matthewhenry");
   };
 };
 var newBackground = function() {

@@ -436,10 +436,10 @@ window.onload = function() {
     styleOpacity(700, "linkDiv", 1);
   };
   setTimeout(opSrchBx, 800);
-  styleOpacity(1500, "title", 0);
+  styleOpacity(1700, "title", 0);
   setTimeout(function() {
     innerHTML("title", "Skye New Tab");
     onlineYN();
-  }, 2500);
-  styleOpacity(2501, "title", 1);
+  }, 2700);
+  styleOpacity(2701, "title", 1);
 };

@@ -258,7 +258,6 @@ if (main) {
   }, false);
 };
 
-
 // Options close
 document.getElementById("opMclose").addEventListener("click", function() {
   clearMenu("true");
@@ -438,7 +437,11 @@ window.onload = function() {
   setTimeout(opSrchBx, 800);
   styleOpacity(1700, "title", 0);
   setTimeout(function() {
-    innerHTML("title", "Skye New Tab");
+    if (main) {
+      innerHTML("title", "Skye New Tab");
+    } else {
+      innerHTML("title", "SkyeNewTab<br /><br />");
+    };
     onlineYN();
   }, 2700);
   styleOpacity(2701, "title", 1);

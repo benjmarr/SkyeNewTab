@@ -23,26 +23,6 @@ var setBack = function() {
   styleOpacity(100, "header", "1");
   backImageData();
 };
-var min;
-var minNum;
-setInterval(function() {
-  min = new Date();
-  minNum = min.getMinutes();
-}, 2);
-var checkBackgroundTimer;
-var startBackgroundTimer = function() {
-  checkBackgroundTimer = setInterval(function() {
-    if (minNum === 00 || minNum === 20 || minNum === 40) {
-      clearInterval(checkBackgroundTimer);
-      setTimeout(function() {
-        startBackgroundTimer();
-      }, 61000);
-      styleOpacity(0, "header", "0");
-      newBackground();
-    };
-  }, 10);
-};
-startBackgroundTimer();
 var backImageInfo = function(imgID, imgAuth, imgAuthPro) {
   imgAuthPro = "https://unsplash.com/@" + imgAuthPro;
   if (main) {

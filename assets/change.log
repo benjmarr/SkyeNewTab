@@ -1,6 +1,10 @@
 Skye New Tab change log
 All changes can be viewed at https://github.com/BenAndy/SkyeNewTab/commits/master
 
+v2.15.203:
+Fixed text jump when loading popup.
+Removed timed background changes.
+
 v2.15.202:
 Added four new background images.
 

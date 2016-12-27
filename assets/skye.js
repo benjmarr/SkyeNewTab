@@ -1,5 +1,5 @@
-// Copyright Benjamin Developments (c) 2016 - All rights reserved
-console.log("Skye New Tab copyright Benjamin Developments (c) 2016 - All rights reserved");
+// Copyright Benjamin Developments (c) 2016-2017 - All rights reserved
+console.log("Skye New Tab copyright Benjamin Developments (c) 2016-2017 - All rights reserved");
 var rootUrl = "https://github.com/BenAndy/SkyeNewTab/tree/master";
 var ckiUpdDte = "November 17, 2016";
 

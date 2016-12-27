@@ -1,5 +1,5 @@
-// Copyright Benjamin Developments (c) 2016-2017 - All rights reserved
-console.log("Skye New Tab copyright Benjamin Developments (c) 2016-2017 - All rights reserved");
+// Copyright Benjamin Developments (c) 2017 - All rights reserved
+console.log("Skye New Tab copyright Benjamin Developments (c) 2017 - All rights reserved");
 var rootUrl = "https://github.com/BenAndy/SkyeNewTab/tree/master";
 var ckiUpdDte = "November 17, 2016";
 
@@ -446,3 +446,12 @@ window.onload = function() {
   }, 2700);
   styleOpacity(2701, "title", 1);
 };
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-89454896-3']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = 'https://ssl.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();

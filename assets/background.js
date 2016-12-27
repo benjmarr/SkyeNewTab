@@ -1,4 +1,4 @@
-// Copyright Benjamin Developments (c) 2016-2017 - All rights reserved
+// Copyright Benjamin Developments (c) 2017 - All rights reserved
 
 var backgroundNames = Array(187, 188, 189);
 var imageUpdateDate = "Tuesday, 27<sup>th</sup> December 2016";

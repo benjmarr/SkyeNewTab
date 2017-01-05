@@ -1,7 +1,7 @@
 // Copyright Benjamin Developments (c) 2017 - All rights reserved
 
-var backgroundNames = Array(187, 188, 189);
-var imageUpdateDate = "Tuesday, 27<sup>th</sup> December 2016";
+var backgroundNames = Array(190, 191, 192, 193, 194);
+var imageUpdateDate = "Thrusday, 5<sup>th</sup> January 2017";
 var backgroundNumber = function() {
   return backgroundNames[Math.floor(Math.random() * backgroundNames.length)];
 };
@@ -41,12 +41,16 @@ document.getElementById("bkgrndImgInfclose").addEventListener("click", function(
   clearMenu("true");
 }, false);
 var backImageData = function() {
-  if (setBackID === 187) {
-    backImageInfo("9NDc2vDMTsQ", "Martin Ezequiel Sanchez", "mzeketv");
-  } else if (setBackID === 188) {
-    backImageInfo("va3_iGyyb9M", "Paul Morris", "oldskool2016");
-  } else if (setBackID === 189) {
-    backImageInfo("tI_Odb7ZU6M", "Sveta Fedarava", "svetacreative");
+  if (setBackID === 190) {
+    backImageInfo("XyoW1MhPqbs", "Felix Russell-Saw", "frsphoto");
+  } else if (setBackID === 191) {
+    backImageInfo("MAxHEAaAukI", "Vincent Guth", "vingtcent");
+  } else if (setBackID === 192) {
+    backImageInfo("duiETcZN7O4", "Cristina Gottardi", "cristina_gottardi");
+  } else if (setBackID === 193) {
+    backImageInfo("zPptO_0swGc", "Nathan Boadle", "nathanb");
+  } else if (setBackID === 194) {
+    backImageInfo("M_5bO1WKP4o", "Nathan Anderson", "nathananderson");
   };
 };
 var newBackground = function() {

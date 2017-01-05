@@ -1,6 +1,10 @@
 Skye New Tab change log
 All changes can be viewed at https://github.com/BenAndy/SkyeNewTab/commits/master
 
+v2.15.207:
+Small text change.
+Added Google Analytics to pass the content security protocol.
+
 v2.15.206:
 Added five new background images.
 

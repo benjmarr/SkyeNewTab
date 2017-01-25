@@ -1,7 +1,7 @@
 // Copyright Benjamin Developments (c) 2017 - All rights reserved
 
-var backgroundNames = Array(195, 196, 197, 198, 199);
-var imageUpdateDate = "Wednesday, 18<sup>th</sup> January 2017";
+var backgroundNames = Array(200, 201, 202);
+var imageUpdateDate = "Wednesday, 25<sup>th</sup> January 2017";
 var backgroundNumber = function() {
   return backgroundNames[Math.floor(Math.random() * backgroundNames.length)];
 };
@@ -41,16 +41,12 @@ document.getElementById("bkgrndImgInfclose").addEventListener("click", function(
   clearMenu("true");
 }, false);
 var backImageData = function() {
-  if (setBackID === 195) {
-    backImageInfo("ZALAsEewSlc", "Jackson Jost", "jacksonjost");
-  } else if (setBackID === 196) {
-    backImageInfo("3PmwYw2uErY", "Michael Hacker", "michael_hacker");
-  } else if (setBackID === 197) {
-    backImageInfo("6dR-fozkSV4", "Ray Hennessy", "rayhennessy");
-  } else if (setBackID === 198) {
-    backImageInfo("3FjIywswHSk", "Chris Greenhow", "chrisgreenhow");
-  } else if (setBackID === 199) {
-    backImageInfo("ssAcdlJRsI4", "John Cobb", "johncobb");
+  if (setBackID === 200) {
+    backImageInfo("mwWJul4WkqU", "Paul Gilmore", "paulgilmore_");
+  } else if (setBackID === 201) {
+    backImageInfo("3kzlCL3rj8A", "Ricardo Gomez Angel", "ripato");
+  } else if (setBackID === 202) {
+    backImageInfo("-HPhkZcJQNk", "Thomas Tucker", "through_these_eyes_photography");
   };
 };
 var newBackground = function() {

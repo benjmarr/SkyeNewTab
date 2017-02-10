@@ -1,7 +1,7 @@
 // Copyright Benjamin Developments (c) 2017 - All rights reserved
 
 var backgroundNames = Array(203, 204, 205, 206, 207);
-var imageUpdateDate = "Wednesday, 8sup>th</sup> February 2017";
+var imageUpdateDate = "Wednesday, 8<sup>th</sup> February 2017";
 var backgroundNumber = function() {
   return backgroundNames[Math.floor(Math.random() * backgroundNames.length)];
 };

@@ -1,6 +1,9 @@
 Skye New Tab change log
 All changes can be viewed at https://github.com/BenAndy/SkyeNewTab/commits/master
 
+v2.15.213:
+Fixed small text issue (line 4 - assets/background.js).
+
 v2.15.212:
 Removed unused CSS rule.
 Added five new background images.

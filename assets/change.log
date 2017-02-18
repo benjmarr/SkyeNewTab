@@ -1,6 +1,9 @@
 Skye New Tab change log
 All changes can be viewed at https://github.com/BenAndy/SkyeNewTab/commits/master
 
+v2.15.215:
+Added three new background images.
+
 v2.15.214:
 Titillium Web font now sources from Google Fonts, not locally.
 Moved searchBox.js, links.js and background.js into skye.js.

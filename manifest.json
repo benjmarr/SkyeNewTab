@@ -1,24 +1,22 @@
 {
-  "version": "2.15.215",
+  "version": "3.0.1",
   "name": "Skye New Tab",
-  "short_name": "Skye New Tab",
-  "description": "Replace your new tab page with a more modern page! Featuring time, dates, many background images, welcome messages and more!",
+  "short_name":  "Skye",
+  "description": "Replace the boring new tab page with Skye, a more modern and customisable new tab page.",
   "manifest_version": 2,
   "author": "Benjamin Developments",
   "offline_enabled": true,
   "homepage_url": "https://benandy.github.io/skye",
-  "incognito": "split",
-  "content_security_policy": "default-src 'self'; script-src 'self' https://benandy.github.io https://ssl.google-analytics.com/ 'sha256-L50E3FZTH+qUfRLPgQ2uOeSsf0LiuK9XS7QZuoNoX0w=' 'sha256-20z+7q8HyetC3+aizmJ64n65p0eObX+f6mBY5WtHy9o=' 'sha256-gtWI+QKNgFNitrRjtO4FMMtjswIRSSEukir/J8SGoWk='; style-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; img-src 'self' http://www.google-analytics.com/ http://www.google.com; font-src https://fonts.googleapis.com https://fonts.gstatic.com; sandbox allow-forms allow-scripts allow-same-origin allow-modals",
-  "minimum_chrome_version": "48.0.2564",
+  "content_security_policy": "default-src 'self'; script-src https://ssl.google-analytics.com 'self'; style-src https://fonts.googleapis.com 'self'; img-src http://www.google-analytics.com 'self'; font-src https://fonts.gstatic.com 'self'",
+  "minimum_chrome_version": "54.0.2840",
   "icons": {
-    "128": "assets/images/favicon128x128.png"
+    "128": "a/i/f128.png"
   },
   "chrome_url_overrides": {
-    "newtab": "extensionindex.html"
+    "newtab": "newtab.html"
   },
   "permissions": [
     "cookies",
-    "unlimitedStorage",
-    "*://benandy.github.io/*"
+    "unlimitedStorage"
   ]
 }

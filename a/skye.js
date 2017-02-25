@@ -59,7 +59,7 @@ if (gc("n") === "") {
 };
 
 // Background image & information
-var bn = Array(208, 209, 210);
+var bn = Array(211, 212);
 var iud = "Saturday 18<sup>th</sup> February, 2017";
 var bo = function() {
   return bn[Math.floor(Math.random() * bn.length)];
@@ -76,11 +76,9 @@ var bii = function(x, y, z) {
   document.getElementById("bii3").innerHTML = "<a target='_blank' href='" + z + "/portfolio'>Click to see</a>";
 };
 if (sbi === bn[0]) {
-  bii("Sq8rpq2KB7U", "Vinh Pham", "fluffpiece");
+  bii("vL4ARRCFyg4", "chuttersnap", "chuttersnap");
 } else if (sbi === bn[1]) {
-  bii("pGKyqck99cg", "Jacob Rank", "jacobaustinrank");
-} else if (sbi === bn[2]) {
-  bii("EARYIkg21D4", "Maja Petric", "majapetric");
+  bii("u3ajSXhZM_U", "Freddy Castro", "readysetfreddy");
 };
 
 // Set/Read/Change/Open options

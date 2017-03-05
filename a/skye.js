@@ -1,6 +1,6 @@
 // Copyright Benjamin Developments (c) 2017 - All rights reserved
 var rl = "https://github.com/BenAndy/SkyeNewTab/tree/master";
-var cud = "000001";
+var cud = "000002";
 
 // Cookie handlers
 function sc(cname, cvalue, exdays) {
@@ -41,9 +41,6 @@ if (gc("alrtmsg") != cud) {
   document.getElementById("am").style.opacity = 0.9;
   sc("alrtmsg", cud, 99*99);
 };
-document.getElementById("cnam").addEventListener("click", function() {
-  cn();
-}, false);
 
 // Get name
 var rum = function() {
@@ -84,7 +81,7 @@ if (sbi === bn[0]) {
 // Set/Read/Change/Open options
     // Close all menus
 var cn = function(x) {
-  var ms = Array("mom", "dfm", "sbr", "biim", "am");
+  var ms = Array("mom", "dfm", "sbr", "biim", "am", "kcm");
   var y = function(z) {
     setTimeout(function() {
       document.getElementById(z).style.visibility = "hidden";
@@ -120,6 +117,12 @@ document.getElementById("cnsbr").addEventListener("click", function() {
   cn();
 }, false);
 document.getElementById("cnbiim").addEventListener("click", function() {
+  cn();
+}, false);
+document.getElementById("cnam").addEventListener("click", function() {
+  cn();
+}, false);
+document.getElementById("cnkcm").addEventListener("click", function() {
   cn();
 }, false);
     // Open options menu
@@ -247,6 +250,35 @@ document.getElementById("ibi").addEventListener("click", function() {
     document.getElementById("biim").style.visibility = "visible";
     document.getElementById("biim").style.opacity = 1;
   }, 400);
+}, false);
+    // Keyboard controls
+document.getElementById("kc").addEventListener("click", function() {
+  cn();
+  setTimeout(function() {
+    document.getElementById("kcm").style.visibility = "visible";
+    document.getElementById("kcm").style.opacity = 1;
+  }, 400);
+}, false);
+document.addEventListener("keydown", function(e) {
+  if (document.activeElement.tagName != "INPUT") {
+    e = e || window.event;
+    if (e.keyCode === 27) {
+      cn();
+    } else if (e.keyCode === 71) {
+      if (gc("ogs") === "f") {
+        sc("ogs", "t", 99*99);
+        document.getElementById("b").style.webkitFilter = "grayscale(1)";
+      } else {
+        sc("ogs", "f", 99*99);
+        document.getElementById("b").style.webkitFilter = "grayscale(0)";
+      };
+    } else if (e.keyCode === 79) {
+      cn(true);
+    } else if (e.keyCode === 73) {
+      document.getElementById("am").style.visibility = "visible";
+      document.getElementById("am").style.opacity = 0.9;
+    };
+  };
 }, false);
 
 // Clock and date

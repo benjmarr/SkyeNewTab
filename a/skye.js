@@ -37,8 +37,7 @@ if (document.addEventListener) {
 
 // Display alert message if need be
 if (gc("alrtmsg") != cud) {
-  document.getElementById("am").style.visibility = "visible";
-  document.getElementById("am").style.opacity = 0.9;
+  $("#am").css({"visibility": "visible", "opacity": "0.9"});
   sc("alrtmsg", cud, 99*99);
 };
 
@@ -62,15 +61,14 @@ var bo = function() {
   return bn[Math.floor(Math.random() * bn.length)];
 };
 var sbi = bo();
-document.getElementById("iue", iud);
-document.getElementById("b").style.backgroundImage = "url('a/i/b/" + sbi + ".jpg')";
-document.getElementById("iue").innerHTML = iud;
+$("#b").css({"background-image": "url('a/i/b/" + sbi + ".jpg')"});
+$("#iue").html(iud);
 var bii = function(x, y, z) {
   z = "https://unsplash.com/@" + z;
-  document.getElementById("bii0").innerHTML = y;
-  document.getElementById("bii1").innerHTML = "<a target='_blank' href='" + z + "'>" + z + "</a>";
-  document.getElementById("bii2").innerHTML = "<a target='_blank' href='https://unsplash.com/photos/" + x + "'>" + "https://unsplash.com/photos/" + x + "</a>"
-  document.getElementById("bii3").innerHTML = "<a target='_blank' href='" + z + "/portfolio'>Click to see</a>";
+  $("#bii0").html(y);
+  $("#bii1").html("<a target='_blank' href='" + z + "'>" + z + "</a>");
+  $("#bii2").html("<a target='_blank' href='https://unsplash.com/photos/" + x + "'>" + "https://unsplash.com/photos/" + x + "</a>");
+  $("#bii3").html("<a target='_blank' href='" + z + "/portfolio'>Click to see</a>");
 };
 if (sbi === bn[0]) {
   bii("EvKBHBGgaUo", "Jonatan Pie", "r3dmax");
@@ -86,80 +84,77 @@ var cn = function(x) {
   var ms = Array("mom", "dfm", "sbr", "biim", "am", "kcm");
   var y = function(z) {
     setTimeout(function() {
-      document.getElementById(z).style.visibility = "hidden";
+      $("#" + z).css({"visibility": "hidden"});
     }, 301);
   };
   for (i = 0; i < ms.length; i++) {
-    document.getElementById(ms[i]).style.opacity = 0;
+    $("#" + ms[i]).css({"opacity": "0"});
     y(ms[i]);
-    console.log(i);
   };
   if (x) {
     setTimeout(function() {
-      document.getElementById("mom").style.visibility = "visible";
-      document.getElementById("mom").style.opacity = 0.9;
-      document.getElementById("o").style.opacity = 0;
+      $("#mom").css({"visibility": "visible", "opacity": "0.9"});
+      $("#o").css({"opacity": "0"});
       setTimeout(function() {
-        document.getElementById("o").style.visibility = "hidden";
+        $("#o").css({"visibility": "hidden"});
       }, 301);
     }, 400);
   } else {
-    document.getElementById("o").style.opacity = 1;
-    document.getElementById("o").style.visibility = "visible";
+    $("#o").css({"opacity": "1", "visibility": "visible"});
   };
 };
     // Close menu button
-document.getElementById("cnmom").addEventListener("click", function() {
+$("#cnmom").on("click", function() {
   cn();
-}, false);
-document.getElementById("cndfm").addEventListener("click", function() {
+});
+$("#cndfm").on("click", function() {
   cn();
-}, false);
-document.getElementById("cnsbr").addEventListener("click", function() {
+});
+$("#cnsbr").on("click", function() {
   cn();
-}, false);
-document.getElementById("cnbiim").addEventListener("click", function() {
+});
+$("#cnbiim").on("click", function() {
   cn();
-}, false);
-document.getElementById("cnam").addEventListener("click", function() {
+});
+$("#cnam").on("click", function() {
   cn();
-}, false);
-document.getElementById("cnkcm").addEventListener("click", function() {
+});
+$("#cnkcm").on("click", function() {
   cn();
-}, false);
+});
     // Open options menu
-document.getElementById("o").addEventListener("click", function() {
+$("#o").on("click", function() {
   cn(true);
-}, false);
+});
     // Toggle background grayscale
 if (gc("ogs") === "") {
   sc("ogs", "f", 99*99);
 };
-document.getElementById("gs").addEventListener("click", function() {
+$("#gs").on("click", function() {
   if (gc("ogs") === "f") {
     sc("ogs", "t", 99*99);
-    document.getElementById("b").style.webkitFilter = "grayscale(1)";
+    $("#b").css({"webkit-filter": "grayscale(1)"});
   } else {
     sc("ogs", "f", 99*99);
-    document.getElementById("b").style.webkitFilter = "grayscale(0)";
+    $("#b").css({"webkit-filter": "grayscale(0)"});
   };
-}, false);
+});
     // Toggle 24 hour time
 if (gc("otht") === "") {
   sc("otht", "12", 99*99);
 };
-document.getElementById("tht").addEventListener("click", function() {
+$("#tht").on("click", function() {
   if (gc("otht") === "24") {
     sc("otht", "12", 99*99);
   } else {
     sc("otht", "24", 99*99);
   };
-}, false);
+});
     // Toggle AM/PM visibility
 if (gc("oap") === "") {
   sc("oap", "v", 99*99);
 };
-document.getElementById("ap").addEventListener("click", function() {
+$("#ap").on("click", function() {
   if (gc("oap") === "v") {
     sc("oap", "h", 99*99);
   } else {
@@ -169,98 +164,93 @@ document.getElementById("ap").addEventListener("click", function() {
     sc("otht", "12", 99*99);
     sc("oap", "v", 99*99);
   };
-}, false);
+});
     // Change date format
 if (gc("dfo") === "") {
   sc("dfo", "0", 99*99);
 };
-document.getElementById("df").addEventListener("click", function() {
+$("#df").on("click", function() {
   cn();
   setTimeout(function() {
-    document.getElementById("dfm").style.visibility = "visible";
-    document.getElementById("dfm").style.opacity = 0.9;
+    $("#dfm").css({"visibility": "visible", "opacity": "0.9"});
   }, 400);
-}, false);
-document.getElementById("dfo0").addEventListener("click", function() {
+});
+$("#dfo0").on("click", function() {
   sc("dfo", "0", 99*99);
-}, false);
-document.getElementById("dfo1").addEventListener("click", function() {
+});
+$("#dfo1").on("click", function() {
   sc("dfo", "1", 99*99);
-}, false);
-document.getElementById("dfo2").addEventListener("click", function() {
+});
+$("#dfo2").on("click", function() {
   sc("dfo", "2", 99*99);
-}, false);
-document.getElementById("dfo3").addEventListener("click", function() {
+});
+$("#dfo3").on("click", function() {
   sc("dfo", "3", 99*99);
-}, false);
+});
     // Change or remove your name
-document.getElementById("cu").addEventListener("click", function() {
+$("#cu").on("click", function() {
   rum();
   cn();
-}, false);
+});
     // Search box options
-document.getElementById("osb").addEventListener("click", function() {
+$("#osb").on("click", function() {
   cn();
   setTimeout(function() {
-    document.getElementById("sbr").style.visibility = "visible";
-    document.getElementById("sbr").style.opacity = 0.9;
+    $("#sbr").css({"visibility": "visible", "opacity": "0.9"});
   }, 400);
-}, false);
+});
 if (gc("osb") === "") {
   sc("osb", "g", 99*99);
 };
 if (gc("osbvh") === "") {
   sc("osbvh", "v", 99*99);
 };
-document.getElementById("sbrvh").addEventListener("click", function() {
+$("#sbrvh").on("click", function() {
   if (gc("osbvh") === "v") {
     sc("osbvh", "h", 99*99);
   } else {
     sc("osbvh", "v", 99*99);
   };
   ttt();
-}, false);
-document.getElementById("sbr0").addEventListener("click", function() {
+});
+$("#sbr0").on("click", function() {
   sc("osb", "g", 99*99);
   sc("osbvh", "v", 99*99);
   ttt();
-}, false);
-document.getElementById("sbr1").addEventListener("click", function() {
+});
+$("#sbr1").on("click", function() {
   sc("osb", "t", 99*99);
   sc("osbvh", "v", 99*99);
   ttt();
-}, false);
-document.getElementById("sbr2").addEventListener("click", function() {
+});
+$("#sbr2").on("click", function() {
   sc("osb", "f", 99*99);
   sc("osbvh", "v", 99*99);
   ttt();
-}, false);
-document.getElementById("sbr3").addEventListener("click", function() {
+});
+$("#sbr3").on("click", function() {
   sc("osb", "y", 99*99);
   sc("osbvh", "v", 99*99);
   ttt();
-}, false);
-document.getElementById("sbr4").addEventListener("click", function() {
+});
+$("#sbr4").on("click", function() {
   sc("osb", "gi", 99*99);
   sc("osbvh", "v", 99*99);
   ttt();
-}, false);
+});
     // View background image infomration
-document.getElementById("ibi").addEventListener("click", function() {
+$("#ibi").on("click", function() {
   cn();
   setTimeout(function() {
-    document.getElementById("biim").style.visibility = "visible";
-    document.getElementById("biim").style.opacity = 1;
+    $("#biim").css({"visibility": "visible", "opacity": "1"});
   }, 400);
-}, false);
+});
     // Keyboard controls
-document.getElementById("kc").addEventListener("click", function() {
-  cn();
+$("#kc").on("click", function() {cn();
   setTimeout(function() {
-    document.getElementById("kcm").style.visibility = "visible";
-    document.getElementById("kcm").style.opacity = 1;
+    $("#kcm").css({"visibility": "visible", "opacity": "1"});
   }, 400);
-}, false);
+});
 document.addEventListener("keydown", function(e) {
   if (document.activeElement.tagName != "INPUT") {
     e = e || window.event;
@@ -269,16 +259,15 @@ document.addEventListener("keydown", function(e) {
     } else if (e.keyCode === 71) {
       if (gc("ogs") === "f") {
         sc("ogs", "t", 99*99);
-        document.getElementById("b").style.webkitFilter = "grayscale(1)";
+        $("#b").css({"webkit-filter": "grayscale(1)"});
       } else {
         sc("ogs", "f", 99*99);
-        document.getElementById("b").style.webkitFilter = "grayscale(0)";
+        $("#b").css({"webkit-filter": "grayscale(0)"});
       };
     } else if (e.keyCode === 79) {
       cn(true);
     } else if (e.keyCode === 73) {
-      document.getElementById("am").style.visibility = "visible";
-      document.getElementById("am").style.opacity = 0.9;
+      $("#am").css({"visibility": "visible", "opacity": "0.9"});
     };
   };
 }, false);
@@ -328,43 +317,44 @@ function c() {
   };
   if (th < 12) {
     if (nnn) {
-      document.getElementById("ab").innerHTML = "Good morning, " + gc("n");
+      $("#ab").html("Good morning, " + gc("n"));
     } else {
-      document.getElementById("ab").innerHTML = "Good morning";
+      $("#ab").html("Good morning");
     };
-  } else if (th < 18) {if (nnn) {
-      document.getElementById("ab").innerHTML = "Good afternoon, " + gc("n");
+  } else if (th < 18) {
+    if (nnn) {
+      $("#ab").html("Good afternoon, " + gc("n"));
     } else {
-      document.getElementById("ab").innerHTML = "Good afternoon";
+      $("#ab").html("Good afternoon");
     };
   } else {
     if (nnn) {
-      document.getElementById("ab").innerHTML = "Good evening, " + gc("n");
+      $("#ab").html("Good evening, " + gc("n"));
     } else {
-      document.getElementById("ab").innerHTML = "Good evening";
+      $("#ab").html("Good evening");
     };
   };
   if (gc("otht") === "24") {
     if (nh < 12) {
-      document.getElementById("cb").innerHTML = nh + 12 + ":" + nmm;
+      $("#cb").html(nh + 12 + ":" + nmm);
     } else {
-      document.getElementById("cb").innerHTML = nh + ":" + nmm;
+      $("#cb").html(nh + ":" + nmm);
     };
   } else {
     if (gc("oap") === "v") {
-      document.getElementById("cb").innerHTML = nh + ":" + nmm + ap;
+      $("#cb").html(nh + ":" + nmm + ap);
     } else {
-      document.getElementById("cb").innerHTML = nh + ":" + nmm;
+      $("#cb").html(nh + ":" + nmm);
     };
   };
   if (gc("dfo") === "0") {
-    document.getElementById("db").innerHTML = td[nd] + ", " + tm[nm] + " " + ne + "<sup>" + st + "</sup>";
+    $("#db").html(td[nd] + ", " + tm[nm] + " " + ne + "<sup>" + st + "</sup>");
   } else if (gc("dfo") === "1") {
-    document.getElementById("db").innerHTML = tm[nm] + " " + ne + "<sup>" + st + "</sup>";
+    $("#db").html(tm[nm] + " " + ne + "<sup>" + st + "</sup>");
   } else if (gc("dfo") === "2") {
-    document.getElementById("db").innerHTML = td[nd] + ", " + ne + " " + tm[nm];
+    $("#db").html(td[nd] + ", " + ne + " " + tm[nm]);
   } else if (gc("dfo") === "3") {
-    document.getElementById("db").innerHTML = tm[nm] + " " + ne + "<sup>" + st + "</sup>";
+    $("#db").html(tm[nm] + " " + ne + "<sup>" + st + "</sup>");
   };
 };
 
@@ -372,20 +362,19 @@ function c() {
 var hasi = function() {
   var x = Array("0", "1", "2", "3", "4");
   for (i = 0; i < x.length; i++) {
-    document.getElementById("si" + x[i]).style.opacity = 0;
+    $("#si" + x[i]).css({"opacity": "0"});
   };
 };
 var msb = function(x, y) {
-  document.getElementById("qb").innerHTML = "<form id='formForm' method='get' action='" + x + "'><input type='text' name='q' size='31' id='si' /></form>";
+  $("#qb").html("<form id='formForm' method='get' action='" + x + "'><input type='text' name='q' size='31' id='si' /></form>");
   hasi();
   setTimeout(function() {
-    console.log("si" + y);
-    document.getElementById("si" + y).style.opacity = 1;
+    $("#si" + y).css({"opacity": "1"});
     if (gc("osbvh") === "h") {
       hasi();
-      document.getElementById("qb").style.opacity = 0;
+      $("#qb").css({"opacity": "0"});
     } else {
-      document.getElementById("qb").style.opacity = 1;
+      $("#qb").css({"opacity": "1"});
     };
   }, 100);
 };
@@ -406,8 +395,7 @@ ttt();
 
 // Hotlinks click
 var rp = function(x) {
-  document.getElementById("a").style.backgroundColor = "#00000";
-  document.getElementById("a").style.opacity = 0;
+  $("#a").css({"background-color": "#00000", "opacity": "0"});
   window.location = x;
 };
 document.getElementById("l0").addEventListener("click", function() {
@@ -431,24 +419,24 @@ document.getElementById("l5").addEventListener("click", function() {
 
 // Page load complete
 window.onload = function() {
-  document.getElementById("a").style.opacity = 1;
+  $("#a").css({"opacity": "1"});
   if (gc("ogs") === "f") {
-    document.getElementById("b").style.webkitFilter = "grayscale(0)";
+    $("#b").css({"webkit-filter": "grayscale(0)"});
   };
   setTimeout(function() {
-    document.getElementById("o").style.opacity = 1;
-    document.getElementById("dt").style.opacity = 1;
-    document.getElementById("cb").style.opacity = 1;
-    document.getElementById("db").style.opacity = 1;
-    document.getElementById("ab").style.opacity = 1;
-    document.getElementById("ld").style.opacity = 1;
+    $("#o").css({"opacity": "1"});
+    $("#dt").css({"opacity": "1"});
+    $("#cb").css({"opacity": "1"});
+    $("#db").css({"opacity": "1"});
+    $("#ab").css({"opacity": "1"});
+    $("#ld").css({"opacity": "1"});
   }, 300);
   setTimeout(function() {
-    document.getElementById("dt").style.opacity = 0;
+    $("#dt").css({"opacity": "0"});
     setTimeout(function() {
-      document.getElementById("dt").innerHTML = "Skye New Tab";
+      $("#dt").html("Skye New Tab");
       setTimeout(function() {
-        document.getElementById("dt").style.opacity = 1;
+        $("#dt").css({"opacity": "1"});
       }, 99);
     }, 501);
   }, 2300);

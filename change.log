@@ -1,6 +1,11 @@
 Skye New Tab change log
 All changes can be viewed at https://github.com/BenAndy/SkyeNewTab/commits/master
 
+v3.1.5:
+Updated content security policy.
+Implemented jQuery.
+Removed some unnecessary code.
+
 v3.0.4:
 Added three new background images.
 

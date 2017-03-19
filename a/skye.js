@@ -1,6 +1,6 @@
 // Copyright Benjamin Developments (c) 2017 - All rights reserved
 var rl = "https://github.com/BenAndy/SkyeNewTab/tree/master";
-var cud = "000002";
+var cud = "000003";
 
 // Cookie handlers
 function sc(cname, cvalue, exdays) {
@@ -81,7 +81,7 @@ if (sbi === bn[0]) {
 // Set/Read/Change/Open options
     // Close all menus
 var cn = function(x) {
-  var ms = Array("mom", "dfm", "sbr", "biim", "am", "kcm");
+  var ms = Array("mom", "dfm", "sbr", "biim", "am", "kcm", "ildm");
   var y = function(z) {
     setTimeout(function() {
       $("#" + z).css({"visibility": "hidden"});
@@ -120,6 +120,9 @@ $("#cnam").on("click", function() {
   cn();
 });
 $("#cnkcm").on("click", function() {
+  cn();
+});
+$("#cnildm").on("click", function() {
   cn();
 });
     // Open options menu
@@ -245,6 +248,57 @@ $("#ibi").on("click", function() {
     $("#biim").css({"visibility": "visible", "opacity": "1"});
   }, 400);
 });
+    // Icon Link Display
+if (gc("ild") === "") {
+  sc("ild", "3", 99*99);
+  ild();
+};
+$("#ild").on("click", function() {
+  cn();
+  setTimeout(function() {
+    $("#ildm").css({"visibility": "visible", "opacity": "1"});
+  }, 400);
+});
+$("#ild0").on("click", function() {
+  sc("ild", "0", 99*99);
+  ild();
+});
+$("#ild1").on("click", function() {
+  sc("ild", "1", 99*99);
+  ild();
+});
+$("#ild2").on("click", function() {
+  sc("ild", "2", 99*99);
+  ild();
+});
+$("#ild3").on("click", function() {
+  sc("ild", "3", 99*99);
+  ild();
+});
+function ild() {
+  $("#l0, #l1, #l2, #l3, #l4, #l5").css({"transition": "-webkit-filter 0.5s"});
+  if (gc("ild") === "0") {
+    $("#l0, #l1, #l2, #l3, #l4, #l5").css({"opacity": "1", "webkit-filter": "grayscale(0)"});
+  } else if (gc("ild") === "1") {
+    $("#l0, #l1, #l2, #l3, #l4, #l5").css({"opacity": "1", "webkit-filter": "grayscale(1)"});
+  } else if (gc("ild") === "2") {
+    $("#l0, #l1, #l2, #l3, #l4, #l5").css({"opacity": "0"});
+  } else if (gc("ild") === "3") {
+    $("#l0, #l1, #l2, #l3, #l4, #l5").css({"opacity": "1", "webkit-filter": "grayscale(1)"});
+    $("#l0").on("mouseover", function() {if (gc("ild") === "3") {$("#l0").css({"webkit-filter": "grayscale(0)"});};});
+    $("#l0").on("mouseout", function() {$("#l0").css({"webkit-filter": "grayscale(1)"});});
+    $("#l1").on("mouseover", function() {if (gc("ild") === "3") {$("#l1").css({"webkit-filter": "grayscale(0)"});};});
+    $("#l1").on("mouseout", function() {$("#l1").css({"webkit-filter": "grayscale(1)"});});
+    $("#l2").on("mouseover", function() {if (gc("ild") === "3") {$("#l2").css({"webkit-filter": "grayscale(0)"});};});
+    $("#l2").on("mouseout", function() {$("#l2").css({"webkit-filter": "grayscale(1)"});});
+    $("#l3").on("mouseover", function() {if (gc("ild") === "3") {$("#l3").css({"webkit-filter": "grayscale(0)"});};});
+    $("#l3").on("mouseout", function() {$("#l3").css({"webkit-filter": "grayscale(1)"});});
+    $("#l4").on("mouseover", function() {if (gc("ild") === "3") {$("#l4").css({"webkit-filter": "grayscale(0)"});};});
+    $("#l4").on("mouseout", function() {$("#l4").css({"webkit-filter": "grayscale(1)"});});
+    $("#l5").on("mouseover", function() {if (gc("ild") === "3") {$("#l5").css({"webkit-filter": "grayscale(0)"});};});
+    $("#l5").on("mouseout", function() {$("#l5").css({"webkit-filter": "grayscale(1)"});});
+  };
+};
     // Keyboard controls
 $("#kc").on("click", function() {cn();
   setTimeout(function() {
@@ -267,7 +321,10 @@ document.addEventListener("keydown", function(e) {
     } else if (e.keyCode === 79) {
       cn(true);
     } else if (e.keyCode === 73) {
-      $("#am").css({"visibility": "visible", "opacity": "0.9"});
+      cn();
+      setTimeout(function() {
+        $("#am").css({"visibility": "visible", "opacity": "0.9"});
+      }, 400);
     };
   };
 }, false);
@@ -423,13 +480,13 @@ window.onload = function() {
   if (gc("ogs") === "f") {
     $("#b").css({"webkit-filter": "grayscale(0)"});
   };
-  setTimeout(function() {
+  ild();
+  setTimeout(function() {;
     $("#o").css({"opacity": "1"});
     $("#dt").css({"opacity": "1"});
     $("#cb").css({"opacity": "1"});
     $("#db").css({"opacity": "1"});
     $("#ab").css({"opacity": "1"});
-    $("#ld").css({"opacity": "1"});
   }, 300);
   setTimeout(function() {
     $("#dt").css({"opacity": "0"});

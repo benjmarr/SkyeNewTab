@@ -1,6 +1,6 @@
 // Copyright Benjamin Developments (c) 2017 - All rights reserved
 var rl = "https://github.com/BenAndy/SkyeNewTab/tree/master";
-var cud = "000004";
+var cud = "000005";
 
 // Cookie handlers
 function sc(cname, cvalue, exdays) {

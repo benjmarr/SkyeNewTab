@@ -495,6 +495,9 @@ window.onload = function() {
       }, 99);
     }, 501);
   }, 2300);
+  $.getJSON("../manifest.json", function(amvf) {
+    $("#amv").html(amvf.version);
+   });
 };
 
 // Google Analytics

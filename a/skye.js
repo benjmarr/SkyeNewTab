@@ -497,7 +497,7 @@ window.onload = function() {
   }, 2300);
   $.getJSON("../manifest.json", function(amvf) {
     $("#amv").html(amvf.version);
-   });
+  });
 };
 
 // Google Analytics

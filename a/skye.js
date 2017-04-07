@@ -1,6 +1,6 @@
 // Copyright Benjamin Developments (c) 2017 - All rights reserved
 var rl = "https://github.com/BenAndy/SkyeNewTab/tree/master";
-var cud = "000007";
+var cud = "7";
 
 // Cookie handlers
 function sc(cname, cvalue, exdays) {
@@ -36,7 +36,9 @@ if (document.addEventListener) {
 };
 
 // Display alert message if need be
-if (gc("alrtmsg") != cud) {
+if (gc("alrtmsg") === "") {
+  sc("alrtmsg", cud, 9999);
+} else if (gc("alrtmsg") != cud) {
   $("#am").css({"visibility": "visible", "opacity": "0.9"});
   sc("alrtmsg", cud, 9999);
 };
@@ -102,27 +104,10 @@ var cn = function(x) {
   };
 };
     // Close menu button
-$("#cnmom").on("click", function() {
-  cn();
-});
-$("#cndfm").on("click", function() {
-  cn();
-});
-$("#cnsbr").on("click", function() {
-  cn();
-});
-$("#cnbiim").on("click", function() {
-  cn();
-});
-$("#cnam").on("click", function() {
-  cn();
-});
-$("#cnkcm").on("click", function() {
-  cn();
-});
-$("#cnildm").on("click", function() {
-  cn();
-});
+var clml = new Array("#cnmom", "#cndfm", "#cnsbr", "#cnbiim", "#cnam", "#cnkcm", "#cnildm");
+for (var i = 0; i < clml.length; i++) {
+  $(clml[i]).on("click", function(){cn();});
+};
     // Open options menu
 $("#o").on("click", function() {
   cn(true);
@@ -328,19 +313,18 @@ document.addEventListener("keydown", function(e) {
 }, false);
 
 // Clock and date
-var nd;
-var nm;
-var ne;
-var st;
-var htf;
-var td = new Array ("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
-var tm = new Array ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+var nd, nm, ne, st, htf;
+var td = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+var tm = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+var sm = new Array("JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC");
 setInterval(c, 100);
 function c() {
   var d = new Date();
   nd = d.getDay();
   nm = d.getMonth();
   ne = d.getDate();
+  yr = d.getYear();
+  yr = yr + 1900;
   var nh = d.getHours(), nmm = d.getMinutes(), ap;
   var th = d.getHours();
   if (nh === 0) {
@@ -409,7 +393,7 @@ function c() {
   } else if (gc("dfo") === "2") {
     $("#db").html(td[nd] + ", " + ne + " " + tm[nm]);
   } else if (gc("dfo") === "3") {
-    $("#db").html(tm[nm] + " " + ne + "<sup>" + st + "</sup>");
+    $("#db").html(ne + " " + sm[nm] + " " + yr);
   };
 };
 
@@ -451,26 +435,14 @@ ttt();
 // Hotlinks click
 var rp = function(x) {
   $("#a").css({"background-color": "#00000", "opacity": "0"});
-  window.location = x;
+  window.location = "https://www." + x;
 };
-document.getElementById("l0").addEventListener("click", function() {
-  rp("https://www.google.com");
-}, false);
-document.getElementById("l1").addEventListener("click", function() {
-  rp("https://www.facebook.com");
-}, false);
-document.getElementById("l2").addEventListener("click", function() {
-  rp("https://www.instagram.com");
-}, false);
-document.getElementById("l3").addEventListener("click", function() {
-  rp("https://www.pinterest.com");
-}, false);
-document.getElementById("l4").addEventListener("click", function() {
-  rp("https://www.twitter.com");
-}, false);
-document.getElementById("l5").addEventListener("click", function() {
-  rp("https://youtube.com");
-}, false);
+$("#l0").on("click", function() {rp("google.com")});
+$("#l1").on("click", function() {rp("facebook.com")});
+$("#l2").on("click", function() {rp("instagram.com")});
+$("#l3").on("click", function() {rp("pinterest.com")});
+$("#l4").on("click", function() {rp("twitter.com")});
+$("#l5").on("click", function() {rp("youtube.com")});
 
 // Page load complete
 window.onload = function() {
@@ -479,12 +451,11 @@ window.onload = function() {
     $("#b").css({"webkit-filter": "grayscale(0)"});
   };
   ild();
-  setTimeout(function() {;
-    $("#o").css({"opacity": "1"});
-    $("#dt").css({"opacity": "1"});
-    $("#cb").css({"opacity": "1"});
-    $("#db").css({"opacity": "1"});
-    $("#ab").css({"opacity": "1"});
+  setTimeout(function() {
+    var pla = new Array("#o", "#dt", "#cb", "#db", "#ab");
+    for (var i = 0; i < pla.length; i++) {
+      $(pla[i]).css({"opacity": "1"});
+    };
   }, 300);
   setTimeout(function() {
     $("#dt").css({"opacity": "0"});

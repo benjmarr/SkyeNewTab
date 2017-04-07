@@ -1,7 +1,7 @@
 {
-  "version": "3.1.15",
+  "version": "3.1.16",
   "name": "Skye New Tab",
-  "short_name":  "Skye",
+  "short_name": "Skye",
   "description": "Replace the boring new tab page with Skye, a more modern and customisable new tab page.",
   "manifest_version": 2,
   "author": "Benjamin Developments",

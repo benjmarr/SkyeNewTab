@@ -1,6 +1,9 @@
 Skye New Tab change log
 All changes can be viewed at https://github.com/BenAndy/SkyeNewTab/commits/master
 
+v3.1.14:
+Added two new background images.
+
 v3.1.13:
 Moved most external assets to lcoal assets to decrease page load times.
 

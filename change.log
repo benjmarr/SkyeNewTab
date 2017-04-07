@@ -1,6 +1,13 @@
 Skye New Tab change log
 All changes can be viewed at https://github.com/BenAndy/SkyeNewTab/commits/master
 
+v3.1.15:
+Changed cookie expiration dates to last longer.
+Small change in how the background image information is displayed.
+Small change in spacing with the clock, date and welcome message.
+Changed the icon links from a 2% width to a 1.75% width.
+Small change in options menu footer.
+
 v3.1.14:
 Added two new background images.
 

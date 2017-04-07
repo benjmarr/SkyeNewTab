@@ -1,6 +1,6 @@
 // Copyright Benjamin Developments (c) 2017 - All rights reserved
 var rl = "https://github.com/BenAndy/SkyeNewTab/tree/master";
-var cud = "000005";
+var cud = "000007";
 
 // Cookie handlers
 function sc(cname, cvalue, exdays) {
@@ -38,16 +38,16 @@ if (document.addEventListener) {
 // Display alert message if need be
 if (gc("alrtmsg") != cud) {
   $("#am").css({"visibility": "visible", "opacity": "0.9"});
-  sc("alrtmsg", cud, 99*99);
+  sc("alrtmsg", cud, 9999);
 };
 
 // Get name
 var rum = function() {
   var pn = prompt("What would you like to be called? You can change your name later in the options menu if need be. If you don't wish to have your name displayed, just press [ENTER].", "Your name");
   if (pn === "Your name" || pn === "" || pn === null) {
-    sc("n", "false", 99*99);
+    sc("n", "false", 9999);
   } else {
-    sc("n", pn, 99*99);
+    sc("n", pn, 9999);
   };
 };
 if (gc("n") === "") {
@@ -68,7 +68,7 @@ var bii = function(x, y, z) {
   $("#bii0").html(y);
   $("#bii1").html("<a target='_blank' href='" + z + "'>" + z + "</a>");
   $("#bii2").html("<a target='_blank' href='https://unsplash.com/photos/" + x + "'>" + "https://unsplash.com/photos/" + x + "</a>");
-  $("#bii3").html("<a target='_blank' href='" + z + "/portfolio'>Click to see</a>");
+  $("#bii3").html("<a target='_blank' href='" + z + "/portfolio'>" + z + "</a>");
 };
 if (sbi === bn[0]) {
   bii("VfUN94cUy4o", "David Marcu", "davidmarcu");
@@ -129,46 +129,46 @@ $("#o").on("click", function() {
 });
     // Toggle background grayscale
 if (gc("ogs") === "") {
-  sc("ogs", "f", 99*99);
+  sc("ogs", "f", 9999);
 };
 $("#gs").on("click", function() {
   if (gc("ogs") === "f") {
-    sc("ogs", "t", 99*99);
+    sc("ogs", "t", 9999);
     $("#b").css({"webkit-filter": "grayscale(1)"});
   } else {
-    sc("ogs", "f", 99*99);
+    sc("ogs", "f", 9999);
     $("#b").css({"webkit-filter": "grayscale(0)"});
   };
 });
     // Toggle 24 hour time
 if (gc("otht") === "") {
-  sc("otht", "12", 99*99);
+  sc("otht", "12", 9999);
 };
 $("#tht").on("click", function() {
   if (gc("otht") === "24") {
-    sc("otht", "12", 99*99);
+    sc("otht", "12", 9999);
   } else {
-    sc("otht", "24", 99*99);
+    sc("otht", "24", 9999);
   };
 });
     // Toggle AM/PM visibility
 if (gc("oap") === "") {
-  sc("oap", "v", 99*99);
+  sc("oap", "v", 9999);
 };
 $("#ap").on("click", function() {
   if (gc("oap") === "v") {
-    sc("oap", "h", 99*99);
+    sc("oap", "h", 9999);
   } else {
-    sc("oap", "v", 99*99);
+    sc("oap", "v", 9999);
   };
   if (gc("otht") === "24") {
-    sc("otht", "12", 99*99);
-    sc("oap", "v", 99*99);
+    sc("otht", "12", 9999);
+    sc("oap", "v", 9999);
   };
 });
     // Change date format
 if (gc("dfo") === "") {
-  sc("dfo", "0", 99*99);
+  sc("dfo", "0", 9999);
 };
 $("#df").on("click", function() {
   cn();
@@ -177,16 +177,16 @@ $("#df").on("click", function() {
   }, 400);
 });
 $("#dfo0").on("click", function() {
-  sc("dfo", "0", 99*99);
+  sc("dfo", "0", 9999);
 });
 $("#dfo1").on("click", function() {
-  sc("dfo", "1", 99*99);
+  sc("dfo", "1", 9999);
 });
 $("#dfo2").on("click", function() {
-  sc("dfo", "2", 99*99);
+  sc("dfo", "2", 9999);
 });
 $("#dfo3").on("click", function() {
-  sc("dfo", "3", 99*99);
+  sc("dfo", "3", 9999);
 });
     // Change or remove your name
 $("#cu").on("click", function() {
@@ -201,42 +201,42 @@ $("#osb").on("click", function() {
   }, 400);
 });
 if (gc("osb") === "") {
-  sc("osb", "g", 99*99);
+  sc("osb", "g", 9999);
 };
 if (gc("osbvh") === "") {
-  sc("osbvh", "v", 99*99);
+  sc("osbvh", "v", 9999);
 };
 $("#sbrvh").on("click", function() {
   if (gc("osbvh") === "v") {
-    sc("osbvh", "h", 99*99);
+    sc("osbvh", "h", 9999);
   } else {
-    sc("osbvh", "v", 99*99);
+    sc("osbvh", "v", 9999);
   };
   ttt();
 });
 $("#sbr0").on("click", function() {
-  sc("osb", "g", 99*99);
-  sc("osbvh", "v", 99*99);
+  sc("osb", "g", 9999);
+  sc("osbvh", "v", 9999);
   ttt();
 });
 $("#sbr1").on("click", function() {
-  sc("osb", "t", 99*99);
-  sc("osbvh", "v", 99*99);
+  sc("osb", "t", 9999);
+  sc("osbvh", "v", 9999);
   ttt();
 });
 $("#sbr2").on("click", function() {
-  sc("osb", "f", 99*99);
-  sc("osbvh", "v", 99*99);
+  sc("osb", "f", 9999);
+  sc("osbvh", "v", 9999);
   ttt();
 });
 $("#sbr3").on("click", function() {
-  sc("osb", "y", 99*99);
-  sc("osbvh", "v", 99*99);
+  sc("osb", "y", 9999);
+  sc("osbvh", "v", 9999);
   ttt();
 });
 $("#sbr4").on("click", function() {
-  sc("osb", "gi", 99*99);
-  sc("osbvh", "v", 99*99);
+  sc("osb", "gi", 9999);
+  sc("osbvh", "v", 9999);
   ttt();
 });
     // View background image infomration
@@ -248,7 +248,7 @@ $("#ibi").on("click", function() {
 });
     // Icon Link Display
 if (gc("ild") === "") {
-  sc("ild", "3", 99*99);
+  sc("ild", "3", 9999);
   ild();
 };
 $("#ild").on("click", function() {
@@ -258,19 +258,19 @@ $("#ild").on("click", function() {
   }, 400);
 });
 $("#ild0").on("click", function() {
-  sc("ild", "0", 99*99);
+  sc("ild", "0", 9999);
   ild();
 });
 $("#ild1").on("click", function() {
-  sc("ild", "1", 99*99);
+  sc("ild", "1", 9999);
   ild();
 });
 $("#ild2").on("click", function() {
-  sc("ild", "2", 99*99);
+  sc("ild", "2", 9999);
   ild();
 });
 $("#ild3").on("click", function() {
-  sc("ild", "3", 99*99);
+  sc("ild", "3", 9999);
   ild();
 });
 function ild() {
@@ -310,10 +310,10 @@ document.addEventListener("keydown", function(e) {
       cn();
     } else if (e.keyCode === 71) {
       if (gc("ogs") === "f") {
-        sc("ogs", "t", 99*99);
+        sc("ogs", "t", 9999);
         $("#b").css({"webkit-filter": "grayscale(1)"});
       } else {
-        sc("ogs", "f", 99*99);
+        sc("ogs", "f", 9999);
         $("#b").css({"webkit-filter": "grayscale(0)"});
       };
     } else if (e.keyCode === 79) {
@@ -495,8 +495,9 @@ window.onload = function() {
       }, 99);
     }, 501);
   }, 2300);
-  $.getJSON("../manifest.json", function(amvf) {
-    $("#amv").html(amvf.version);
+  $.getJSON("../manifest.json", function(json) {
+    $("#amv").html(json.version);
+    $("#sntv").html("Skye New Tab v" + json.version);
   });
 };
 

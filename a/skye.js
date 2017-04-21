@@ -76,7 +76,7 @@ if (sbi === bn[0]) {
   bii("ehNGoB6q5p4", "Sean Afnan", "sean82");
 } else if (sbi === bn[1]) {
   bii("NsUcpqfcpCE", "Drew Collins", "drewjohncollins");
-} else if (sbi === [bn[2]) {
+} else if (sbi === bn[2]) {
   bii("soQm9BZiDeI", "Teddy Kelley", "teddykelley");
 };
 

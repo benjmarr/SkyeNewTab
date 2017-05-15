@@ -71,6 +71,7 @@ var bii = function(x, y, z) {
   $("#bii1").html("<a target='_blank' href='" + z + "'>" + z + "</a>");
   $("#bii2").html("<a target='_blank' href='https://unsplash.com/photos/" + x + "'>" + "https://unsplash.com/photos/" + x + "</a>");
   $("#bii3").html("<a target='_blank' href='" + z + "/portfolio'>" + z + "</a>");
+  $("#bii4").html(iud);
 };
 if (sbi === bn[0]) {
   bii("JiWVJ5-vR44", "Aaron Burden", "aaronburden");

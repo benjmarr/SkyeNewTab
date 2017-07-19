@@ -57,8 +57,8 @@ if (gc("n") === "") {
 };
 
 // Background image & information
-var bn = Array(243, 244, 245, 246);
-var iud = "Monday 3<sup>rd</sup> July, 2017";
+var bn = Array(0, 1, 2, 3);
+var iud = "Wednesday 19<sup>rd</sup> July, 2017";
 var bo = function() {
   return bn[Math.floor(Math.random() * bn.length)];
 };
@@ -74,13 +74,13 @@ var bii = function(x, y, z) {
   $("#bii4").html(iud);
 };
 if (sbi === bn[0]) {
-  bii("Nod1nQ0i5a0", "Igor Son", "igorson");
+  bii("f4amnWqRU70", "Heidi Sandstrom", "sandstromfilm");
 } else if (sbi === bn[1]) {
-  bii("P1qyEf1g0HU", "Glenn Carstens-Peters", "glenncarstenspeters");
+  bii("A-NVHPka9Rk", "Diego Jimenez", "diegojimenez");
 } else if (sbi === bn[2]) {
-  bii("Xh0yiAhVLFA", "Annie Spratt", "anniespratt");
+  bii("9cCeS9Sg6nU", "chuttersnap", "chuttersnap");
 } else if (sbi === bn[3]) {
-  bii("6DivtP_WRYs", "Martin Reisch", "safesolvent");
+  bii("_Zn_7FzoL1w", "Brenda Godinez", "cravethebenefits");
 };
 
 // Set/Read/Change/Open options

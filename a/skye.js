@@ -58,7 +58,7 @@ if (gc("n") === "") {
 
 // Background image & information
 var bn = Array(0, 1, 2, 3);
-var iud = "Monday 4<sup>nd</sup> September, 2017";
+var iud = "Friday 15<sup>nd</sup> September, 2017";
 var bo = function() {
   return bn[Math.floor(Math.random() * bn.length)];
 };
@@ -74,13 +74,13 @@ var bii = function(x, y, z) {
   $("#bii4").html(iud);
 };
 if (sbi === bn[0]) {
-  bii("FzrlPh20l7Q", "Jeremy Bishop", "tidesinourveins");
+  bii("I63YZy3S9Ns", "Jake Thacker", "jaketthacker");
 } else if (sbi === bn[1]) {
-  bii("uuod6IM8Cs8", "Adi Goldstein", "adigold1");
+  bii("-f2sJr-PJDA", "Falco Negenman", "fanegen");
 } else if (sbi === bn[2]) {
-  bii("iSHwa3EaMlo", "Yavor Punchev", "yavor");
+  bii("sYzFIusQp3Q", "Greg Becker", "gregbecker");
 } else if (sbi === bn[3]) {
-  bii("c6M7AoevSXE", "Prometey Sánchez Noskov", "prometeysanchez");
+  bii("srd-rZ5fcFw", "Igor Ovsyannykov", "igorovsyannykov");
 };
 
 // Set/Read/Change/Open options
@@ -449,6 +449,33 @@ $("#l3").on("click", function() {rp("pinterest.com")});
 $("#l4").on("click", function() {rp("twitter.com")});
 $("#l5").on("click", function() {rp("youtube.com")});
 
+// Yearly anniversary
+var ya = function() {
+  var d = new Date();
+  a = d.getDate();
+  b = d.getMonth();
+  c = d.getYear();
+  e = a + " " + b;
+  f = true;
+
+  if (gc("yan") === "") {
+    sc("yan", "0", 9999);
+    f = false;
+  };
+  if (gc("yad") === "") {
+    sc("yad", e, 9999);
+    sc("yaa", c, 9999);
+    f = false;
+  };
+
+  if (gc("yad") === e && gc("yaa") != c && f) {
+    // Yearly anniversary
+    console.log("x");
+  };
+
+  console.log(e);
+};
+
 // Page load complete
 window.onload = function() {
   $("#a").css({"opacity": "1"});
@@ -475,6 +502,7 @@ window.onload = function() {
     $("#amv").html(json.version);
     $("#sntv").html("Skye New Tab v" + json.version);
   });
+  ya();
 };
 
 // Google Analytics

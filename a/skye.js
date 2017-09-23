@@ -450,30 +450,34 @@ $("#l4").on("click", function() {rp("twitter.com")});
 $("#l5").on("click", function() {rp("youtube.com")});
 
 // Yearly anniversary
-var ya = function() {
-  var d = new Date();
-  a = d.getDate();
-  b = d.getMonth();
-  c = d.getYear();
-  e = a + " " + b;
-  f = true;
+function ya() {
+  $.getJSON("../manifest.json", function(json) {
+    var d = new Date();
+    a = d.getDate();
+    b = d.getMonth();
+    c = d.getYear() + 1900;
+    e = a + " " + b;
+    f = true;
 
-  if (gc("yan") === "") {
-    sc("yan", "0", 9999);
-    f = false;
-  };
-  if (gc("yad") === "") {
-    sc("yad", e, 9999);
-    sc("yaa", c, 9999);
-    f = false;
-  };
+    if (gc("yasv") === "") {
+      sc("yasv", json.version, 9999);
+    };
+    if (gc("yan") === "") {
+      sc("yan", "0", 9999);
+      f = false;
+    };
+    if (gc("yad") === "") {
+      sc("yad", e, 9999);
+      sc("yay", c, 9999);
+      f = false;
+    };
 
-  if (gc("yad") === e && gc("yaa") != c && f) {
-    // Yearly anniversary
-    console.log("x");
-  };
-
-  console.log(e);
+    if (gc("yad") === e && gc("yay") != c && f) {
+      // Yearly anniversary
+    };
+    console.log("current " + json.version + " " + a + " " + b + " " + c + " " + f);
+    console.log("set     " + gc("yasv") + " " + gc("yad") + " " + gc("yay") + " " + gc("yan"));
+  });
 };
 
 // Page load complete

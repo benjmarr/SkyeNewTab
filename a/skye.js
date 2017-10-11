@@ -74,13 +74,13 @@ var bii = function(x, y, z) {
   $("#bii4").html(iud);
 };
 if (sbi === bn[0]) {
-  bii("B6O-Fc4TIvE", "Ken Treloar", "kentreloar");
+  bii("trJqgtb3oIE", "Julia Sabiniarz", "julczed");
 } else if (sbi === bn[1]) {
-  bii("iltnOce4T7U", "Rebecca Moktar", "rebeccamoktar");
+  bii("XtUd5SiX464", "Jakub Dziubak", "jackuback");
 } else if (sbi === bn[2]) {
-  bii("EyeSSqkHIvc", "bosen Yan", "dysonson");
+  bii("B6O-Fc4TIvE", "Ken Treloar", "kentreloar");
 } else if (sbi === bn[3]) {
-  bii("I63YZy3S9Ns", "Jake Thacker", "jaketthacker");
+  bii("iltnOce4T7U", "Rebecca Moktar", "rebeccamoktar");
 };
 
 // Set/Read/Change/Open options

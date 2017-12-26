@@ -67,11 +67,9 @@ $("#b").css({"background-image": "url('a/i/b/" + sbi + ".jpg')"});
 $("#iue").html(iud);
 var bii = function(x, y, z) {
   z = "https://unsplash.com/@" + z;
-  $("#bii0").html(y);
-  $("#bii1").html("<a target='_blank' href='" + z + "'>" + z + "</a>");
-  $("#bii2").html("<a target='_blank' href='https://unsplash.com/photos/" + x + "'>" + "https://unsplash.com/photos/" + x + "</a>");
-  $("#bii3").html("<a target='_blank' href='" + z + "/portfolio'>" + z + "</a>");
-  $("#bii4").html(iud);
+  x = "https://unsplash.com/photos/" + x;
+  $("#bii0").html("<a target='_blank' href='" + x + "'>Background image</a> photographed by <a target='_blank' href='" + z + "'>" + y + "</a> on <a target='_blank' href='https://unsplash.com/'>Unsplash.com</a>");
+  $("#bii1").html(iud);
 };
 if (sbi === bn[0]) {
   bii("ocku3zjNM7k", "Alexander Mils", "alexandermils");

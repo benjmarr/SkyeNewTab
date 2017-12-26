@@ -1,6 +1,9 @@
 Skye New Tab change log
 All changes can be viewed at https://github.com/BenAndy/SkyeNewTab/commits/master
 
+v3.1.41:
+Shortened background image information display format. (skye.js-70L72:newtab.html-70L72)
+
 v3.1.40:
 Added three new background images. (61L83)
 

@@ -1,4 +1,4 @@
-// Copyright Benjamin Developments (c) 2017 - All rights reserved
+// Copyright Benjamin Developments (c) 2018 - All rights reserved
 var rl = "https://github.com/BenAndy/SkyeNewTab/tree/master";
 var cud = "7";
 
@@ -58,7 +58,7 @@ if (gc("n") === "") {
 
 // Background image & information
 var bn = Array(0, 1, 2, 3);
-var iud = "Saturday 23<sup>th</sup> December, 2017";
+var iud = "Wednesday 24<sup>th</sup> January, 2018";
 var bo = function() {
   return bn[Math.floor(Math.random() * bn.length)];
 };
@@ -72,13 +72,13 @@ var bii = function(x, y, z) {
   $("#bii1").html(iud);
 };
 if (sbi === bn[0]) {
-  bii("ocku3zjNM7k", "Alexander Mils", "alexandermils");
+  bii("baBm9yH8teQ", "Jeremy Allouche", "labandestyle");
 } else if (sbi === bn[1]) {
-  bii("LKwo0PfwSTs", "Joe Green", "jg");
+  bii("RC3p9XWxzv4", "Tim Trad", "timtrad");
 } else if (sbi === bn[2]) {
-  bii("8RapT49-eqI", "Thomas Peham", "tompeham");
+  bii("KSsx3NayPA8", "Derek Liang", "derekrliang");
 } else if (sbi === bn[3]) {
-  bii("5WZbaV96IjA", "Guillaume Baudusseau", "gbaudusseau");
+  bii("ocku3zjNM7k", "Alexander Mils", "alexandermils");
 };
 
 // Set/Read/Change/Open options

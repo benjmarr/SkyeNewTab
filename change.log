@@ -1,6 +1,11 @@
 Skye New Tab change log
 All changes can be viewed at https://github.com/BenAndy/SkyeNewTab/commits/master
 
+v3.1.42:
+Added three new background images. (skye.js-61L81)
+Updated copyright information from 2017 to 2018 (newtab.html-L45:newtab.html-L114:m.css-L1:skye.js-L1)
+Changed date format display option year (newtab.html-L59)
+
 v3.1.41:
 Shortened background image information display format. (skye.js-70L72:newtab.html-70L72)
 

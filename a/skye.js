@@ -58,7 +58,7 @@ if (gc("n") === "") {
 
 // Background image & information
 var bn = Array(0, 1, 2, 3);
-var iud = "Friday 2<sup>th</sup> February, 2018";
+var iud = "Thursday 8<sup>th</sup> February, 2018";
 var bo = function() {
   return bn[Math.floor(Math.random() * bn.length)];
 };
@@ -72,13 +72,13 @@ var bii = function(x, y, z) {
   $("#bii1").html(iud);
 };
 if (sbi === bn[0]) {
-  bii("3yIBNntfdXU", "Ali Gooya", "aligooya");
+  bii("tvleqH3p1os", "Simon Fitall", "simonfitall");
 } else if (sbi === bn[1]) {
-  bii("baBm9yH8teQ", "Jeremy Allouche", "labandestyle");
+  bii("eo3tBGMR9yY", "Spencer Watson", "thebrownspy");
 } else if (sbi === bn[2]) {
-  bii("RC3p9XWxzv4", "Tim Trad", "timtrad");
+  bii("3yIBNntfdXU", "Ali Gooya", "aligooya");
 } else if (sbi === bn[3]) {
-  bii("KSsx3NayPA8", "Derek Liang", "derekrliang");
+  bii("baBm9yH8teQ", "Jeremy Allouche", "labandestyle");
 };
 
 // Set/Read/Change/Open options

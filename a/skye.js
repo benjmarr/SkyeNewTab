@@ -72,13 +72,13 @@ var bii = function(x, y, z) {
   $("#bii1").html(iud);
 };
 if (sbi === bn[0]) {
-  bii("Hyu76loQLdk", "Laura Vinck", "lauravinck");
+  bii("XIb5sgUF-kI", "Dennis Alvear Perez", "saintdennis_");
 } else if (sbi === bn[1]) {
-  bii("AJFdEo-DKCg", "Ian Froome", "ian_froome_photography");
+  bii("0A6n1ipnt18", "Fabrizio Conti", "staticlaw");
 } else if (sbi === bn[2]) {
-  bii("3gBeUFE89Zc", "Barth Bailey", "7bbbailey");
+  bii("CTSmEfYr3Oo", "Claus Grünstäudl", "w18");
 } else if (sbi === bn[3]) {
-  bii("KqJKBwQGrTs", "Paulius Dragunas", "paulius005");
+  bii("gtanOtRUSlc", "Jason Leung", "ninjason");
 };
 
 // Set/Read/Change/Open options
